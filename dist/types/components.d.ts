@@ -41,7 +41,7 @@ export interface StatusStateProps {
 }
 /**
  * Mapping of overridable UI components ("slots").
- * Tipare relaxate aici, că oricum tu ești autorul override-urilor.
+ * Relaxed typing here since you control any overrides.
  */
 export interface ListComponents {
     Toolbar?: ComponentType<any>;
