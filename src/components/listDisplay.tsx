@@ -22,12 +22,23 @@ import {ListModalOutlet} from "./modals/ListModalOutlet";
  * PROPS
  * ───────────────────────────── */
 
+/**
+ * Props forwarded to {@link ListDisplay}. They mirror {@link ListConfig}
+ * and therefore describe the full data, schema, and action configuration for
+ * the list.
+ */
 export type ListDisplayProps = ListConfig<any, any>;
 
 /* ─────────────────────────────
  * COMPONENT
  * ───────────────────────────── */
 
+/**
+ * High-level component that renders the entire ListDisplay experience using
+ * the core hook for state management and a set of slot-based components for
+ * the UI. Consumers can override any slot via the {@link ListConfig.components}
+ * map while still benefiting from the built-in behaviours.
+ */
 export const ListDisplay: React.FC<ListDisplayProps> = (props) => {
     const {
         components,
