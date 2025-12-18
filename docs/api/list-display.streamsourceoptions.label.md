@@ -4,6 +4,8 @@
 
 ## StreamSourceOptions.label property
 
+Optional label for identifying this data source in debugging and logging.
+
 **Signature:**
 
 ```typescript

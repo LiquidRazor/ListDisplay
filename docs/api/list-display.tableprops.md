@@ -121,7 +121,7 @@ _(Optional)_ Optional row-level actions.
 
 </td><td>
 
-[ListState](./list-display.liststate.md)<!-- -->&lt;any&gt;
+ListState&lt;any&gt;
 
 
 </td><td>

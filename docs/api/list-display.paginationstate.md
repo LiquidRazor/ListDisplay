@@ -88,7 +88,7 @@ number
 
 </td><td>
 
-_(Optional)_ Optional total number of items available.
+_(Optional)_ Optional total number of items available across all pages.
 
 
 </td></tr>
@@ -107,7 +107,7 @@ number
 
 </td><td>
 
-_(Optional)_ Optional total number of pages inferred from .
+_(Optional)_ Optional total number of pages inferred from [PaginationState.totalItems](./list-display.paginationstate.totalitems.md) and [PaginationState.pageSize](./list-display.paginationstate.pagesize.md)<!-- -->.
 
 
 </td></tr>

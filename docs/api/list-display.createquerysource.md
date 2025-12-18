@@ -4,7 +4,7 @@
 
 ## createQuerySource() function
 
-Creates a query-based data source (single-shot load + optional refresh).
+Creates a query-based data source with single-shot load and optional refresh capability.
 
 **Signature:**
 
@@ -42,6 +42,8 @@ options
 
 </td><td>
 
+Configuration options for the query source
+
 
 </td></tr>
 </tbody></table>
@@ -49,4 +51,24 @@ options
 **Returns:**
 
 [DataSource](./list-display.datasource.md)<!-- -->&lt;TRow, TRowId&gt;
+
+A DataSource object with query-based loading capabilities
+
+## Remarks
+
+This function creates a DataSource implementation that loads data using a provided query function. The data source supports initialization and refresh operations, making it suitable for list views that need to fetch and reload data.
+
+## Example
+
+
+```typescript
+const userSource = createQuerySource({
+  load: async () => {
+    const response = await fetch('/api/users');
+    const data = await response.json();
+    return { rows: data.users, totalCount: data.total };
+  },
+  label: 'User List'
+});
+```
 

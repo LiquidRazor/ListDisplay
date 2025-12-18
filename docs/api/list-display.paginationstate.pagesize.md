@@ -11,3 +11,8 @@ Number of items requested per page.
 ```typescript
 pageSize: number;
 ```
+
+## Remarks
+
+Defines how many rows should be displayed on each page. This value is used together with [PaginationState.pageIndex](./list-display.paginationstate.pageindex.md) to determine the visible row range.
+

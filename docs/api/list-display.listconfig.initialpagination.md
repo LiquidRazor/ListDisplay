@@ -4,10 +4,15 @@
 
 ## ListConfig.initialPagination property
 
-Initial pagination state.
+Initial pagination state including page size and starting page.
 
 **Signature:**
 
 ```typescript
 initialPagination?: PaginationState;
 ```
+
+## Remarks
+
+Specifies the initial page number and number of rows per page. Users can navigate through pages and change the page size through the UI. [PaginationState](./list-display.paginationstate.md)
+

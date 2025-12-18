@@ -11,3 +11,10 @@ High-level component that renders the entire ListDisplay experience using the co
 ```typescript
 ListDisplay: React.FC<ListDisplayProps>
 ```
+
+## Remarks
+
+This component orchestrates the complete list UI including: - Toolbar with general actions - Filters panel for data filtering - Sort bar for column sorting - Table with rows and row actions - Pagination controls - Modal outlet for action confirmations - Loading, empty, and error states
+
+All sub-components can be replaced via the `components` prop while maintaining full integration with the core state management layer.
+

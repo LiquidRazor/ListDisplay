@@ -4,6 +4,8 @@
 
 ## StreamSourceOptions interface
 
+Configuration options for creating a streaming data source. Defines how to bootstrap, subscribe to, refresh, and destroy a streaming connection.
+
 **Signature:**
 
 ```typescript
@@ -86,7 +88,7 @@ string
 
 </td><td>
 
-_(Optional)_
+_(Optional)_ Optional label for identifying this data source in debugging and logging.
 
 
 </td></tr>

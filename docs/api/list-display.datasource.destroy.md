@@ -4,7 +4,7 @@
 
 ## DataSource.destroy property
 
-Optional cleanup hook (unsubscribe, close sockets, etc.).
+Optional cleanup hook called when the data source is no longer needed. Use this to unsubscribe from streams, close connections, or release resources.
 
 **Signature:**
 

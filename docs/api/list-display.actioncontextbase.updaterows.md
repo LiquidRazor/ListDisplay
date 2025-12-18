@@ -4,7 +4,7 @@
 
 ## ActionContextBase.updateRows property
 
-Primary way for actions to mutate the list.
+Primary way for actions to mutate the list. Pass an updater function that receives the current rows and returns the new rows array.
 
 **Signature:**
 

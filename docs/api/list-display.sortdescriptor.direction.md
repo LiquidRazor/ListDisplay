@@ -4,7 +4,7 @@
 
 ## SortDescriptor.direction property
 
-Direction in which rows should be ordered.
+Direction in which rows should be ordered. [SortDirection](./list-display.sortdirection.md)
 
 **Signature:**
 

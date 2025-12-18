@@ -4,7 +4,7 @@
 
 ## ModalConfig type
 
-Union describing the supported modal configurations for actions.
+Union describing the supported modal configurations for actions. [ConfirmModalConfig](./list-display.confirmmodalconfig.md) \| [CustomModalConfig](./list-display.custommodalconfig.md)
 
 **Signature:**
 

@@ -4,7 +4,7 @@
 
 ## FieldSchema.sortable property
 
-Whether the column can be sorted.
+Whether the column can be sorted. When true, enables sort interaction on the column header.
 
 **Signature:**
 

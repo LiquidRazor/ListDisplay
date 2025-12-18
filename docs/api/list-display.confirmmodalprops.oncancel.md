@@ -4,6 +4,8 @@
 
 ## ConfirmModalProps.onCancel property
 
+Callback function triggered when the cancel button is clicked
+
 **Signature:**
 
 ```typescript

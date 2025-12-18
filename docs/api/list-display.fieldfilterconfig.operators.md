@@ -4,6 +4,8 @@
 
 ## FieldFilterConfig.operators property
 
+Optional list of operators to restrict for this field. If omitted, all operators for the type are available.
+
 **Signature:**
 
 ```typescript

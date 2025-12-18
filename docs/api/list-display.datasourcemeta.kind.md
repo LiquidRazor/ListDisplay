@@ -4,6 +4,8 @@
 
 ## DataSourceMeta.kind property
 
+The kind of data source. [DataSourceKind](./list-display.datasourcekind.md)
+
 **Signature:**
 
 ```typescript

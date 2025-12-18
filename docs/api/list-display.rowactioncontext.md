@@ -4,6 +4,8 @@
 
 ## RowActionContext interface
 
+Context object provided to row-specific action handlers, including the specific row being operated on. [ActionContextBase](./list-display.actioncontextbase.md)
+
 **Signature:**
 
 ```typescript
@@ -49,6 +51,8 @@ TRow
 
 </td><td>
 
+The specific row this action is operating on.
+
 
 </td></tr>
 <tr><td>
@@ -65,6 +69,8 @@ number
 
 
 </td><td>
+
+The index of this row in the rows array.
 
 
 </td></tr>

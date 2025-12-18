@@ -10,27 +10,25 @@ import { JSX } from 'react/jsx-runtime';
 import { default as React_2 } from 'react';
 import type { ReactNode } from 'react';
 
-// @public (undocumented)
+// @public
 export interface ActionContextBase<TRow = any, TRowId = string | number> {
     exportState: () => ListSnapshot<TRow, TRowId>;
-    // (undocumented)
     filters: ActiveFilterState;
-    // (undocumented)
     pagination: PaginationState;
     refresh?: () => void | Promise<void>;
     rows: TRow[];
-    // (undocumented)
     selection: SelectionState<TRowId>;
-    // (undocumented)
     sort?: SortDescriptor<TRow>;
     updateRows: (updater: (current: TRow[]) => TRow[]) => void;
     visibleRows: TRow[];
 }
 
-// @public (undocumented)
+// @public
 export type ActionKind = "default" | "primary" | "secondary" | "danger" | "ghost";
 
-// @public
+// Warning: (ae-internal-missing-underscore) The name "ActiveActionState" should be prefixed with an underscore because the declaration is marked as @internal
+//
+// @internal
 export interface ActiveActionState {
     actionId: string;
     rowId?: RowId;
@@ -41,47 +39,62 @@ export interface ActiveActionState {
 export type ActiveFilterState = Record<string, unknown>;
 
 // Warning: (ae-forgotten-export) The symbol "AnyRow" needs to be exported by the entry point index.d.ts
+// Warning: (ae-internal-missing-underscore) The name "applyFilters" should be prefixed with an underscore because the declaration is marked as @internal
 //
-// @public
+// @internal
 export const applyFilters: <TRow = AnyRow>(rows: TRow[], ctx: FilterContext<TRow>) => TRow[];
 
 // Warning: (ae-forgotten-export) The symbol "AnyRow_2" needs to be exported by the entry point index.d.ts
+// Warning: (ae-internal-missing-underscore) The name "applyPagination" should be prefixed with an underscore because the declaration is marked as @internal
 //
-// @public
+// @internal
 export const applyPagination: <TRow = AnyRow_2>(rows: TRow[], pagination: PaginationState) => TRow[];
 
-// @public
+// Warning: (ae-internal-missing-underscore) The name "applyPatch" should be prefixed with an underscore because the declaration is marked as @internal
+//
+// @internal
 export const applyPatch: <TRow = any, TRowId extends RowId = RowId>(rows: TRow[], patch: DataPatch<TRow, TRowId>, idKey: keyof TRow & string) => TRow[];
 
-// @public
+// Warning: (ae-internal-missing-underscore) The name "applyPatches" should be prefixed with an underscore because the declaration is marked as @internal
+//
+// @internal
 export const applyPatches: <TRow = any, TRowId extends RowId = RowId>(rows: TRow[], patches: Array<DataPatch<TRow, TRowId>>, idKey: keyof TRow & string) => TRow[];
 
 // Warning: (ae-forgotten-export) The symbol "AnyRow_4" needs to be exported by the entry point index.d.ts
+// Warning: (ae-internal-missing-underscore) The name "applySorting" should be prefixed with an underscore because the declaration is marked as @internal
 //
-// @public
+// @internal
 export const applySorting: <TRow = AnyRow_4>(rows: TRow[], ctx: SortingContext<TRow>) => TRow[];
 
-// @public
+// Warning: (ae-internal-missing-underscore) The name "buildFilterPredicate" should be prefixed with an underscore because the declaration is marked as @internal
+//
+// @internal
 export const buildFilterPredicate: <TRow = AnyRow>(ctx: FilterContext<TRow>) => ((row: TRow) => boolean);
 
-// @public
+// Warning: (ae-internal-missing-underscore) The name "buildSnapshot" should be prefixed with an underscore because the declaration is marked as @internal
+//
+// @internal
 export const buildSnapshot: <TRow = any, TRowId extends RowId = RowId>(state: ListState<TRow>) => ListSnapshot<TRow, TRowId>;
 
-// @public (undocumented)
+// @public
 export interface CellRenderContext<TRow = any> {
-    // (undocumented)
     isSelected: boolean;
-    // (undocumented)
     rowIndex: number;
 }
 
-// @public (undocumented)
+// Warning: (ae-internal-missing-underscore) The name "clearActiveAction" should be prefixed with an underscore because the declaration is marked as @internal
+//
+// @internal
 export const clearActiveAction: (prev: ListUiState) => ListUiState;
 
-// @public (undocumented)
+// Warning: (ae-internal-missing-underscore) The name "clearSelection" should be prefixed with an underscore because the declaration is marked as @internal
+//
+// @internal
 export const clearSelection: <TRowId extends RowId = RowId>(selection: SelectionState<TRowId>) => SelectionState<TRowId>;
 
-// @public (undocumented)
+// Warning: (ae-internal-missing-underscore) The name "closeModal" should be prefixed with an underscore because the declaration is marked as @internal
+//
+// @internal
 export const closeModal: (prev: ListUiState) => ListUiState;
 
 // @public
@@ -96,29 +109,27 @@ export interface ConfirmModalConfig {
     type: "confirm";
 }
 
-// @public (undocumented)
+// @public
 export interface ConfirmModalProps {
-    // (undocumented)
     cancelLabel?: string;
-    // (undocumented)
     confirmLabel?: string;
-    // (undocumented)
     description?: React_2.ReactNode;
-    // (undocumented)
     onCancel: () => void;
-    // (undocumented)
     onConfirm: () => void | Promise<void>;
-    // (undocumented)
     title: string;
 }
 
-// @public (undocumented)
+// Warning: (ae-internal-missing-underscore) The name "createInitialUiState" should be prefixed with an underscore because the declaration is marked as @internal
+//
+// @internal
 export const createInitialUiState: () => ListUiState;
 
 // @public
 export const createQuerySource: <TRow = any, TRowId extends RowId = RowId>(options: QuerySourceOptions<TRow>) => DataSource<TRow, TRowId>;
 
-// @public
+// Warning: (ae-internal-missing-underscore) The name "createSelectionState" should be prefixed with an underscore because the declaration is marked as @internal
+//
+// @internal
 export const createSelectionState: (mode?: SelectionMode_2) => SelectionState;
 
 // Warning: (ae-forgotten-export) The symbol "StaticSourceOptions" needs to be exported by the entry point index.d.ts
@@ -145,7 +156,7 @@ export interface CustomModalRenderContext<TRow = any, TRowId = string | number> 
     submit: (payload?: unknown) => void;
 }
 
-// @public (undocumented)
+// @public
 export type DataPatch<TRow = any, TRowId = RowId> = {
     type: "replaceAll";
     rows: TRow[];
@@ -160,50 +171,43 @@ export type DataPatch<TRow = any, TRowId = RowId> = {
     id: TRowId;
 };
 
-// @public (undocumented)
+// @public
 export type DataPatchListener<TRow = any, TRowId = RowId> = (patch: DataPatch<TRow, TRowId>) => void;
 
 // @public
 export interface DataSource<TRow = any, TRowId = RowId> {
     destroy?: () => void;
     init: () => Promise<DataSourceInitResult<TRow>>;
-    // (undocumented)
     meta: DataSourceMeta;
     refresh?: () => Promise<void> | void;
     subscribe?: (listener: DataPatchListener<TRow, TRowId>) => Unsubscribe;
 }
 
-// @public (undocumented)
+// @public
 export interface DataSourceInitResult<TRow = any> {
-    // (undocumented)
     rows: TRow[];
-    // (undocumented)
+    // Warning: (ae-incompatible-release-tags) The symbol "status" is marked as @public, but its signature references "ListStatus" which is marked as @internal
     status?: ListStatus;
-    // (undocumented)
     totalCount?: number;
 }
 
-// @public (undocumented)
+// @public
 export type DataSourceKind = "static" | "stream" | "query";
 
-// @public (undocumented)
+// @public
 export interface DataSourceMeta {
-    // (undocumented)
     kind: DataSourceKind;
-    // (undocumented)
     label?: string;
 }
 
-// @public (undocumented)
+// @public
 export type FieldAlign = "left" | "center" | "right";
 
 // @public
 export interface FieldFilterConfig<TRow = any, TValue = any> {
     normalize?: (value: TValue, row: TRow) => string | number | boolean | null;
-    // (undocumented)
     operators?: FilterOperator[];
     options?: FilterOption[];
-    // (undocumented)
     type: FilterType;
 }
 
@@ -221,11 +225,11 @@ export interface FieldSchema<TRow = any, TValue = any> {
     width?: number | string;
 }
 
-// @public (undocumented)
+// Warning: (ae-internal-missing-underscore) The name "FilterContext" should be prefixed with an underscore because the declaration is marked as @internal
+//
+// @internal
 export interface FilterContext<TRow = AnyRow> {
-    // (undocumented)
     fields: Array<FieldSchema<TRow>>;
-    // (undocumented)
     filters: ActiveFilterState;
 }
 
@@ -242,73 +246,72 @@ export interface FilterOption {
 export interface FiltersPanelProps {
     fields: Array<FieldSchema<any>>;
     onChangeFilters?: (next: unknown) => void;
+    // Warning: (ae-incompatible-release-tags) The symbol "state" is marked as @public, but its signature references "ListState" which is marked as @internal
     state: ListState<any>;
 }
 
 // @public
 export type FilterType = "text" | "select" | "multiSelect" | "number" | "date" | "boolean" | "custom";
 
-// @public (undocumented)
+// @public
 export interface GeneralAction<TRow = any, TRowId = string | number> extends ListActionBase<TRow, TRowId> {
     handler?: (ctx: GeneralActionContext<TRow, TRowId>) => void | Promise<void>;
     requiresSelection?: boolean;
 }
 
-// @public (undocumented)
+// @public
 export interface GeneralActionContext<TRow = any, TRowId = string | number> extends ActionContextBase<TRow, TRowId> {
 }
 
-// @public
+// Warning: (ae-internal-missing-underscore) The name "getRowId" should be prefixed with an underscore because the declaration is marked as @internal
+//
+// @internal
 export const getRowId: <TRow = any, TRowId extends RowId = RowId>(row: TRow, idKey: keyof TRow & string) => TRowId;
 
 // Warning: (ae-forgotten-export) The symbol "AnyRow_3" needs to be exported by the entry point index.d.ts
+// Warning: (ae-internal-missing-underscore) The name "isRowSelected" should be prefixed with an underscore because the declaration is marked as @internal
 //
-// @public (undocumented)
+// @internal
 export const isRowSelected: <TRow = AnyRow_3, TRowId extends RowId = RowId>(row: TRow, selection: SelectionState<TRowId>, ctx: SelectionContext<TRow, TRowId>) => boolean;
 
-// @public (undocumented)
+// @public
 export interface ListActionBase<TRow = any, TRowId = string | number> {
-    // (undocumented)
     icon?: ReactNode;
-    // (undocumented)
     id: string;
-    // (undocumented)
     kind?: ActionKind;
-    // (undocumented)
     label: string;
     modal?: ModalConfig<TRow, TRowId>;
     opensModal?: boolean;
 }
 
-// @public (undocumented)
+// Warning: (ae-internal-missing-underscore) The name "ListBody" should be prefixed with an underscore because the declaration is marked as @internal
+//
+// @internal
 export const ListBody: React_2.FC<ListBodyProps>;
 
-// @public (undocumented)
+// Warning: (ae-internal-missing-underscore) The name "ListBodyProps" should be prefixed with an underscore because the declaration is marked as @internal
+//
+// @internal
 export interface ListBodyProps {
-    // (undocumented)
     fields: Array<FieldSchema<any>>;
-    // (undocumented)
     idKey: string;
-    // (undocumented)
     onRowActionClick?: (actionId: string, rowIndex: number) => void;
-    // (undocumented)
     rowActions?: Array<RowAction<any, any>>;
-    // (undocumented)
     state: ListState<any>;
 }
 
-// @public (undocumented)
+// Warning: (ae-internal-missing-underscore) The name "ListCell" should be prefixed with an underscore because the declaration is marked as @internal
+//
+// @internal
 export const ListCell: React_2.FC<ListCellProps>;
 
-// @public (undocumented)
+// Warning: (ae-internal-missing-underscore) The name "ListCellProps" should be prefixed with an underscore because the declaration is marked as @internal
+//
+// @internal
 export interface ListCellProps {
-    // (undocumented)
     field: FieldSchema<any>;
-    // (undocumented)
     isSelected: boolean;
-    // (undocumented)
     row: any;
-    // (undocumented)
     rowIndex: number;
 }
 
@@ -343,14 +346,16 @@ export interface ListConfig<TRow = any, TRowId = RowId> {
     selectionMode?: SelectionMode_2;
 }
 
-// @public
+// Warning: (ae-internal-missing-underscore) The name "ListContainer" should be prefixed with an underscore because the declaration is marked as @internal
+//
+// @internal
 export const ListContainer: React_2.FC<ListContainerProps>;
 
-// @public (undocumented)
+// Warning: (ae-internal-missing-underscore) The name "ListContainerProps" should be prefixed with an underscore because the declaration is marked as @internal
+//
+// @internal
 export interface ListContainerProps {
-    // (undocumented)
     children?: React_2.ReactNode;
-    // (undocumented)
     className?: string;
 }
 
@@ -360,107 +365,115 @@ export const ListDisplay: React_2.FC<ListDisplayProps>;
 // @public
 export type ListDisplayProps = ListConfig<any, any>;
 
-// @public (undocumented)
+// Warning: (ae-internal-missing-underscore) The name "ListEmptyState" should be prefixed with an underscore because the declaration is marked as @internal
+//
+// @internal
 export const ListEmptyState: React_2.FC<StatusStateProps>;
 
-// @public (undocumented)
+// Warning: (ae-internal-missing-underscore) The name "ListErrorState" should be prefixed with an underscore because the declaration is marked as @internal
+//
+// @internal
 export const ListErrorState: React_2.FC<StatusStateProps>;
 
-// @public
+// Warning: (ae-internal-missing-underscore) The name "ListFiltersPanel" should be prefixed with an underscore because the declaration is marked as @internal
+//
+// @internal
 export const ListFiltersPanel: React_2.FC<FiltersPanelProps>;
 
-// @public (undocumented)
+// Warning: (ae-internal-missing-underscore) The name "ListHeader" should be prefixed with an underscore because the declaration is marked as @internal
+//
+// @internal
 export const ListHeader: <TRow = any>({ fields, hasRowActions, }: ListHeaderProps<TRow>) => JSX.Element;
 
-// @public (undocumented)
+// Warning: (ae-internal-missing-underscore) The name "ListHeaderProps" should be prefixed with an underscore because the declaration is marked as @internal
+//
+// @internal
 export interface ListHeaderProps<TRow = any> {
-    // (undocumented)
     fields: Array<FieldSchema<TRow>>;
-    // (undocumented)
     hasRowActions: boolean;
 }
 
-// @public (undocumented)
+// Warning: (ae-internal-missing-underscore) The name "ListLoadingState" should be prefixed with an underscore because the declaration is marked as @internal
+//
+// @internal
 export const ListLoadingState: React_2.FC<StatusStateProps>;
 
 // @public
 export const ListModalOutlet: React_2.FC<ModalOutletProps>;
 
-// @public
+// Warning: (ae-internal-missing-underscore) The name "ListPagination" should be prefixed with an underscore because the declaration is marked as @internal
+//
+// @internal
 export const ListPagination: React_2.FC<PaginationProps>;
 
-// @public (undocumented)
+// Warning: (ae-internal-missing-underscore) The name "ListRow" should be prefixed with an underscore because the declaration is marked as @internal
+//
+// @internal
 export const ListRow: React_2.FC<ListRowProps>;
 
-// @public (undocumented)
+// Warning: (ae-internal-missing-underscore) The name "ListRowProps" should be prefixed with an underscore because the declaration is marked as @internal
+//
+// @internal
 export interface ListRowProps {
-    // (undocumented)
     fields: Array<FieldSchema<any>>;
-    // (undocumented)
     idKey: string;
-    // (undocumented)
     onRowActionClick?: (actionId: string, rowIndex: number) => void;
-    // (undocumented)
     row: any;
-    // (undocumented)
     rowActions?: Array<RowAction<any, any>>;
-    // (undocumented)
     rowIndex: number;
-    // (undocumented)
     state: ListState<any>;
 }
 
 // @public
 export interface ListSnapshot<TRow = any, TRowId = RowId> {
-    // (undocumented)
     filters: ActiveFilterState;
-    // (undocumented)
     pagination: PaginationState;
     rowsAll: TRow[];
     rowsVisible: TRow[];
-    // (undocumented)
     selection: SelectionState<TRowId>;
-    // (undocumented)
     sort?: SortDescriptor<TRow>;
 }
 
-// @public
+// Warning: (ae-internal-missing-underscore) The name "ListSortBar" should be prefixed with an underscore because the declaration is marked as @internal
+//
+// @internal
 export const ListSortBar: React_2.FC<SortBarProps>;
 
-// @public
+// Warning: (ae-internal-missing-underscore) The name "ListState" should be prefixed with an underscore because the declaration is marked as @internal
+//
+// @internal
 export interface ListState<TRow = any> {
-    // (undocumented)
     error?: unknown;
-    // (undocumented)
     filters: ActiveFilterState;
-    // (undocumented)
     pagination: PaginationState;
     rawRows: TRow[];
     rows: TRow[];
-    // (undocumented)
     selection: SelectionState;
-    // (undocumented)
     sort?: SortDescriptor<TRow>;
-    // (undocumented)
     status: ListStatus;
-    // (undocumented)
     ui: ListUiState;
 }
 
-// @public
+// Warning: (ae-internal-missing-underscore) The name "ListStatus" should be prefixed with an underscore because the declaration is marked as @internal
+//
+// @internal
 export type ListStatus = "idle" | "loading" | "ready" | "streaming" | "error";
 
-// @public
+// Warning: (ae-internal-missing-underscore) The name "ListTable" should be prefixed with an underscore because the declaration is marked as @internal
+//
+// @internal
 export const ListTable: React_2.FC<TableProps>;
 
-// @public
+// Warning: (ae-internal-missing-underscore) The name "ListToolbar" should be prefixed with an underscore because the declaration is marked as @internal
+//
+// @internal
 export const ListToolbar: React_2.FC<ToolbarProps>;
 
-// @public
+// Warning: (ae-internal-missing-underscore) The name "ListUiState" should be prefixed with an underscore because the declaration is marked as @internal
+//
+// @internal
 export interface ListUiState {
-    // (undocumented)
     activeAction?: ActiveActionState;
-    // (undocumented)
     modal?: ModalState;
 }
 
@@ -473,23 +486,29 @@ export interface ModalOutletProps {
     onCancel: () => void;
     onConfirm: (payload?: unknown) => void | Promise<void>;
     rowActions?: Array<RowAction<any, any>>;
+    // Warning: (ae-incompatible-release-tags) The symbol "state" is marked as @public, but its signature references "ListState" which is marked as @internal
     state: ListState<any>;
 }
 
-// @public
+// Warning: (ae-internal-missing-underscore) The name "ModalState" should be prefixed with an underscore because the declaration is marked as @internal
+//
+// @internal
 export interface ModalState {
     actionId?: string;
     isOpen: boolean;
     rowId?: RowId;
 }
 
-// @public (undocumented)
+// Warning: (ae-internal-missing-underscore) The name "openModalForAction" should be prefixed with an underscore because the declaration is marked as @internal
+//
+// @internal
 export const openModalForAction: (prev: ListUiState, actionId: string, type: "general" | "row", rowId?: RowId) => ListUiState;
 
 // @public
 export interface PaginationProps {
     onChangePage?: (pageIndex: number) => void;
     onChangePageSize?: (pageSize: number) => void;
+    // Warning: (ae-incompatible-release-tags) The symbol "state" is marked as @public, but its signature references "ListState" which is marked as @internal
     state: ListState<any>;
 }
 
@@ -501,47 +520,45 @@ export interface PaginationState {
     totalPages?: number;
 }
 
-// @public (undocumented)
+// @public
 export type QueryLoadFn<TRow = any> = () => Promise<QueryResult<TRow>> | QueryResult<TRow>;
 
-// @public (undocumented)
+// @public
 export interface QueryResult<TRow = any> {
-    // (undocumented)
     rows: TRow[];
-    // (undocumented)
     totalCount?: number;
 }
 
-// @public (undocumented)
+// @public
 export interface QuerySourceOptions<TRow = any> {
     label?: string;
     load: QueryLoadFn<TRow>;
 }
 
-// @public (undocumented)
+// @public
 export interface RowAction<TRow = any, TRowId = string | number> extends ListActionBase<TRow, TRowId> {
     handler?: (ctx: RowActionContext<TRow, TRowId>) => void | Promise<void>;
 }
 
-// @public (undocumented)
+// @public
 export interface RowActionContext<TRow = any, TRowId = string | number> extends ActionContextBase<TRow, TRowId> {
-    // (undocumented)
     row: TRow;
-    // (undocumented)
     rowIndex: number;
 }
 
 // @public
 export type RowId = string | number;
 
-// @public (undocumented)
+// Warning: (ae-internal-missing-underscore) The name "selectAllVisible" should be prefixed with an underscore because the declaration is marked as @internal
+//
+// @internal
 export const selectAllVisible: <TRow = AnyRow_3, TRowId extends RowId = RowId>(visibleRows: TRow[], selection: SelectionState<TRowId>, ctx: SelectionContext<TRow, TRowId>) => SelectionState<TRowId>;
 
-// @public (undocumented)
+// Warning: (ae-internal-missing-underscore) The name "SelectionContext" should be prefixed with an underscore because the declaration is marked as @internal
+//
+// @internal
 export interface SelectionContext<TRow = AnyRow_3, TRowId extends RowId = RowId> {
-    // (undocumented)
     idKey: keyof TRow & string;
-    // (undocumented)
     mode: SelectionMode_2;
 }
 
@@ -559,6 +576,7 @@ export interface SelectionState<TRowId = RowId> {
 export interface SortBarProps {
     fields: Array<FieldSchema<any>>;
     onChangeSort?: (fieldId: string) => void;
+    // Warning: (ae-incompatible-release-tags) The symbol "state" is marked as @public, but its signature references "ListState" which is marked as @internal
     state: ListState<any>;
 }
 
@@ -571,11 +589,11 @@ export interface SortDescriptor<TRow = any> {
 // @public
 export type SortDirection = "asc" | "desc";
 
-// @public (undocumented)
+// Warning: (ae-internal-missing-underscore) The name "SortingContext" should be prefixed with an underscore because the declaration is marked as @internal
+//
+// @internal
 export interface SortingContext<TRow = AnyRow_4> {
-    // (undocumented)
     fields: Array<FieldSchema<TRow>>;
-    // (undocumented)
     sort?: SortDescriptor<TRow>;
 }
 
@@ -584,23 +602,22 @@ export interface StatusStateProps {
     message?: string;
 }
 
-// @public (undocumented)
+// @public
 export interface StreamBootstrapResult<TRow = any> {
     initialRows?: TRow[];
     totalCount?: number;
 }
 
-// @public (undocumented)
+// @public
 export interface StreamSourceOptions<TRow = any, TRowId extends RowId = RowId> {
     bootstrap?: () => Promise<StreamBootstrapResult<TRow>> | StreamBootstrapResult<TRow>;
     destroy?: () => void;
-    // (undocumented)
     label?: string;
     refresh?: () => Promise<void> | void;
     subscribe: StreamSubscribeFn<TRow, TRowId>;
 }
 
-// @public (undocumented)
+// @public
 export type StreamSubscribeFn<TRow = any, TRowId extends RowId = RowId> = (listener: DataPatchListener<TRow, TRowId>) => Unsubscribe | void;
 
 // @public
@@ -609,29 +626,39 @@ export interface TableProps {
     idKey: string;
     onRowActionClick?: (actionId: string, rowIndex: number) => void;
     rowActions?: Array<RowAction<any, any>>;
+    // Warning: (ae-incompatible-release-tags) The symbol "state" is marked as @public, but its signature references "ListState" which is marked as @internal
     state: ListState<any>;
 }
 
-// @public (undocumented)
+// Warning: (ae-internal-missing-underscore) The name "toggleRowSelection" should be prefixed with an underscore because the declaration is marked as @internal
+//
+// @internal
 export const toggleRowSelection: <TRow = AnyRow_3, TRowId extends RowId = RowId>(row: TRow, selection: SelectionState<TRowId>, ctx: SelectionContext<TRow, TRowId>) => SelectionState<TRowId>;
 
 // @public
 export interface ToolbarProps {
     generalActions?: Array<GeneralAction<any, any>>;
     onActionClick?: (actionId: string) => void;
+    // Warning: (ae-incompatible-release-tags) The symbol "state" is marked as @public, but its signature references "ListState" which is marked as @internal
     state: ListState<any>;
 }
 
-// @public (undocumented)
+// @public
 export type Unsubscribe = () => void;
 
-// @public
+// Warning: (ae-internal-missing-underscore) The name "updatePaginationMeta" should be prefixed with an underscore because the declaration is marked as @internal
+//
+// @internal
 export const updatePaginationMeta: (pagination: PaginationState, totalItems: number) => PaginationState;
 
-// @public
+// Warning: (ae-internal-missing-underscore) The name "useListCore" should be prefixed with an underscore because the declaration is marked as @internal
+//
+// @internal
 export const useListCore: <TRow = any, TRowId extends RowId = RowId>(config: ListConfig<TRow, TRowId>) => UseListCoreResult<TRow, TRowId>;
 
-// @public
+// Warning: (ae-internal-missing-underscore) The name "UseListCoreResult" should be prefixed with an underscore because the declaration is marked as @internal
+//
+// @internal
 export interface UseListCoreResult<TRow = any, TRowId extends RowId = RowId> {
     cancelActiveAction: () => void;
     clearSelection: () => void;
@@ -650,7 +677,5 @@ export interface UseListCoreResult<TRow = any, TRowId extends RowId = RowId> {
     triggerGeneralAction: (actionId: string) => Promise<void>;
     triggerRowAction: (actionId: string, rowIndex: number) => Promise<void>;
 }
-
-// (No @packageDocumentation comment for this package)
 
 ```

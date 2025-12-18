@@ -4,14 +4,17 @@
 
 ## ListModalOutlet variable
 
-Default modal outlet implementation.
-
-Supports: - Confirm modal (ModalConfig.type === "confirm")
-
-For custom modals (ModalConfig.type === "custom"), consumers are expected to override this component via the "ModalOutlet" slot and handle rendering themselves.
+Default modal outlet component for rendering action-triggered modals.
 
 **Signature:**
 
 ```typescript
 ListModalOutlet: React.FC<ModalOutletProps>
 ```
+
+## Remarks
+
+This component provides default modal rendering functionality for list actions. It supports: - Confirm modals (ModalConfig.type === "confirm") with customizable titles, descriptions, and button labels - Fallback handling for missing action configurations - Custom modal placeholders with instructions for consumer implementation
+
+For custom modals (ModalConfig.type === "custom"), consumers are expected to override this component via the "ModalOutlet" slot in the list configuration and handle rendering themselves.
+

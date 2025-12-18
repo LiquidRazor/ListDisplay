@@ -83,7 +83,7 @@ _(Optional)_ Callback invoked when a toolbar action is selected.
 
 </td><td>
 
-[ListState](./list-display.liststate.md)<!-- -->&lt;any&gt;
+ListState&lt;any&gt;
 
 
 </td><td>

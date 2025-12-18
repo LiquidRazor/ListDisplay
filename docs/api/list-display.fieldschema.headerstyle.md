@@ -4,7 +4,7 @@
 
 ## FieldSchema.headerStyle property
 
-Optional header cell style.
+Optional static style object for the header cell.
 
 **Signature:**
 

@@ -4,6 +4,8 @@
 
 ## StreamBootstrapResult interface
 
+Result object returned by the bootstrap function of a streaming data source. Contains optional initial data and metadata for the stream.
+
 **Signature:**
 
 ```typescript

@@ -4,6 +4,8 @@
 
 ## GeneralActionContext interface
 
+Context object provided to general action handlers that are not tied to a specific row. [ActionContextBase](./list-display.actioncontextbase.md)
+
 **Signature:**
 
 ```typescript

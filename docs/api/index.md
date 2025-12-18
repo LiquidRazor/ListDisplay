@@ -24,6 +24,8 @@ Description
 
 </td><td>
 
+Entry point exporting the ListDisplay React components, core hook, data source helpers, and supporting TypeScript types.
+
 
 </td></tr>
 </tbody></table>

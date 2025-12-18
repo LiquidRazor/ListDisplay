@@ -4,6 +4,8 @@
 
 ## ListActionBase.icon property
 
+Optional icon element to display alongside the label.
+
 **Signature:**
 
 ```typescript

@@ -4,6 +4,8 @@
 
 ## ConfirmModalProps.onConfirm property
 
+Callback function triggered when the confirm button is clicked, can be synchronous or asynchronous
+
 **Signature:**
 
 ```typescript

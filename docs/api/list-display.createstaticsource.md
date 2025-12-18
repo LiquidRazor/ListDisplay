@@ -4,7 +4,7 @@
 
 ## createStaticSource() function
 
-Creates a simple, static data source that just returns an initial snapshot of rows and does not stream patches.
+Creates a simple, static data source that returns an initial snapshot of rows without streaming updates or patches.
 
 **Signature:**
 
@@ -42,7 +42,7 @@ StaticSourceOptions&lt;TRow&gt;
 
 </td><td>
 
-_(Optional)_
+_(Optional)_ Configuration options for the static data source
 
 
 </td></tr>
@@ -51,4 +51,10 @@ _(Optional)_
 **Returns:**
 
 [DataSource](./list-display.datasource.md)<!-- -->&lt;TRow, TRowId&gt;
+
+A DataSource instance configured with the provided static data
+
+## Remarks
+
+This data source is ideal for static lists where data does not change after initialization. It provides all rows upfront during the `init` call and does not support real-time updates.
 

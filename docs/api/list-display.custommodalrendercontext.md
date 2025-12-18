@@ -4,7 +4,7 @@
 
 ## CustomModalRenderContext interface
 
-Context provided to a custom modal renderer. Extends general context and optionally carries row info.
+Context provided to a custom modal renderer. Extends general context and optionally carries row info. [GeneralActionContext](./list-display.generalactioncontext.md)
 
 **Signature:**
 

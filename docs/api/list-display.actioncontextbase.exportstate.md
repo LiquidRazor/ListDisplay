@@ -4,7 +4,7 @@
 
 ## ActionContextBase.exportState property
 
-Export a full snapshot of the current list state.
+Export a full snapshot of the current list state. [ListSnapshot](./list-display.listsnapshot.md)
 
 **Signature:**
 

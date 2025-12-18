@@ -4,6 +4,8 @@
 
 ## DataPatch type
 
+Discriminated union representing incremental data updates that can be applied to the list. - `replaceAll`<!-- -->: Replace all rows with a new set - `append`<!-- -->: Add a single new row - `update`<!-- -->: Update an existing row - `remove`<!-- -->: Remove a row by ID
+
 **Signature:**
 
 ```typescript

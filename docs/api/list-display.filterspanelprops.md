@@ -83,7 +83,7 @@ _(Optional)_ Handler to update the filter bag. The consumer should pass the next
 
 </td><td>
 
-[ListState](./list-display.liststate.md)<!-- -->&lt;any&gt;
+ListState&lt;any&gt;
 
 
 </td><td>

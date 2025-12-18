@@ -4,6 +4,8 @@
 
 ## RowAction interface
 
+Action that operates on a specific row in the list.
+
 **Signature:**
 
 ```typescript

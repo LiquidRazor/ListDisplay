@@ -1,3 +1,11 @@
+/**
+ * Core hook module that encapsulates the data-management logic for ListDisplay.
+ * This module provides the main `useListCore` hook which wires a data source,
+ * schema metadata, and optional actions into a cohesive state machine that can
+ * be consumed by UI components.
+ *
+ * @internal
+ */
 import { useCallback, useEffect, useMemo, useState, } from "react";
 import { applyFilters } from "./filters";
 import { applySorting } from "./sorting";
@@ -9,7 +17,20 @@ import { applyPatch } from "../dataSource";
 /* ─────────────────────────────
  * HELPERS
  * ───────────────────────────── */
+/**
+ * Default number of rows to display per page when pagination is enabled.
+ *
+ * @internal
+ */
 const DEFAULT_PAGE_SIZE = 25;
+/**
+ * Initializes the selection state based on the provided selection mode.
+ *
+ * @param mode - The selection mode to initialize (none, single, or multiple).
+ * @returns A new selection state object.
+ *
+ * @internal
+ */
 const initSelection = (mode) => createSelectionState(mode ?? "none");
 /**
  * Recomputes derived parts of the list state:
@@ -17,6 +38,17 @@ const initSelection = (mode) => createSelectionState(mode ?? "none");
  * - sorting
  * - pagination metadata
  * - visible rows
+ *
+ * This function applies filters, sorting, and pagination in sequence to produce
+ * the final set of visible rows. It is the core computation pipeline for the list.
+ *
+ * @typeParam TRow - The type of row data managed by the list.
+ * @param prevState - The previous list state to derive from.
+ * @param fields - Field schema definitions used for filtering and sorting.
+ * @param rawRowsOverride - Optional override for the raw rows array. If not provided, uses prevState.rawRows.
+ * @returns A new list state with updated derived properties.
+ *
+ * @internal
  */
 const recomputeDerived = (prevState, fields, rawRowsOverride) => {
     const rawRows = rawRowsOverride ?? prevState.rawRows;
@@ -48,6 +80,22 @@ const recomputeDerived = (prevState, fields, rawRowsOverride) => {
  * Core hook that encapsulates the data-management logic for ListDisplay. It
  * wires a {@link DataSource}, schema metadata, and optional actions into a
  * cohesive state machine that can be consumed by UI components.
+ *
+ * This hook manages:
+ * - Data loading from the data source
+ * - Real-time updates via data source subscriptions
+ * - Filtering, sorting, and pagination
+ * - Row selection
+ * - Action execution and modal flows
+ * - State snapshots and refresh
+ *
+ * @typeParam TRow - The type of row data managed by the list.
+ * @typeParam TRowId - The type of the unique identifier for each row.
+ *
+ * @param config - Configuration object containing data source, fields, actions, and initial state.
+ * @returns An object containing the current state and methods to interact with the list.
+ *
+ * @internal
  */
 export const useListCore = (config) => {
     const { dataSource, fields, idKey, generalActions, rowActions, initialFilters, initialPagination, initialSort, selectionMode, } = config;

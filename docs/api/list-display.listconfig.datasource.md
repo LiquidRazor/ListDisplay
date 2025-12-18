@@ -4,10 +4,15 @@
 
 ## ListConfig.dataSource property
 
-Data source adapter.
+Data source adapter that provides and manages the list data.
 
 **Signature:**
 
 ```typescript
 dataSource: DataSource<TRow, TRowId>;
 ```
+
+## Remarks
+
+The data source is responsible for loading, filtering, sorting, and paginating data. It must implement the [DataSource](./list-display.datasource.md) interface.
+

@@ -1,6 +1,17 @@
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 /**
- * Minimal sort bar: renders a dropdown of sortable fields.
+ * Renders a sort control bar for list tables.
+ *
+ * @remarks
+ * This component provides a minimal sort interface with a dropdown to select
+ * sortable fields and a direction toggle button. It only renders if the onChangeSort
+ * callback is provided and there are sortable fields available. The component
+ * automatically filters fields to show only those marked as sortable.
+ *
+ * @param props - The component props
+ * @returns A sort bar with field selector and direction toggle, or null if sorting is not available
+ *
+ * @internal
  */
 export const ListSortBar = ({ state, fields, onChangeSort, }) => {
     if (!onChangeSort) {

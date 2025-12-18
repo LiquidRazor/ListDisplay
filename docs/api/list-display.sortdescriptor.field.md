@@ -4,7 +4,7 @@
 
 ## SortDescriptor.field property
 
-Field id used to extract the sortable value from a row.
+Field id used to extract the sortable value from a row. Must be a valid key of the row type that can be converted to a string.
 
 **Signature:**
 

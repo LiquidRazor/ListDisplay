@@ -50,7 +50,7 @@ Description
 
 </td><td>
 
-Current selection mode.
+Current selection mode determining how rows can be selected.
 
 
 </td></tr>
@@ -69,7 +69,7 @@ TRowId\[\]
 
 </td><td>
 
-Identifiers for the selected rows.
+Array of identifiers for the currently selected rows.
 
 
 </td></tr>

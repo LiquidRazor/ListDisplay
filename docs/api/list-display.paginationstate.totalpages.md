@@ -4,10 +4,15 @@
 
 ## PaginationState.totalPages property
 
-Optional total number of pages inferred from .
+Optional total number of pages inferred from [PaginationState.totalItems](./list-display.paginationstate.totalitems.md) and [PaginationState.pageSize](./list-display.paginationstate.pagesize.md)<!-- -->.
 
 **Signature:**
 
 ```typescript
 totalPages?: number;
 ```
+
+## Remarks
+
+Calculated as `Math.ceil(totalItems / pageSize)` when both values are available. May be undefined when [PaginationState.totalItems](./list-display.paginationstate.totalitems.md) is not provided or when the total page count cannot be determined.
+

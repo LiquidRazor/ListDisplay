@@ -4,6 +4,8 @@
 
 ## ListActionBase.label property
 
+Display label for the action.
+
 **Signature:**
 
 ```typescript

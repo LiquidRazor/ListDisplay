@@ -11,3 +11,8 @@ Normalizes a raw value from the row into something that can be used for generic 
 ```typescript
 normalize?: (value: TValue, row: TRow) => string | number | boolean | null;
 ```
+
+## Remarks
+
+Used to transform complex field values into filterable primitives. For example, converting a date object to a timestamp or extracting a nested property value.
+

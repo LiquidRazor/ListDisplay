@@ -4,10 +4,15 @@
 
 ## ListConfig.generalActions property
 
-General (toolbar-level) actions.
+General (toolbar-level) actions that operate on the entire list or selected rows.
 
 **Signature:**
 
 ```typescript
 generalActions?: Array<GeneralAction<TRow, TRowId>>;
 ```
+
+## Remarks
+
+These actions typically appear in the list toolbar and can operate on the current selection or the entire dataset. Examples include bulk delete, export, or refresh. [GeneralAction](./list-display.generalaction.md)
+

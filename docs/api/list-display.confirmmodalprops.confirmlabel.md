@@ -4,6 +4,8 @@
 
 ## ConfirmModalProps.confirmLabel property
 
+Optional label for the confirm button, defaults to "Confirm"
+
 **Signature:**
 
 ```typescript

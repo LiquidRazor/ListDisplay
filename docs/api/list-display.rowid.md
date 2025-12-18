@@ -4,7 +4,7 @@
 
 ## RowId type
 
-Identifier type accepted by selection helpers.
+Identifier type accepted by selection helpers. Can be either a string or numeric value used to uniquely identify rows.
 
 **Signature:**
 

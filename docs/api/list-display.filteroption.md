@@ -12,6 +12,10 @@ Option used by select-based filters.
 export interface FilterOption 
 ```
 
+## Remarks
+
+Used by select and multiSelect filter types to provide predefined choices.
+
 ## Properties
 
 <table><thead><tr><th>

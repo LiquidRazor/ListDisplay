@@ -83,7 +83,7 @@ _(Optional)_ Handler invoked when the user selects a new field to sort by.
 
 </td><td>
 
-[ListState](./list-display.liststate.md)<!-- -->&lt;any&gt;
+ListState&lt;any&gt;
 
 
 </td><td>

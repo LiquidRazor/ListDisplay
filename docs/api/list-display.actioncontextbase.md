@@ -4,6 +4,8 @@
 
 ## ActionContextBase interface
 
+Base context object provided to all action handlers, containing the current list state and mutation methods.
+
 **Signature:**
 
 ```typescript
@@ -48,7 +50,7 @@ Description
 
 </td><td>
 
-Export a full snapshot of the current list state.
+Export a full snapshot of the current list state. [ListSnapshot](./list-display.listsnapshot.md)
 
 
 </td></tr>
@@ -67,6 +69,8 @@ Export a full snapshot of the current list state.
 
 </td><td>
 
+The current active filter state, containing all applied filters. [ActiveFilterState](./list-display.activefilterstate.md)
+
 
 </td></tr>
 <tr><td>
@@ -83,6 +87,8 @@ Export a full snapshot of the current list state.
 
 
 </td><td>
+
+The current pagination state, including page size and current page. [PaginationState](./list-display.paginationstate.md)
 
 
 </td></tr>
@@ -139,6 +145,8 @@ All rows managed by the list (after data source + local mutations).
 
 </td><td>
 
+The current row selection state, tracking which rows are selected. [SelectionState](./list-display.selectionstate.md)
+
 
 </td></tr>
 <tr><td>
@@ -156,7 +164,7 @@ All rows managed by the list (after data source + local mutations).
 
 </td><td>
 
-_(Optional)_
+_(Optional)_ The current sort configuration, if any sorting is applied. [SortDescriptor](./list-display.sortdescriptor.md)
 
 
 </td></tr>
@@ -175,7 +183,7 @@ _(Optional)_
 
 </td><td>
 
-Primary way for actions to mutate the list.
+Primary way for actions to mutate the list. Pass an updater function that receives the current rows and returns the new rows array.
 
 
 </td></tr>

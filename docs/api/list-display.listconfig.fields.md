@@ -4,10 +4,15 @@
 
 ## ListConfig.fields property
 
-Column definitions.
+Column definitions that specify which fields to display and how to render them.
 
 **Signature:**
 
 ```typescript
 fields: Array<FieldSchema<TRow>>;
 ```
+
+## Remarks
+
+Each field schema defines a column in the list, including its accessor, label, rendering behavior, and whether it supports filtering or sorting. [FieldSchema](./list-display.fieldschema.md)
+

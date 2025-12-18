@@ -4,6 +4,8 @@
 
 ## ListActionBase.kind property
 
+Visual style variant for the action button [ActionKind](./list-display.actionkind.md)<!-- -->.
+
 **Signature:**
 
 ```typescript

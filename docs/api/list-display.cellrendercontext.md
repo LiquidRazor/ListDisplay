@@ -4,6 +4,8 @@
 
 ## CellRenderContext interface
 
+Context object passed to custom cell renderers.
+
 **Signature:**
 
 ```typescript
@@ -48,6 +50,8 @@ boolean
 
 </td><td>
 
+Whether the row is currently selected.
+
 
 </td></tr>
 <tr><td>
@@ -64,6 +68,8 @@ number
 
 
 </td><td>
+
+The index of the row in the visible rows array.
 
 
 </td></tr>

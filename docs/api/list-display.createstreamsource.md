@@ -4,7 +4,9 @@
 
 ## createStreamSource() function
 
-Creates a streaming data source (e.g. SSE, WebSocket, RTSK, NDJSON).
+Creates a streaming data source for real-time data updates.
+
+Supports various streaming protocols including Server-Sent Events (SSE), WebSockets, RTSK, NDJSON, and other push-based data delivery mechanisms. The source can optionally bootstrap with initial data and continuously receive updates via patches.
 
 **Signature:**
 
@@ -42,6 +44,8 @@ options
 
 </td><td>
 
+Configuration options for the streaming data source
+
 
 </td></tr>
 </tbody></table>
@@ -49,4 +53,6 @@ options
 **Returns:**
 
 [DataSource](./list-display.datasource.md)<!-- -->&lt;TRow, TRowId&gt;
+
+A DataSource object that manages the streaming connection and data updates
 

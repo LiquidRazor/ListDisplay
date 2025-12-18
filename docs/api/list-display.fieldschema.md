@@ -4,7 +4,7 @@
 
 ## FieldSchema interface
 
-Column/field definition for the list.
+Column/field definition for the list, describing how a field should be displayed and behave.
 
 **Signature:**
 
@@ -50,7 +50,7 @@ Description
 
 </td><td>
 
-_(Optional)_ Text / cell alignment.
+_(Optional)_ Text and cell content alignment. [FieldAlign](./list-display.fieldalign.md)
 
 
 </td></tr>
@@ -69,7 +69,7 @@ _(Optional)_ Text / cell alignment.
 
 </td><td>
 
-_(Optional)_ Optional custom renderer for the cell.
+_(Optional)_ Optional custom renderer for the cell content. Receives the row, extracted value, and render context. [CellRenderContext](./list-display.cellrendercontext.md)
 
 
 </td></tr>
@@ -88,7 +88,7 @@ _(Optional)_ Optional custom renderer for the cell.
 
 </td><td>
 
-_(Optional)_ Dynamic style for the cell (e.g. based on status).
+_(Optional)_ Dynamic style function for the cell, allowing conditional styling based on row data and value.
 
 
 </td></tr>
@@ -107,7 +107,7 @@ _(Optional)_ Dynamic style for the cell (e.g. based on status).
 
 </td><td>
 
-_(Optional)_ Filter configuration for this column.
+_(Optional)_ Filter configuration for this column, enabling filtering capabilities. [FieldFilterConfig](./list-display.fieldfilterconfig.md)
 
 
 </td></tr>
@@ -126,7 +126,7 @@ CSSProperties
 
 </td><td>
 
-_(Optional)_ Optional header cell style.
+_(Optional)_ Optional static style object for the header cell.
 
 
 </td></tr>
@@ -145,7 +145,7 @@ keyof TRow &amp; string
 
 </td><td>
 
-Property name on the row object.
+Property name on the row object. Must be a valid key of the row type.
 
 
 </td></tr>
@@ -164,7 +164,7 @@ string
 
 </td><td>
 
-Label shown in the header.
+Label shown in the header column.
 
 
 </td></tr>
@@ -183,7 +183,7 @@ number \| string
 
 </td><td>
 
-_(Optional)_ Minimum width for the column.
+_(Optional)_ Minimum width for the column (can be pixels, percentage, or other CSS units).
 
 
 </td></tr>
@@ -202,7 +202,7 @@ boolean
 
 </td><td>
 
-_(Optional)_ Whether the column can be sorted.
+_(Optional)_ Whether the column can be sorted. When true, enables sort interaction on the column header.
 
 
 </td></tr>
@@ -221,7 +221,7 @@ number \| string
 
 </td><td>
 
-_(Optional)_ Preferred width (px, %, etc).
+_(Optional)_ Preferred width for the column (can be pixels, percentage, or other CSS units).
 
 
 </td></tr>

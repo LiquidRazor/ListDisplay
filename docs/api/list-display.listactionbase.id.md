@@ -4,6 +4,8 @@
 
 ## ListActionBase.id property
 
+Unique identifier for this action.
+
 **Signature:**
 
 ```typescript

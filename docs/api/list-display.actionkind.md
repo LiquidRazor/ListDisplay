@@ -4,6 +4,8 @@
 
 ## ActionKind type
 
+Visual style variants available for list actions.
+
 **Signature:**
 
 ```typescript

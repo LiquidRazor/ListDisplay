@@ -102,7 +102,6 @@ export interface ListConfig<TRow = any, TRowId = RowId> {
    * @remarks
    * Controls whether users can select no rows, a single row, or multiple rows.
    * This affects the rendering of selection UI elements like checkboxes or radio buttons.
-   * {@link SelectionMode}
    */
   selectionMode?: SelectionMode;
 

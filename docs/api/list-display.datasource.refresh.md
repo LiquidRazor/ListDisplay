@@ -4,7 +4,7 @@
 
 ## DataSource.refresh property
 
-Optional refresh hook (refetch / reload).
+Optional refresh hook to manually trigger a data reload or refetch.
 
 **Signature:**
 

@@ -4,7 +4,7 @@
 
 ## FieldSchema.label property
 
-Label shown in the header.
+Label shown in the header column.
 
 **Signature:**
 

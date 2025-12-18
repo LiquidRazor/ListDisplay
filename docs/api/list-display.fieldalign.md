@@ -4,6 +4,8 @@
 
 ## FieldAlign type
 
+Text alignment options for field cells and headers.
+
 **Signature:**
 
 ```typescript

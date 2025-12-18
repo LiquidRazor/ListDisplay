@@ -4,6 +4,8 @@
 
 ## ListSnapshot.sort property
 
+The current sort configuration, if any sorting is applied. [SortDescriptor](./list-display.sortdescriptor.md)
+
 **Signature:**
 
 ```typescript

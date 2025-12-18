@@ -4,6 +4,8 @@
 
 ## DataSourceInitResult.status property
 
+Optional status indicator for the list state.
+
 **Signature:**
 
 ```typescript

@@ -27,7 +27,6 @@ export interface DataSourceInitResult<TRow = any> {
   totalCount?: number;
   /**
    * Optional status indicator for the list state.
-   * {@link ListStatus}
    */
   status?: ListStatus;
 }

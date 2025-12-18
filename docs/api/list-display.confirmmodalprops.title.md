@@ -4,6 +4,8 @@
 
 ## ConfirmModalProps.title property
 
+The title text displayed in the modal header
+
 **Signature:**
 
 ```typescript

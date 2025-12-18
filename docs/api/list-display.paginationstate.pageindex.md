@@ -11,3 +11,8 @@ Zero-based index of the current page.
 ```typescript
 pageIndex: number;
 ```
+
+## Remarks
+
+The first page is represented by index 0. This value is used to calculate which subset of rows should be displayed when pagination is enabled.
+

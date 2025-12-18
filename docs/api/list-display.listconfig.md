@@ -4,13 +4,17 @@
 
 ## ListConfig interface
 
-Public configuration accepted by ListDisplay.
+Public configuration accepted by ListDisplay component.
 
 **Signature:**
 
 ```typescript
 export interface ListConfig<TRow = any, TRowId = RowId> 
 ```
+
+## Remarks
+
+This interface defines all configuration options for creating a ListDisplay instance, including data source, field definitions, actions, filtering, sorting, pagination, selection behavior, and UI component customization.
 
 ## Properties
 
@@ -50,7 +54,7 @@ Description
 
 </td><td>
 
-_(Optional)_ Overridable UI components (slots).
+_(Optional)_ Overridable UI components (slots) for customizing the list appearance.
 
 
 </td></tr>
@@ -69,7 +73,7 @@ _(Optional)_ Overridable UI components (slots).
 
 </td><td>
 
-_(Optional)_ Optional props passed to slot components.
+_(Optional)_ Optional props passed to slot components for additional customization.
 
 
 </td></tr>
@@ -88,7 +92,7 @@ _(Optional)_ Optional props passed to slot components.
 
 </td><td>
 
-Data source adapter.
+Data source adapter that provides and manages the list data.
 
 
 </td></tr>
@@ -107,7 +111,7 @@ Array&lt;[FieldSchema](./list-display.fieldschema.md)<!-- -->&lt;TRow&gt;&gt;
 
 </td><td>
 
-Column definitions.
+Column definitions that specify which fields to display and how to render them.
 
 
 </td></tr>
@@ -126,7 +130,7 @@ Array&lt;[GeneralAction](./list-display.generalaction.md)<!-- -->&lt;TRow, TRowI
 
 </td><td>
 
-_(Optional)_ General (toolbar-level) actions.
+_(Optional)_ General (toolbar-level) actions that operate on the entire list or selected rows.
 
 
 </td></tr>
@@ -145,7 +149,7 @@ keyof TRow &amp; string
 
 </td><td>
 
-Property name on TRow used as identifier.
+Property name on TRow that serves as the unique identifier for each row.
 
 
 </td></tr>
@@ -164,7 +168,7 @@ Property name on TRow used as identifier.
 
 </td><td>
 
-_(Optional)_ Initial filters map.
+_(Optional)_ Initial filters to apply when the list is first rendered.
 
 
 </td></tr>
@@ -183,7 +187,7 @@ _(Optional)_ Initial filters map.
 
 </td><td>
 
-_(Optional)_ Initial pagination state.
+_(Optional)_ Initial pagination state including page size and starting page.
 
 
 </td></tr>
@@ -202,7 +206,7 @@ _(Optional)_ Initial pagination state.
 
 </td><td>
 
-_(Optional)_ Initial sort descriptor.
+_(Optional)_ Initial sort configuration to apply when the list is first rendered.
 
 
 </td></tr>
@@ -221,7 +225,7 @@ Array&lt;[RowAction](./list-display.rowaction.md)<!-- -->&lt;TRow, TRowId&gt;&gt
 
 </td><td>
 
-_(Optional)_ Row-level actions.
+_(Optional)_ Row-level actions that operate on individual rows.
 
 
 </td></tr>
@@ -240,7 +244,7 @@ _(Optional)_ Row-level actions.
 
 </td><td>
 
-_(Optional)_ Selection mode for the list.
+_(Optional)_ Selection mode that determines how rows can be selected in the list.
 
 
 </td></tr>

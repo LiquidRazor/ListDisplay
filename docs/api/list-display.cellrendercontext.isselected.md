@@ -4,6 +4,8 @@
 
 ## CellRenderContext.isSelected property
 
+Whether the row is currently selected.
+
 **Signature:**
 
 ```typescript

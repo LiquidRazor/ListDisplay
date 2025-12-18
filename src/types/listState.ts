@@ -45,7 +45,6 @@ export interface ListState<TRow = any> {
 
   /**
    * The current operational status of the list (idle, loading, error, etc.).
-   * {@link ListStatus}
    */
   status: ListStatus;
 

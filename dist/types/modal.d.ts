@@ -3,6 +3,7 @@ import type { GeneralActionContext } from "./actionContext";
 /**
  * Configuration for the built-in confirmation modal used by actions that need
  * a simple yes/no flow.
+ * @public
  */
 export interface ConfirmModalConfig {
     /** Discriminator indicating a confirm modal. */
@@ -19,6 +20,8 @@ export interface ConfirmModalConfig {
 /**
  * Context provided to a custom modal renderer.
  * Extends general context and optionally carries row info.
+ * {@link GeneralActionContext}
+ * @public
  */
 export interface CustomModalRenderContext<TRow = any, TRowId = string | number> extends GeneralActionContext<TRow, TRowId> {
     row?: TRow;
@@ -36,6 +39,7 @@ export interface CustomModalRenderContext<TRow = any, TRowId = string | number> 
 /**
  * Configuration for a user-supplied modal renderer, allowing bespoke flows
  * while still participating in the ListDisplay action lifecycle.
+ * @public
  */
 export interface CustomModalConfig<TRow = any, TRowId = string | number> {
     /** Discriminator indicating a custom modal. */
@@ -48,6 +52,8 @@ export interface CustomModalConfig<TRow = any, TRowId = string | number> {
 }
 /**
  * Union describing the supported modal configurations for actions.
+ * {@link ConfirmModalConfig} | {@link CustomModalConfig}
+ * @public
  */
 export type ModalConfig<TRow = any, TRowId = string | number> = ConfirmModalConfig | CustomModalConfig<TRow, TRowId>;
 //# sourceMappingURL=modal.d.ts.map

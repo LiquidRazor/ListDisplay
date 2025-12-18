@@ -4,10 +4,15 @@
 
 ## ListConfig.idKey property
 
-Property name on TRow used as identifier.
+Property name on TRow that serves as the unique identifier for each row.
 
 **Signature:**
 
 ```typescript
 idKey: keyof TRow & string;
 ```
+
+## Remarks
+
+This key is used for row selection, tracking, and uniquely identifying rows in operations like updates and deletions.
+

@@ -4,10 +4,15 @@
 
 ## ListConfig.initialSort property
 
-Initial sort descriptor.
+Initial sort configuration to apply when the list is first rendered.
 
 **Signature:**
 
 ```typescript
 initialSort?: SortDescriptor<TRow>;
 ```
+
+## Remarks
+
+Defines which field to sort by and the sort direction (ascending or descending). Users can change the sort order through the UI. [SortDescriptor](./list-display.sortdescriptor.md)
+

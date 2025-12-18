@@ -13,3 +13,7 @@ export type ListDisplayProps = ListConfig<any, any>;
 ```
 **References:** [ListConfig](./list-display.listconfig.md)
 
+## Remarks
+
+This type is a direct alias to [ListConfig](./list-display.listconfig.md) with generic parameters set to `any`<!-- -->. It allows the list to work with any row type and row ID type. Consumers should provide appropriate configuration including data source, field schemas, actions, and optional component overrides.
+

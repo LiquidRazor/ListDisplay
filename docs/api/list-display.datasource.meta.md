@@ -4,6 +4,8 @@
 
 ## DataSource.meta property
 
+Metadata describing this data source. [DataSourceMeta](./list-display.datasourcemeta.md)
+
 **Signature:**
 
 ```typescript

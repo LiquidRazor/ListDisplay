@@ -4,6 +4,8 @@
 
 ## RowActionContext.row property
 
+The specific row this action is operating on.
+
 **Signature:**
 
 ```typescript

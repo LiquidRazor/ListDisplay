@@ -4,10 +4,15 @@
 
 ## PaginationState.totalItems property
 
-Optional total number of items available.
+Optional total number of items available across all pages.
 
 **Signature:**
 
 ```typescript
 totalItems?: number;
 ```
+
+## Remarks
+
+When provided, this value is used to calculate [PaginationState.totalPages](./list-display.paginationstate.totalpages.md) and enable UI features like page count display or jump-to-page controls. May be undefined when the total count is not yet known or not applicable.
+

@@ -4,7 +4,7 @@
 
 ## FieldSchema.cellStyle property
 
-Dynamic style for the cell (e.g. based on status).
+Dynamic style function for the cell, allowing conditional styling based on row data and value.
 
 **Signature:**
 

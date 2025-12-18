@@ -4,6 +4,8 @@
 
 ## QuerySourceOptions interface
 
+Configuration options for creating a query-based data source.
+
 **Signature:**
 
 ```typescript

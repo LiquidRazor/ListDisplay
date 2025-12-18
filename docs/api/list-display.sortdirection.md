@@ -4,7 +4,7 @@
 
 ## SortDirection type
 
-Direction used when sorting rows.
+Direction used when sorting rows. - `"asc"` - Ascending order (A-Z, 0-9, oldest to newest) - `"desc"` - Descending order (Z-A, 9-0, newest to oldest)
 
 **Signature:**
 

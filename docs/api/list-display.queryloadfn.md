@@ -4,6 +4,8 @@
 
 ## QueryLoadFn type
 
+Function type for loading data from a query source.
+
 **Signature:**
 
 ```typescript

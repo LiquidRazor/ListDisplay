@@ -4,7 +4,7 @@
 
 ## FieldSchema.width property
 
-Preferred width (px, %, etc).
+Preferred width for the column (can be pixels, percentage, or other CSS units).
 
 **Signature:**
 

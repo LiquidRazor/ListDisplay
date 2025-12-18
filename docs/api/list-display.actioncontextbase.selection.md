@@ -4,6 +4,8 @@
 
 ## ActionContextBase.selection property
 
+The current row selection state, tracking which rows are selected. [SelectionState](./list-display.selectionstate.md)
+
 **Signature:**
 
 ```typescript

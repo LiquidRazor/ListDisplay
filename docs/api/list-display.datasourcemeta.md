@@ -4,6 +4,8 @@
 
 ## DataSourceMeta interface
 
+Metadata describing a data source's characteristics.
+
 **Signature:**
 
 ```typescript
@@ -48,6 +50,8 @@ Description
 
 </td><td>
 
+The kind of data source. [DataSourceKind](./list-display.datasourcekind.md)
+
 
 </td></tr>
 <tr><td>
@@ -65,7 +69,7 @@ string
 
 </td><td>
 
-_(Optional)_
+_(Optional)_ Optional human-readable label for the data source.
 
 
 </td></tr>

@@ -4,6 +4,8 @@
 
 ## list-display package
 
+Entry point exporting the ListDisplay React components, core hook, data source helpers, and supporting TypeScript types.
+
 ## Functions
 
 <table><thead><tr><th>
@@ -19,136 +21,12 @@ Description
 </th></tr></thead>
 <tbody><tr><td>
 
-[applyFilters(rows, ctx)](./list-display.applyfilters.md)
-
-
-</td><td>
-
-Applies filters to a list of rows and returns the filtered array.
-
-
-</td></tr>
-<tr><td>
-
-[applyPagination(rows, pagination)](./list-display.applypagination.md)
-
-
-</td><td>
-
-Slices the rows according to the pagination state.
-
-
-</td></tr>
-<tr><td>
-
-[applyPatch(rows, patch, idKey)](./list-display.applypatch.md)
-
-
-</td><td>
-
-Applies a single data patch to the current list of rows.
-
-
-</td></tr>
-<tr><td>
-
-[applyPatches(rows, patches, idKey)](./list-display.applypatches.md)
-
-
-</td><td>
-
-Applies a list of patches in order.
-
-
-</td></tr>
-<tr><td>
-
-[applySorting(rows, ctx)](./list-display.applysorting.md)
-
-
-</td><td>
-
-Applies sorting to a list of rows.
-
-
-</td></tr>
-<tr><td>
-
-[buildFilterPredicate(ctx)](./list-display.buildfilterpredicate.md)
-
-
-</td><td>
-
-Builds a predicate that evaluates whether a row passes all active filters.
-
-
-</td></tr>
-<tr><td>
-
-[buildSnapshot(state)](./list-display.buildsnapshot.md)
-
-
-</td><td>
-
-Builds an immutable snapshot of the current list state.
-
-
-</td></tr>
-<tr><td>
-
-[clearActiveAction(prev)](./list-display.clearactiveaction.md)
-
-
-</td><td>
-
-
-</td></tr>
-<tr><td>
-
-[clearSelection(selection)](./list-display.clearselection.md)
-
-
-</td><td>
-
-
-</td></tr>
-<tr><td>
-
-[closeModal(prev)](./list-display.closemodal.md)
-
-
-</td><td>
-
-
-</td></tr>
-<tr><td>
-
-[createInitialUiState()](./list-display.createinitialuistate.md)
-
-
-</td><td>
-
-
-</td></tr>
-<tr><td>
-
 [createQuerySource(options)](./list-display.createquerysource.md)
 
 
 </td><td>
 
-Creates a query-based data source (single-shot load + optional refresh).
-
-
-</td></tr>
-<tr><td>
-
-[createSelectionState(mode)](./list-display.createselectionstate.md)
-
-
-</td><td>
-
-Initializes a selection state.
+Creates a query-based data source with single-shot load and optional refresh capability.
 
 
 </td></tr>
@@ -159,7 +37,7 @@ Initializes a selection state.
 
 </td><td>
 
-Creates a simple, static data source that just returns an initial snapshot of rows and does not stream patches.
+Creates a simple, static data source that returns an initial snapshot of rows without streaming updates or patches.
 
 
 </td></tr>
@@ -170,85 +48,9 @@ Creates a simple, static data source that just returns an initial snapshot of ro
 
 </td><td>
 
-Creates a streaming data source (e.g. SSE, WebSocket, RTSK, NDJSON).
+Creates a streaming data source for real-time data updates.
 
-
-</td></tr>
-<tr><td>
-
-[getRowId(row, idKey)](./list-display.getrowid.md)
-
-
-</td><td>
-
-Extracts the id from a row based on the configured idKey.
-
-
-</td></tr>
-<tr><td>
-
-[isRowSelected(row, selection, ctx)](./list-display.isrowselected.md)
-
-
-</td><td>
-
-
-</td></tr>
-<tr><td>
-
-[ListHeader({ fields, hasRowActions, })](./list-display.listheader.md)
-
-
-</td><td>
-
-
-</td></tr>
-<tr><td>
-
-[openModalForAction(prev, actionId, type, rowId)](./list-display.openmodalforaction.md)
-
-
-</td><td>
-
-
-</td></tr>
-<tr><td>
-
-[selectAllVisible(visibleRows, selection, ctx)](./list-display.selectallvisible.md)
-
-
-</td><td>
-
-
-</td></tr>
-<tr><td>
-
-[toggleRowSelection(row, selection, ctx)](./list-display.togglerowselection.md)
-
-
-</td><td>
-
-
-</td></tr>
-<tr><td>
-
-[updatePaginationMeta(pagination, totalItems)](./list-display.updatepaginationmeta.md)
-
-
-</td><td>
-
-Recomputes pagination metadata based on the current rows.
-
-
-</td></tr>
-<tr><td>
-
-[useListCore(config)](./list-display.uselistcore.md)
-
-
-</td><td>
-
-Core hook that encapsulates the data-management logic for ListDisplay. It wires a [DataSource](./list-display.datasource.md)<!-- -->, schema metadata, and optional actions into a cohesive state machine that can be consumed by UI components.
+Supports various streaming protocols including Server-Sent Events (SSE), WebSockets, RTSK, NDJSON, and other push-based data delivery mechanisms. The source can optionally bootstrap with initial data and continuously receive updates via patches.
 
 
 </td></tr>
@@ -274,16 +76,7 @@ Description
 
 </td><td>
 
-
-</td></tr>
-<tr><td>
-
-[ActiveActionState](./list-display.activeactionstate.md)
-
-
-</td><td>
-
-Tracks which action is currently active in the UI, optionally tied to a row.
+Base context object provided to all action handlers, containing the current list state and mutation methods.
 
 
 </td></tr>
@@ -293,6 +86,8 @@ Tracks which action is currently active in the UI, optionally tied to a row.
 
 
 </td><td>
+
+Context object passed to custom cell renderers.
 
 
 </td></tr>
@@ -314,6 +109,8 @@ Configuration for the built-in confirmation modal used by actions that need a si
 
 </td><td>
 
+Props for the ConfirmModal component.
+
 
 </td></tr>
 <tr><td>
@@ -334,7 +131,7 @@ Configuration for a user-supplied modal renderer, allowing bespoke flows while s
 
 </td><td>
 
-Context provided to a custom modal renderer. Extends general context and optionally carries row info.
+Context provided to a custom modal renderer. Extends general context and optionally carries row info. [GeneralActionContext](./list-display.generalactioncontext.md)
 
 
 </td></tr>
@@ -345,7 +142,7 @@ Context provided to a custom modal renderer. Extends general context and optiona
 
 </td><td>
 
-Generic, technology-agnostic data source contract. Wraps parent-provided data, streams, queries etc.
+Generic, technology-agnostic data source contract. Wraps parent-provided data, streams, queries etc. This interface abstracts away the underlying data fetching mechanism, allowing the list component to work with static data, real-time streams, REST APIs, GraphQL queries, and more.
 
 
 </td></tr>
@@ -356,6 +153,8 @@ Generic, technology-agnostic data source contract. Wraps parent-provided data, s
 
 </td><td>
 
+Result object returned by the data source's initial load operation.
+
 
 </td></tr>
 <tr><td>
@@ -364,6 +163,8 @@ Generic, technology-agnostic data source contract. Wraps parent-provided data, s
 
 
 </td><td>
+
+Metadata describing a data source's characteristics.
 
 
 </td></tr>
@@ -385,16 +186,7 @@ Per-field filter configuration.
 
 </td><td>
 
-Column/field definition for the list.
-
-
-</td></tr>
-<tr><td>
-
-[FilterContext](./list-display.filtercontext.md)
-
-
-</td><td>
+Column/field definition for the list, describing how a field should be displayed and behave.
 
 
 </td></tr>
@@ -427,6 +219,8 @@ Props for the filters panel slot. This component is expected to surface controls
 
 </td><td>
 
+Action that operates on the entire list or selected rows, not tied to a specific row.
+
 
 </td></tr>
 <tr><td>
@@ -435,6 +229,8 @@ Props for the filters panel slot. This component is expected to surface controls
 
 
 </td><td>
+
+Context object provided to general action handlers that are not tied to a specific row. [ActionContextBase](./list-display.actioncontextbase.md)
 
 
 </td></tr>
@@ -445,23 +241,7 @@ Props for the filters panel slot. This component is expected to surface controls
 
 </td><td>
 
-
-</td></tr>
-<tr><td>
-
-[ListBodyProps](./list-display.listbodyprops.md)
-
-
-</td><td>
-
-
-</td></tr>
-<tr><td>
-
-[ListCellProps](./list-display.listcellprops.md)
-
-
-</td><td>
+Base interface for all list actions, defining common properties like label, icon, and modal configuration.
 
 
 </td></tr>
@@ -483,34 +263,7 @@ Mapping of overridable UI components ("slots"). Relaxed typing here since you co
 
 </td><td>
 
-Public configuration accepted by ListDisplay.
-
-
-</td></tr>
-<tr><td>
-
-[ListContainerProps](./list-display.listcontainerprops.md)
-
-
-</td><td>
-
-
-</td></tr>
-<tr><td>
-
-[ListHeaderProps](./list-display.listheaderprops.md)
-
-
-</td><td>
-
-
-</td></tr>
-<tr><td>
-
-[ListRowProps](./list-display.listrowprops.md)
-
-
-</td><td>
+Public configuration accepted by ListDisplay component.
 
 
 </td></tr>
@@ -527,45 +280,12 @@ Exported snapshot of the list, meant to be consumed by the parent only on demand
 </td></tr>
 <tr><td>
 
-[ListState](./list-display.liststate.md)
-
-
-</td><td>
-
-Full internal state of the list.
-
-
-</td></tr>
-<tr><td>
-
-[ListUiState](./list-display.listuistate.md)
-
-
-</td><td>
-
-UI-specific state (separate from data state).
-
-
-</td></tr>
-<tr><td>
-
 [ModalOutletProps](./list-display.modaloutletprops.md)
 
 
 </td><td>
 
 Props forwarded to the modal outlet slot which orchestrates confirmation or custom modals associated with actions.
-
-
-</td></tr>
-<tr><td>
-
-[ModalState](./list-display.modalstate.md)
-
-
-</td><td>
-
-State for the modal experience tied to actions.
 
 
 </td></tr>
@@ -598,6 +318,8 @@ Pagination metadata describing both the current paging parameters and the total 
 
 </td><td>
 
+Result object returned by a query load function.
+
 
 </td></tr>
 <tr><td>
@@ -606,6 +328,8 @@ Pagination metadata describing both the current paging parameters and the total 
 
 
 </td><td>
+
+Configuration options for creating a query-based data source.
 
 
 </td></tr>
@@ -616,6 +340,8 @@ Pagination metadata describing both the current paging parameters and the total 
 
 </td><td>
 
+Action that operates on a specific row in the list.
+
 
 </td></tr>
 <tr><td>
@@ -625,14 +351,7 @@ Pagination metadata describing both the current paging parameters and the total 
 
 </td><td>
 
-
-</td></tr>
-<tr><td>
-
-[SelectionContext](./list-display.selectioncontext.md)
-
-
-</td><td>
+Context object provided to row-specific action handlers, including the specific row being operated on. [ActionContextBase](./list-display.actioncontextbase.md)
 
 
 </td></tr>
@@ -665,16 +384,7 @@ Props for the sort bar slot. This surface exposes the fields that can be sorted 
 
 </td><td>
 
-Describes the active sort configuration for the list.
-
-
-</td></tr>
-<tr><td>
-
-[SortingContext](./list-display.sortingcontext.md)
-
-
-</td><td>
+Describes the active sort configuration for the list. Specifies which field to sort by and in which direction.
 
 
 </td></tr>
@@ -696,6 +406,8 @@ Minimal props shared by the various status state components such as loading, emp
 
 </td><td>
 
+Result object returned by the bootstrap function of a streaming data source. Contains optional initial data and metadata for the stream.
+
 
 </td></tr>
 <tr><td>
@@ -704,6 +416,8 @@ Minimal props shared by the various status state components such as loading, emp
 
 
 </td><td>
+
+Configuration options for creating a streaming data source. Defines how to bootstrap, subscribe to, refresh, and destroy a streaming connection.
 
 
 </td></tr>
@@ -729,17 +443,6 @@ Props passed to the toolbar slot component. This surface focuses on triggering l
 
 
 </td></tr>
-<tr><td>
-
-[UseListCoreResult](./list-display.uselistcoreresult.md)
-
-
-</td><td>
-
-Contract returned by [useListCore()](./list-display.uselistcore.md)<!-- -->. It aggregates the current list state as well as callbacks to mutate filters, sorting, pagination, and selection. Action-oriented handlers are also exposed to keep the UI layer thin and declarative.
-
-
-</td></tr>
 </tbody></table>
 
 ## Variables
@@ -762,36 +465,7 @@ Description
 
 </td><td>
 
-Very small, unstyled confirm modal. Styling is left to consumer via CSS classes.
-
-
-</td></tr>
-<tr><td>
-
-[ListBody](./list-display.listbody.md)
-
-
-</td><td>
-
-
-</td></tr>
-<tr><td>
-
-[ListCell](./list-display.listcell.md)
-
-
-</td><td>
-
-
-</td></tr>
-<tr><td>
-
-[ListContainer](./list-display.listcontainer.md)
-
-
-</td><td>
-
-Basic container for the list layout.
+Renders a confirmation modal dialog with customizable content and actions.
 
 
 </td></tr>
@@ -808,107 +482,12 @@ High-level component that renders the entire ListDisplay experience using the co
 </td></tr>
 <tr><td>
 
-[ListEmptyState](./list-display.listemptystate.md)
-
-
-</td><td>
-
-
-</td></tr>
-<tr><td>
-
-[ListErrorState](./list-display.listerrorstate.md)
-
-
-</td><td>
-
-
-</td></tr>
-<tr><td>
-
-[ListFiltersPanel](./list-display.listfilterspanel.md)
-
-
-</td><td>
-
-Minimal filters panel (placeholder).
-
-
-</td></tr>
-<tr><td>
-
-[ListLoadingState](./list-display.listloadingstate.md)
-
-
-</td><td>
-
-
-</td></tr>
-<tr><td>
-
 [ListModalOutlet](./list-display.listmodaloutlet.md)
 
 
 </td><td>
 
-Default modal outlet implementation.
-
-Supports: - Confirm modal (ModalConfig.type === "confirm")
-
-For custom modals (ModalConfig.type === "custom"), consumers are expected to override this component via the "ModalOutlet" slot and handle rendering themselves.
-
-
-</td></tr>
-<tr><td>
-
-[ListPagination](./list-display.listpagination.md)
-
-
-</td><td>
-
-Basic pagination controls.
-
-
-</td></tr>
-<tr><td>
-
-[ListRow](./list-display.listrow.md)
-
-
-</td><td>
-
-
-</td></tr>
-<tr><td>
-
-[ListSortBar](./list-display.listsortbar.md)
-
-
-</td><td>
-
-Minimal sort bar: renders a dropdown of sortable fields.
-
-
-</td></tr>
-<tr><td>
-
-[ListTable](./list-display.listtable.md)
-
-
-</td><td>
-
-Default table layout for the list.
-
-
-</td></tr>
-<tr><td>
-
-[ListToolbar](./list-display.listtoolbar.md)
-
-
-</td><td>
-
-Default toolbar: renders general actions as buttons.
+Default modal outlet component for rendering action-triggered modals.
 
 
 </td></tr>
@@ -934,6 +513,8 @@ Description
 
 </td><td>
 
+Visual style variants available for list actions.
+
 
 </td></tr>
 <tr><td>
@@ -954,6 +535,8 @@ Active filters at list level. Keyed by field id (or custom logical id).
 
 </td><td>
 
+Discriminated union representing incremental data updates that can be applied to the list. - `replaceAll`<!-- -->: Replace all rows with a new set - `append`<!-- -->: Add a single new row - `update`<!-- -->: Update an existing row - `remove`<!-- -->: Remove a row by ID
+
 
 </td></tr>
 <tr><td>
@@ -962,6 +545,8 @@ Active filters at list level. Keyed by field id (or custom logical id).
 
 
 </td><td>
+
+Callback function invoked when a data patch is received from the data source. [DataPatch](./list-display.datapatch.md)
 
 
 </td></tr>
@@ -972,6 +557,8 @@ Active filters at list level. Keyed by field id (or custom logical id).
 
 </td><td>
 
+Defines the kind of data source being used. - `static`<!-- -->: Fixed data provided once at initialization - `stream`<!-- -->: Real-time data that can push updates incrementally - `query`<!-- -->: Data fetched from a query-based source (e.g., REST API, GraphQL)
+
 
 </td></tr>
 <tr><td>
@@ -980,6 +567,8 @@ Active filters at list level. Keyed by field id (or custom logical id).
 
 
 </td><td>
+
+Text alignment options for field cells and headers.
 
 
 </td></tr>
@@ -1029,23 +618,12 @@ Props forwarded to [ListDisplay](./list-display.listdisplay.md)<!-- -->. They mi
 </td></tr>
 <tr><td>
 
-[ListStatus](./list-display.liststatus.md)
-
-
-</td><td>
-
-Status values representing the lifecycle of the list data layer.
-
-
-</td></tr>
-<tr><td>
-
 [ModalConfig](./list-display.modalconfig.md)
 
 
 </td><td>
 
-Union describing the supported modal configurations for actions.
+Union describing the supported modal configurations for actions. [ConfirmModalConfig](./list-display.confirmmodalconfig.md) \| [CustomModalConfig](./list-display.custommodalconfig.md)
 
 
 </td></tr>
@@ -1056,6 +634,8 @@ Union describing the supported modal configurations for actions.
 
 </td><td>
 
+Function type for loading data from a query source.
+
 
 </td></tr>
 <tr><td>
@@ -1065,7 +645,7 @@ Union describing the supported modal configurations for actions.
 
 </td><td>
 
-Identifier type accepted by selection helpers.
+Identifier type accepted by selection helpers. Can be either a string or numeric value used to uniquely identify rows.
 
 
 </td></tr>
@@ -1076,7 +656,7 @@ Identifier type accepted by selection helpers.
 
 </td><td>
 
-Available selection modes for the list component.
+Available selection modes for the list component. - `"none"`<!-- -->: No row selection allowed - `"single"`<!-- -->: Only one row can be selected at a time - `"multiple"`<!-- -->: Multiple rows can be selected simultaneously
 
 
 </td></tr>
@@ -1087,7 +667,7 @@ Available selection modes for the list component.
 
 </td><td>
 
-Direction used when sorting rows.
+Direction used when sorting rows. - `"asc"` - Ascending order (A-Z, 0-9, oldest to newest) - `"desc"` - Descending order (Z-A, 9-0, newest to oldest)
 
 
 </td></tr>
@@ -1098,6 +678,8 @@ Direction used when sorting rows.
 
 </td><td>
 
+Function type for subscribing to streaming data updates. Receives a patch listener and returns an optional unsubscribe function.
+
 
 </td></tr>
 <tr><td>
@@ -1106,6 +688,8 @@ Direction used when sorting rows.
 
 
 </td><td>
+
+Function returned by subscribe() that can be called to unsubscribe from data updates.
 
 
 </td></tr>

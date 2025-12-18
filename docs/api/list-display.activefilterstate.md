@@ -11,3 +11,8 @@ Active filters at list level. Keyed by field id (or custom logical id).
 ```typescript
 export type ActiveFilterState = Record<string, unknown>;
 ```
+
+## Remarks
+
+Maps field identifiers to their current filter values. The structure of each value depends on the filter type and operator being used.
+

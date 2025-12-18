@@ -4,7 +4,7 @@
 
 ## DataSource.init property
 
-Initial load. Must resolve with at least the initial rows.
+Initial load. Must resolve with at least the initial rows. [DataSourceInitResult](./list-display.datasourceinitresult.md)
 
 **Signature:**
 

@@ -4,7 +4,7 @@
 
 ## SelectionState.mode property
 
-Current selection mode.
+Current selection mode determining how rows can be selected.
 
 **Signature:**
 

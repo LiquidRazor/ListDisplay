@@ -4,10 +4,15 @@
 
 ## ListConfig.initialFilters property
 
-Initial filters map.
+Initial filters to apply when the list is first rendered.
 
 **Signature:**
 
 ```typescript
 initialFilters?: ActiveFilterState;
 ```
+
+## Remarks
+
+Specifies the initial state of active filters. Users can modify these filters through the UI, and the list will update accordingly. [ActiveFilterState](./list-display.activefilterstate.md)
+

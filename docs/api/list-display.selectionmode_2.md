@@ -4,7 +4,7 @@
 
 ## SelectionMode\_2 type
 
-Available selection modes for the list component.
+Available selection modes for the list component. - `"none"`<!-- -->: No row selection allowed - `"single"`<!-- -->: Only one row can be selected at a time - `"multiple"`<!-- -->: Multiple rows can be selected simultaneously
 
 **Signature:**
 

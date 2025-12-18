@@ -20,7 +20,6 @@ export type SelectionMode = "none" | "single" | "multiple";
 export interface SelectionState<TRowId = RowId> {
   /**
    * Current selection mode determining how rows can be selected.
-   * {@link SelectionMode}
    */
   mode: SelectionMode;
 

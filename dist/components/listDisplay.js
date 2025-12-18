@@ -1,4 +1,16 @@
 import { jsx as _jsx, Fragment as _Fragment, jsxs as _jsxs } from "react/jsx-runtime";
+/**
+ * Main list display component module.
+ *
+ * @remarks
+ * This module provides the primary {@link ListDisplay} component which renders
+ * a complete data list experience with filtering, sorting, pagination, and
+ * action support. It leverages a ListCore for state management and
+ * exposes a slot-based architecture for customization.
+ *
+ * @packageDocumentation
+ * @public
+ */
 import { useMemo } from "react";
 import { useListCore } from "../core";
 import { ListContainer } from "./layout/ListContainer";
@@ -19,6 +31,24 @@ import { ListModalOutlet } from "./modals/ListModalOutlet";
  * the core hook for state management and a set of slot-based components for
  * the UI. Consumers can override any slot via the {@link ListConfig.components}
  * map while still benefiting from the built-in behaviours.
+ *
+ * @remarks
+ * This component orchestrates the complete list UI including:
+ * - Toolbar with general actions
+ * - Filters panel for data filtering
+ * - Sort bar for column sorting
+ * - Table with rows and row actions
+ * - Pagination controls
+ * - Modal outlet for action confirmations
+ * - Loading, empty, and error states
+ *
+ * All sub-components can be replaced via the `components` prop while maintaining
+ * full integration with the core state management layer.
+ *
+ * @param props - Configuration object containing data source, fields, actions, and UI customization options. See {@link ListDisplayProps}.
+ * @returns A complete list UI with all interactive features enabled.
+ *
+ * @public
  */
 export const ListDisplay = (props) => {
     const { components, componentsProps, idKey, ...coreConfig } = props;

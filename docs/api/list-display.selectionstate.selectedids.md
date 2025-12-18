@@ -4,7 +4,7 @@
 
 ## SelectionState.selectedIds property
 
-Identifiers for the selected rows.
+Array of identifiers for the currently selected rows.
 
 **Signature:**
 

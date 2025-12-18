@@ -1,5 +1,19 @@
 /**
- * Creates a streaming data source (e.g. SSE, WebSocket, RTSK, NDJSON).
+ * Creates a streaming data source for real-time data updates.
+ *
+ * Supports various streaming protocols including Server-Sent Events (SSE),
+ * WebSockets, RTSK, NDJSON, and other push-based data delivery mechanisms.
+ * The source can optionally bootstrap with initial data and continuously
+ * receive updates via patches.
+ *
+ * @typeParam TRow - The type of row objects in the data source
+ * @typeParam TRowId - The type of row identifiers, defaults to string | number
+ *
+ * @param options - Configuration options for the streaming data source
+ *
+ * @returns A DataSource object that manages the streaming connection and data updates
+ *
+ * @public
  */
 export const createStreamSource = (options) => {
     const { bootstrap, subscribe, refresh, destroy, label } = options;

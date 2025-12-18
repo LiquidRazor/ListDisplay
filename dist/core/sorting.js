@@ -1,3 +1,13 @@
+/**
+ * Compares two values for sorting purposes with null-safe handling.
+ * Supports numbers, dates, and falls back to case-insensitive string comparison.
+ *
+ * @param a - First value to compare
+ * @param b - Second value to compare
+ * @returns Negative if a < b, positive if a > b, zero if equal
+ *
+ * @internal
+ */
 const compareValues = (a, b) => {
     if (a == null && b == null)
         return 0;
@@ -20,7 +30,14 @@ const compareValues = (a, b) => {
     return 0;
 };
 /**
- * Applies sorting to a list of rows.
+ * Applies sorting to a list of rows based on the provided sorting context.
+ * Returns a new sorted array without mutating the original.
+ *
+ * @param rows - Array of rows to sort
+ * @param ctx - Sorting context containing sort descriptor and field schemas
+ * @returns New array with rows sorted according to the sort descriptor, or original array if no sort is specified
+ *
+ * @internal
  */
 export const applySorting = (rows, ctx) => {
     const { sort } = ctx;

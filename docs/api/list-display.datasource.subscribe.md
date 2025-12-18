@@ -4,7 +4,7 @@
 
 ## DataSource.subscribe property
 
-Optional stream of patches for incremental updates.
+Optional stream of patches for incremental updates. Subscribe to receive real-time data changes via [DataPatch](./list-display.datapatch.md) objects. [DataPatchListener](./list-display.datapatchlistener.md) [Unsubscribe](./list-display.unsubscribe.md)
 
 **Signature:**
 

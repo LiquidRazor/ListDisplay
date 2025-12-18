@@ -4,10 +4,15 @@
 
 ## ListConfig.rowActions property
 
-Row-level actions.
+Row-level actions that operate on individual rows.
 
 **Signature:**
 
 ```typescript
 rowActions?: Array<RowAction<TRow, TRowId>>;
 ```
+
+## Remarks
+
+These actions are associated with specific rows and typically appear as buttons or menu items in each row. Examples include edit, delete, or view details. [RowAction](./list-display.rowaction.md)
+

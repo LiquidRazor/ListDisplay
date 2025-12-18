@@ -4,6 +4,8 @@
 
 ## RowActionContext.rowIndex property
 
+The index of this row in the rows array.
+
 **Signature:**
 
 ```typescript

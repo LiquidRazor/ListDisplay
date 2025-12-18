@@ -4,6 +4,8 @@
 
 ## DataSourceMeta.label property
 
+Optional human-readable label for the data source.
+
 **Signature:**
 
 ```typescript

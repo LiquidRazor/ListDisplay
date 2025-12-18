@@ -4,6 +4,8 @@
 
 ## GeneralAction interface
 
+Action that operates on the entire list or selected rows, not tied to a specific row.
+
 **Signature:**
 
 ```typescript

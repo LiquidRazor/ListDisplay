@@ -4,6 +4,8 @@
 
 ## DataSourceInitResult interface
 
+Result object returned by the data source's initial load operation.
+
 **Signature:**
 
 ```typescript
@@ -48,6 +50,8 @@ TRow\[\]
 
 </td><td>
 
+The initial rows loaded from the data source.
+
 
 </td></tr>
 <tr><td>
@@ -60,12 +64,12 @@ TRow\[\]
 
 </td><td>
 
-[ListStatus](./list-display.liststatus.md)
+ListStatus
 
 
 </td><td>
 
-_(Optional)_
+_(Optional)_ Optional status indicator for the list state.
 
 
 </td></tr>
@@ -84,7 +88,7 @@ number
 
 </td><td>
 
-_(Optional)_
+_(Optional)_ Optional total count of all rows available (useful for server-side pagination).
 
 
 </td></tr>

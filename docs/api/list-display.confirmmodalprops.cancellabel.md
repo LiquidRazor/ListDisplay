@@ -4,6 +4,8 @@
 
 ## ConfirmModalProps.cancelLabel property
 
+Optional label for the cancel button, defaults to "Cancel"
+
 **Signature:**
 
 ```typescript

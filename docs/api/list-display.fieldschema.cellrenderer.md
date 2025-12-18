@@ -4,7 +4,7 @@
 
 ## FieldSchema.cellRenderer property
 
-Optional custom renderer for the cell.
+Optional custom renderer for the cell content. Receives the row, extracted value, and render context. [CellRenderContext](./list-display.cellrendercontext.md)
 
 **Signature:**
 

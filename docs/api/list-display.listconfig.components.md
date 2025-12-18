@@ -4,10 +4,15 @@
 
 ## ListConfig.components property
 
-Overridable UI components (slots).
+Overridable UI components (slots) for customizing the list appearance.
 
 **Signature:**
 
 ```typescript
 components?: ListComponents;
 ```
+
+## Remarks
+
+Allows replacement of default UI components with custom implementations for various parts of the list, such as the toolbar, filters, pagination controls, etc. [ListComponents](./list-display.listcomponents.md)
+

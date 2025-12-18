@@ -4,6 +4,8 @@
 
 ## CellRenderContext.rowIndex property
 
+The index of the row in the visible rows array.
+
 **Signature:**
 
 ```typescript

@@ -4,6 +4,8 @@
 
 ## DataSourceInitResult.rows property
 
+The initial rows loaded from the data source.
+
 **Signature:**
 
 ```typescript

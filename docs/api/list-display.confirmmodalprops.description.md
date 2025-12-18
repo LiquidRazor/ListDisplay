@@ -4,6 +4,8 @@
 
 ## ConfirmModalProps.description property
 
+Optional description content displayed in the modal body, can be a string or React node
+
 **Signature:**
 
 ```typescript

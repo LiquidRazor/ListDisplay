@@ -4,6 +4,8 @@
 
 ## DataSourceKind type
 
+Defines the kind of data source being used. - `static`<!-- -->: Fixed data provided once at initialization - `stream`<!-- -->: Real-time data that can push updates incrementally - `query`<!-- -->: Data fetched from a query-based source (e.g., REST API, GraphQL)
+
 **Signature:**
 
 ```typescript

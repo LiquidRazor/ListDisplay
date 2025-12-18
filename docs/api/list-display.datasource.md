@@ -4,7 +4,7 @@
 
 ## DataSource interface
 
-Generic, technology-agnostic data source contract. Wraps parent-provided data, streams, queries etc.
+Generic, technology-agnostic data source contract. Wraps parent-provided data, streams, queries etc. This interface abstracts away the underlying data fetching mechanism, allowing the list component to work with static data, real-time streams, REST APIs, GraphQL queries, and more.
 
 **Signature:**
 
@@ -50,7 +50,7 @@ Description
 
 </td><td>
 
-_(Optional)_ Optional cleanup hook (unsubscribe, close sockets, etc.).
+_(Optional)_ Optional cleanup hook called when the data source is no longer needed. Use this to unsubscribe from streams, close connections, or release resources.
 
 
 </td></tr>
@@ -69,7 +69,7 @@ _(Optional)_ Optional cleanup hook (unsubscribe, close sockets, etc.).
 
 </td><td>
 
-Initial load. Must resolve with at least the initial rows.
+Initial load. Must resolve with at least the initial rows. [DataSourceInitResult](./list-display.datasourceinitresult.md)
 
 
 </td></tr>
@@ -88,6 +88,8 @@ Initial load. Must resolve with at least the initial rows.
 
 </td><td>
 
+Metadata describing this data source. [DataSourceMeta](./list-display.datasourcemeta.md)
+
 
 </td></tr>
 <tr><td>
@@ -105,7 +107,7 @@ Initial load. Must resolve with at least the initial rows.
 
 </td><td>
 
-_(Optional)_ Optional refresh hook (refetch / reload).
+_(Optional)_ Optional refresh hook to manually trigger a data reload or refetch.
 
 
 </td></tr>
@@ -124,7 +126,7 @@ _(Optional)_ Optional refresh hook (refetch / reload).
 
 </td><td>
 
-_(Optional)_ Optional stream of patches for incremental updates.
+_(Optional)_ Optional stream of patches for incremental updates. Subscribe to receive real-time data changes via [DataPatch](./list-display.datapatch.md) objects. [DataPatchListener](./list-display.datapatchlistener.md) [Unsubscribe](./list-display.unsubscribe.md)
 
 
 </td></tr>

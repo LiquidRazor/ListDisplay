@@ -4,7 +4,7 @@
 
 ## FieldSchema.id property
 
-Property name on the row object.
+Property name on the row object. Must be a valid key of the row type.
 
 **Signature:**
 

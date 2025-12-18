@@ -11,3 +11,8 @@ Logical filter types used to match operators and value shapes.
 ```typescript
 export type FilterType = "text" | "select" | "multiSelect" | "number" | "date" | "boolean" | "custom";
 ```
+
+## Remarks
+
+Determines which operators are available and how filter values are interpreted. Custom types allow for specialized filtering logic.
+

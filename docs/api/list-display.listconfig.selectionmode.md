@@ -4,10 +4,15 @@
 
 ## ListConfig.selectionMode property
 
-Selection mode for the list.
+Selection mode that determines how rows can be selected in the list.
 
 **Signature:**
 
 ```typescript
 selectionMode?: SelectionMode;
 ```
+
+## Remarks
+
+Controls whether users can select no rows, a single row, or multiple rows. This affects the rendering of selection UI elements like checkboxes or radio buttons.
+

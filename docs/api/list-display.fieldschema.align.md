@@ -4,7 +4,7 @@
 
 ## FieldSchema.align property
 
-Text / cell alignment.
+Text and cell content alignment. [FieldAlign](./list-display.fieldalign.md)
 
 **Signature:**
 

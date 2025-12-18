@@ -4,6 +4,8 @@
 
 ## ListActionBase interface
 
+Base interface for all list actions, defining common properties like label, icon, and modal configuration.
+
 **Signature:**
 
 ```typescript
@@ -48,7 +50,7 @@ ReactNode
 
 </td><td>
 
-_(Optional)_
+_(Optional)_ Optional icon element to display alongside the label.
 
 
 </td></tr>
@@ -67,6 +69,8 @@ string
 
 </td><td>
 
+Unique identifier for this action.
+
 
 </td></tr>
 <tr><td>
@@ -84,7 +88,7 @@ string
 
 </td><td>
 
-_(Optional)_
+_(Optional)_ Visual style variant for the action button [ActionKind](./list-display.actionkind.md)<!-- -->.
 
 
 </td></tr>
@@ -102,6 +106,8 @@ string
 
 
 </td><td>
+
+Display label for the action.
 
 
 </td></tr>

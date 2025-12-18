@@ -4,6 +4,8 @@
 
 ## DataPatchListener type
 
+Callback function invoked when a data patch is received from the data source. [DataPatch](./list-display.datapatch.md)
+
 **Signature:**
 
 ```typescript

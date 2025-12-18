@@ -4,6 +4,8 @@
 
 ## Unsubscribe type
 
+Function returned by subscribe() that can be called to unsubscribe from data updates.
+
 **Signature:**
 
 ```typescript

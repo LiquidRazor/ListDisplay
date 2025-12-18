@@ -11,3 +11,8 @@ Optional list of static options (for select / multiSelect).
 ```typescript
 options?: FilterOption[];
 ```
+
+## Remarks
+
+When provided, these options will be presented to the user for selection. Each option contains a value and a human-readable label. [FilterOption](./list-display.filteroption.md)
+

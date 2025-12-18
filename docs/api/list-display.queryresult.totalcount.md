@@ -4,6 +4,8 @@
 
 ## QueryResult.totalCount property
 
+Optional total count of all available rows (for pagination)
+
 **Signature:**
 
 ```typescript

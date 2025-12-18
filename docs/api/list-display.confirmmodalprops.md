@@ -4,6 +4,8 @@
 
 ## ConfirmModalProps interface
 
+Props for the ConfirmModal component.
+
 **Signature:**
 
 ```typescript
@@ -48,7 +50,7 @@ string
 
 </td><td>
 
-_(Optional)_
+_(Optional)_ Optional label for the cancel button, defaults to "Cancel"
 
 
 </td></tr>
@@ -67,7 +69,7 @@ string
 
 </td><td>
 
-_(Optional)_
+_(Optional)_ Optional label for the confirm button, defaults to "Confirm"
 
 
 </td></tr>
@@ -86,7 +88,7 @@ React.ReactNode
 
 </td><td>
 
-_(Optional)_
+_(Optional)_ Optional description content displayed in the modal body, can be a string or React node
 
 
 </td></tr>
@@ -105,6 +107,8 @@ _(Optional)_
 
 </td><td>
 
+Callback function triggered when the cancel button is clicked
+
 
 </td></tr>
 <tr><td>
@@ -122,6 +126,8 @@ _(Optional)_
 
 </td><td>
 
+Callback function triggered when the confirm button is clicked, can be synchronous or asynchronous
+
 
 </td></tr>
 <tr><td>
@@ -138,6 +144,8 @@ string
 
 
 </td><td>
+
+The title text displayed in the modal header
 
 
 </td></tr>

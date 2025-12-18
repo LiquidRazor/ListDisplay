@@ -4,10 +4,15 @@
 
 ## ListConfig.componentsProps property
 
-Optional props passed to slot components.
+Optional props passed to slot components for additional customization.
 
 **Signature:**
 
 ```typescript
 componentsProps?: ListComponentsProps;
 ```
+
+## Remarks
+
+Provides a way to pass additional configuration or props to the custom components specified in the components property. [ListComponentsProps](./list-display.listcomponentsprops.md)
+

@@ -11,3 +11,8 @@ Operators supported by the filtering engine.
 ```typescript
 export type FilterOperator = "equals" | "notEquals" | "contains" | "startsWith" | "endsWith" | "in" | "gt" | "gte" | "lt" | "lte" | "between";
 ```
+
+## Remarks
+
+Includes comparison operators (equals, notEquals, gt, gte, lt, lte, between), text operators (contains, startsWith, endsWith), and set operators (in).
+

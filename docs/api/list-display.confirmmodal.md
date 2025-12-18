@@ -4,10 +4,15 @@
 
 ## ConfirmModal variable
 
-Very small, unstyled confirm modal. Styling is left to consumer via CSS classes.
+Renders a confirmation modal dialog with customizable content and actions.
 
 **Signature:**
 
 ```typescript
 ConfirmModal: React.FC<ConfirmModalProps>
 ```
+
+## Remarks
+
+This component provides a very small, unstyled confirm modal. Styling is left to consumer via CSS classes. The modal includes a header, optional body content, and footer with cancel and confirm action buttons.
+

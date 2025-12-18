@@ -4,6 +4,8 @@
 
 ## QueryResult interface
 
+Result object returned by a query load function.
+
 **Signature:**
 
 ```typescript
@@ -48,6 +50,8 @@ TRow\[\]
 
 </td><td>
 
+Array of row objects returned by the query
+
 
 </td></tr>
 <tr><td>
@@ -65,7 +69,7 @@ number
 
 </td><td>
 
-_(Optional)_
+_(Optional)_ Optional total count of all available rows (for pagination)
 
 
 </td></tr>

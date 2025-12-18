@@ -27,12 +27,7 @@ import {ConfirmModal} from "./ConfirmModal";
  * For custom modals (ModalConfig.type === "custom"), consumers are expected to override
  * this component via the "ModalOutlet" slot in the list configuration and handle rendering themselves.
  *
- * @param props - The component props containing state, actions, and callbacks
- * @param props.state - The current list state including UI modal state
- * @param props.generalActions - Array of general actions that can trigger modals
- * @param props.rowActions - Array of row-specific actions that can trigger modals
- * @param props.onConfirm - Callback function invoked when the user confirms the modal action
- * @param props.onCancel - Callback function invoked when the user cancels or closes the modal
+ * @param props - The component props containing state, actions, and callbacks {@link ModalOutletProps}
  * @returns A modal component based on the active action configuration, or null if no modal is open
  *
  * @public

@@ -4,6 +4,8 @@
 
 ## ActionContextBase.pagination property
 
+The current pagination state, including page size and current page. [PaginationState](./list-display.paginationstate.md)
+
 **Signature:**
 
 ```typescript

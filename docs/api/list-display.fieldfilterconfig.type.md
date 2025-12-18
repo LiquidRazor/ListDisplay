@@ -4,6 +4,8 @@
 
 ## FieldFilterConfig.type property
 
+The type of filter to use for this field.
+
 **Signature:**
 
 ```typescript

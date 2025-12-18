@@ -4,7 +4,7 @@
 
 ## SortDescriptor interface
 
-Describes the active sort configuration for the list.
+Describes the active sort configuration for the list. Specifies which field to sort by and in which direction.
 
 **Signature:**
 
@@ -50,7 +50,7 @@ Description
 
 </td><td>
 
-Direction in which rows should be ordered.
+Direction in which rows should be ordered. [SortDirection](./list-display.sortdirection.md)
 
 
 </td></tr>
@@ -69,7 +69,7 @@ keyof TRow &amp; string
 
 </td><td>
 
-Field id used to extract the sortable value from a row.
+Field id used to extract the sortable value from a row. Must be a valid key of the row type that can be converted to a string.
 
 
 </td></tr>

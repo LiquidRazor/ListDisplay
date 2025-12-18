@@ -12,6 +12,10 @@ Per-field filter configuration.
 export interface FieldFilterConfig<TRow = any, TValue = any> 
 ```
 
+## Remarks
+
+Defines how a specific field should be filtered, including the filter type, available operators, normalization logic, and predefined options.
+
 ## Properties
 
 <table><thead><tr><th>
@@ -69,7 +73,7 @@ _(Optional)_ Normalizes a raw value from the row into something that can be used
 
 </td><td>
 
-_(Optional)_
+_(Optional)_ Optional list of operators to restrict for this field. If omitted, all operators for the type are available.
 
 
 </td></tr>
@@ -106,6 +110,8 @@ _(Optional)_ Optional list of static options (for select / multiSelect).
 
 
 </td><td>
+
+The type of filter to use for this field.
 
 
 </td></tr>

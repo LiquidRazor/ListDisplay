@@ -121,7 +121,7 @@ _(Optional)_ Row-specific actions that may open a modal.
 
 </td><td>
 
-[ListState](./list-display.liststate.md)<!-- -->&lt;any&gt;
+ListState&lt;any&gt;
 
 
 </td><td>

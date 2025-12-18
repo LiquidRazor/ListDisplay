@@ -4,7 +4,7 @@
 
 ## FieldSchema.minWidth property
 
-Minimum width for the column.
+Minimum width for the column (can be pixels, percentage, or other CSS units).
 
 **Signature:**
 

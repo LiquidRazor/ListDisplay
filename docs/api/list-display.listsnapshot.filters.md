@@ -4,6 +4,8 @@
 
 ## ListSnapshot.filters property
 
+The current active filter state, containing all applied filters. [ActiveFilterState](./list-display.activefilterstate.md)
+
 **Signature:**
 
 ```typescript

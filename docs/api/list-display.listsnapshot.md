@@ -50,6 +50,8 @@ Description
 
 </td><td>
 
+The current active filter state, containing all applied filters. [ActiveFilterState](./list-display.activefilterstate.md)
+
 
 </td></tr>
 <tr><td>
@@ -66,6 +68,8 @@ Description
 
 
 </td><td>
+
+The current pagination state, including page size and current page. [PaginationState](./list-display.paginationstate.md)
 
 
 </td></tr>
@@ -122,6 +126,8 @@ Rows currently visible (after filters, sort, pagination).
 
 </td><td>
 
+The current row selection state, tracking which rows are selected. [SelectionState](./list-display.selectionstate.md)
+
 
 </td></tr>
 <tr><td>
@@ -139,7 +145,7 @@ Rows currently visible (after filters, sort, pagination).
 
 </td><td>
 
-_(Optional)_
+_(Optional)_ The current sort configuration, if any sorting is applied. [SortDescriptor](./list-display.sortdescriptor.md)
 
 
 </td></tr>

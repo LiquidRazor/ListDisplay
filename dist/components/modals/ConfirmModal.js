@@ -1,7 +1,16 @@
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 /**
- * Very small, unstyled confirm modal.
- * Styling is left to consumer via CSS classes.
+ * Renders a confirmation modal dialog with customizable content and actions.
+ *
+ * @remarks
+ * This component provides a very small, unstyled confirm modal.
+ * Styling is left to consumer via CSS classes. The modal includes a header,
+ * optional body content, and footer with cancel and confirm action buttons.
+ *
+ * @param props - The component props
+ * @returns A modal dialog element with backdrop
+ *
+ * @public
  */
 export const ConfirmModal = ({ title, description, confirmLabel = "Confirm", cancelLabel = "Cancel", onConfirm, onCancel, }) => {
     const handleConfirm = () => {

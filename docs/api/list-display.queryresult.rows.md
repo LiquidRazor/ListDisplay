@@ -4,6 +4,8 @@
 
 ## QueryResult.rows property
 
+Array of row objects returned by the query
+
 **Signature:**
 
 ```typescript

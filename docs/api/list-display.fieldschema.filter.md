@@ -4,7 +4,7 @@
 
 ## FieldSchema.filter property
 
-Filter configuration for this column.
+Filter configuration for this column, enabling filtering capabilities. [FieldFilterConfig](./list-display.fieldfilterconfig.md)
 
 **Signature:**
 

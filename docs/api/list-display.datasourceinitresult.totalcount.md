@@ -4,6 +4,8 @@
 
 ## DataSourceInitResult.totalCount property
 
+Optional total count of all rows available (useful for server-side pagination).
+
 **Signature:**
 
 ```typescript

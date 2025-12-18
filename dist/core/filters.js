@@ -1,9 +1,20 @@
 /**
- * Tries to normalize the active filter value into a standard structure.
- * We support:
- *  - primitive (e.g. "foo")  => equals
- *  - { value, operator }     => single-value
- *  - { from, to }            => between
+ * Core filtering module providing predicate building and filter application for list data.
+ *
+ * @packageDocumentation
+ * @internal
+ */
+/**
+ * Normalizes raw filter values into a standard structure with operator and value(s).
+ * Supports multiple input formats:
+ *  - Primitive values (e.g. "foo") - mapped to type-appropriate operator
+ *  - Object with `{ value, operator }` - explicit operator specification
+ *  - Object with `{ from, to }` - converted to "between" operator
+ *
+ * @param rawValue - The raw filter value from user input or state
+ * @param defaultType - The field type used to determine default operator for primitives
+ * @returns Normalized filter structure with operator and value(s), or null if value is invalid
+ * @internal
  */
 const resolveFilterValue = (rawValue, defaultType) => {
     if (rawValue == null) {
@@ -39,9 +50,27 @@ const resolveFilterValue = (rawValue, defaultType) => {
             return { operator: "equals", value: rawValue };
     }
 };
+/**
+ * Extracts the filter configuration from a field schema.
+ *
+ * @typeParam TRow - The type of row objects
+ * @param field - The field schema to extract configuration from
+ * @returns The field's filter configuration, or undefined if not configured
+ * @internal
+ */
 const getFieldFilterConfig = (field) => {
     return field.filter;
 };
+/**
+ * Builds an array of resolved filters by matching active filters with their field schemas
+ * and normalizing their values into a standard evaluation structure.
+ *
+ * @typeParam TRow - The type of row objects
+ * @param filters - The active filter state from user input
+ * @param fields - Array of field schemas containing filter configurations
+ * @returns Array of resolved filters ready for evaluation
+ * @internal
+ */
 const buildResolvedFilters = (filters, fields) => {
     const resolved = [];
     for (const [fieldId, rawValue] of Object.entries(filters)) {
@@ -64,18 +93,49 @@ const buildResolvedFilters = (filters, fields) => {
     }
     return resolved;
 };
+/**
+ * Normalizes a field value using the field's custom normalization function if provided.
+ * This allows fields to transform values before comparison (e.g., case normalization, formatting).
+ *
+ * @typeParam TRow - The type of row objects
+ * @typeParam TValue - The type of the field value
+ * @param value - The raw value from the row
+ * @param row - The complete row object (for context-aware normalization)
+ * @param config - Optional field filter configuration containing normalization function
+ * @returns The normalized value ready for comparison
+ * @internal
+ */
 const normalizeValue = (value, row, config) => {
     if (config?.normalize) {
         return config.normalize(value, row);
     }
     return value;
 };
+/**
+ * Converts values to comparable primitives for consistent comparison operations.
+ * Specifically handles Date objects by converting them to timestamps.
+ *
+ * @param value - The value to convert
+ * @returns A comparable primitive value
+ * @internal
+ */
 const toComparable = (value) => {
     if (value instanceof Date) {
         return value.getTime();
     }
     return value;
 };
+/**
+ * Evaluates a filter operator against a normalized value and filter criteria.
+ * Supports all standard operators including text matching, numeric comparison, and range checks.
+ *
+ * @param operator - The filter operator to apply
+ * @param normalizedValue - The normalized value from the row
+ * @param filterValue - The primary filter value to compare against
+ * @param filterValueTo - Optional secondary value for range-based operators
+ * @returns True if the value passes the filter, false otherwise
+ * @internal
+ */
 const applyOperator = (operator, normalizedValue, filterValue, filterValueTo) => {
     const v = toComparable(normalizedValue);
     const fv = toComparable(filterValue);
@@ -116,7 +176,14 @@ const applyOperator = (operator, normalizedValue, filterValue, filterValueTo) =>
     }
 };
 /**
- * Builds a predicate that evaluates whether a row passes all active filters.
+ * Builds a predicate function that evaluates whether a row passes all active filters.
+ * The predicate performs AND logic across all filters (row must match all filters).
+ * Returns a no-op predicate if no filters are active.
+ *
+ * @typeParam TRow - The type of row objects
+ * @param ctx - The filter context containing active filters and field schemas
+ * @returns A predicate function that returns true if the row passes all filters
+ * @internal
  */
 export const buildFilterPredicate = (ctx) => {
     const { filters, fields } = ctx;
@@ -139,7 +206,14 @@ export const buildFilterPredicate = (ctx) => {
     };
 };
 /**
- * Applies filters to a list of rows and returns the filtered array.
+ * Applies all active filters to a list of rows and returns the filtered array.
+ * This is the primary entry point for filter evaluation.
+ *
+ * @typeParam TRow - The type of row objects
+ * @param rows - The array of rows to filter
+ * @param ctx - The filter context containing active filters and field schemas
+ * @returns A new array containing only rows that pass all filters
+ * @internal
  */
 export const applyFilters = (rows, ctx) => {
     const predicate = buildFilterPredicate(ctx);

@@ -4,6 +4,8 @@
 
 ## StreamSubscribeFn type
 
+Function type for subscribing to streaming data updates. Receives a patch listener and returns an optional unsubscribe function.
+
 **Signature:**
 
 ```typescript
