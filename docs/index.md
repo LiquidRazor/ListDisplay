@@ -211,7 +211,7 @@ The exported types help ensure configuration correctness:
 
 ## Full API documentation
 
-you can always dig into the full api documentation [here](./api/index.md)
+you can always dig into the full api documentation [here](./api/)
 
 ## Troubleshooting
 
