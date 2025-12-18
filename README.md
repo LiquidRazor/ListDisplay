@@ -3,7 +3,7 @@
 ListDisplay is a React component and hook combo that delivers filtering, sorting, pagination, selection, and action handling out of the box while remaining slot-based and customizable.
 
 - 🚀 **Headless-friendly**: bring your own styling and override any slot component.
-- 🔄 **Data-source agnostic**: plug in REST, GraphQL, websockets, or static data through a simple adapter.
+- 🔄 **Data-source agnostic**: plug in REST, GraphQL, websockets, or pretty much any type of data through a simple adapter.
 - 🧰 **Action-ready**: toolbar and row actions with optional confirmation/custom modals.
 
 ## Documentation
