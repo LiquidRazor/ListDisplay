@@ -1,1 +1,1 @@
-{"version":3,"file":"index.js","sourceRoot":"","sources":["../../../components/modals/index.ts"],"names":[],"mappings":"AAAA,cAAc,gBAAgB,CAAA;AAC9B,cAAc,mBAAmB,CAAA"}
+{"version":3,"file":"index.js","sourceRoot":"","sources":["../../../src/components/modals/index.ts"],"names":[],"mappings":"AAAA,cAAc,gBAAgB,CAAA;AAC9B,cAAc,mBAAmB,CAAA"}

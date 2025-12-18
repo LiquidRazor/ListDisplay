@@ -5,13 +5,13 @@
  *  - { value, operator }     => single-value
  *  - { from, to }            => between
  */
-var resolveFilterValue = function (rawValue, defaultType) {
+const resolveFilterValue = (rawValue, defaultType) => {
     if (rawValue == null) {
         return null;
     }
     // object-based filter
     if (typeof rawValue === "object") {
-        var obj = rawValue;
+        const obj = rawValue;
         if (obj.operator && "value" in obj) {
             return {
                 operator: obj.operator,
@@ -39,52 +39,47 @@ var resolveFilterValue = function (rawValue, defaultType) {
             return { operator: "equals", value: rawValue };
     }
 };
-var getFieldFilterConfig = function (field) {
+const getFieldFilterConfig = (field) => {
     return field.filter;
 };
-var buildResolvedFilters = function (filters, fields) {
-    var _a;
-    var resolved = [];
-    var _loop_1 = function (fieldId, rawValue) {
-        var field = fields.find(function (f) { return f.id === fieldId; });
+const buildResolvedFilters = (filters, fields) => {
+    const resolved = [];
+    for (const [fieldId, rawValue] of Object.entries(filters)) {
+        const field = fields.find((f) => f.id === fieldId);
         if (!field || rawValue == null)
-            return "continue";
-        var filterConfig = getFieldFilterConfig(field);
-        var type = (_a = filterConfig === null || filterConfig === void 0 ? void 0 : filterConfig.type) !== null && _a !== void 0 ? _a : "text";
-        var resolvedValue = resolveFilterValue(rawValue, type);
+            continue;
+        const filterConfig = getFieldFilterConfig(field);
+        const type = filterConfig?.type ?? "text";
+        const resolvedValue = resolveFilterValue(rawValue, type);
         if (!resolvedValue)
-            return "continue";
+            continue;
         resolved.push({
-            fieldId: fieldId,
-            type: type,
+            fieldId,
+            type,
             operator: resolvedValue.operator,
             value: resolvedValue.value,
             valueTo: resolvedValue.valueTo,
             config: filterConfig,
         });
-    };
-    for (var _i = 0, _b = Object.entries(filters); _i < _b.length; _i++) {
-        var _c = _b[_i], fieldId = _c[0], rawValue = _c[1];
-        _loop_1(fieldId, rawValue);
     }
     return resolved;
 };
-var normalizeValue = function (value, row, config) {
-    if (config === null || config === void 0 ? void 0 : config.normalize) {
+const normalizeValue = (value, row, config) => {
+    if (config?.normalize) {
         return config.normalize(value, row);
     }
     return value;
 };
-var toComparable = function (value) {
+const toComparable = (value) => {
     if (value instanceof Date) {
         return value.getTime();
     }
     return value;
 };
-var applyOperator = function (operator, normalizedValue, filterValue, filterValueTo) {
-    var v = toComparable(normalizedValue);
-    var fv = toComparable(filterValue);
-    var fv2 = toComparable(filterValueTo);
+const applyOperator = (operator, normalizedValue, filterValue, filterValueTo) => {
+    const v = toComparable(normalizedValue);
+    const fv = toComparable(filterValue);
+    const fv2 = toComparable(filterValueTo);
     switch (operator) {
         case "equals":
             return v === fv;
@@ -123,28 +118,22 @@ var applyOperator = function (operator, normalizedValue, filterValue, filterValu
 /**
  * Builds a predicate that evaluates whether a row passes all active filters.
  */
-export var buildFilterPredicate = function (ctx) {
-    var filters = ctx.filters, fields = ctx.fields;
-    var resolved = buildResolvedFilters(filters, fields);
+export const buildFilterPredicate = (ctx) => {
+    const { filters, fields } = ctx;
+    const resolved = buildResolvedFilters(filters, fields);
     if (resolved.length === 0) {
-        return function () { return true; };
+        return () => true;
     }
-    return function (row) {
-        var _loop_2 = function (filter) {
-            var field = fields.find(function (f) { return f.id === filter.fieldId; });
+    return (row) => {
+        for (const filter of resolved) {
+            const field = fields.find((f) => f.id === filter.fieldId);
             if (!field)
-                return "continue";
-            var value = row[field.id];
-            var normalized = normalizeValue(value, row, filter.config);
-            var ok = applyOperator(filter.operator, normalized, filter.value, filter.valueTo);
+                continue;
+            const value = row[field.id];
+            const normalized = normalizeValue(value, row, filter.config);
+            const ok = applyOperator(filter.operator, normalized, filter.value, filter.valueTo);
             if (!ok)
-                return { value: false };
-        };
-        for (var _i = 0, resolved_1 = resolved; _i < resolved_1.length; _i++) {
-            var filter = resolved_1[_i];
-            var state_1 = _loop_2(filter);
-            if (typeof state_1 === "object")
-                return state_1.value;
+                return false;
         }
         return true;
     };
@@ -152,8 +141,8 @@ export var buildFilterPredicate = function (ctx) {
 /**
  * Applies filters to a list of rows and returns the filtered array.
  */
-export var applyFilters = function (rows, ctx) {
-    var predicate = buildFilterPredicate(ctx);
+export const applyFilters = (rows, ctx) => {
+    const predicate = buildFilterPredicate(ctx);
     return rows.filter(predicate);
 };
 //# sourceMappingURL=filters.js.map

@@ -1,13 +1,4 @@
-var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
-    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
-        if (ar || !(i in from)) {
-            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
-            ar[i] = from[i];
-        }
-    }
-    return to.concat(ar || Array.prototype.slice.call(from));
-};
-var compareValues = function (a, b) {
+const compareValues = (a, b) => {
     if (a == null && b == null)
         return 0;
     if (a == null)
@@ -20,8 +11,8 @@ var compareValues = function (a, b) {
     if (a instanceof Date && b instanceof Date) {
         return a.getTime() - b.getTime();
     }
-    var sa = String(a).toLowerCase();
-    var sb = String(b).toLowerCase();
+    const sa = String(a).toLowerCase();
+    const sb = String(b).toLowerCase();
     if (sa < sb)
         return -1;
     if (sa > sb)
@@ -31,16 +22,16 @@ var compareValues = function (a, b) {
 /**
  * Applies sorting to a list of rows.
  */
-export var applySorting = function (rows, ctx) {
-    var sort = ctx.sort;
+export const applySorting = (rows, ctx) => {
+    const { sort } = ctx;
     if (!sort) {
         return rows;
     }
-    var field = sort.field, direction = sort.direction;
-    return __spreadArray([], rows, true).sort(function (a, b) {
-        var va = a[field];
-        var vb = b[field];
-        var cmp = compareValues(va, vb);
+    const { field, direction } = sort;
+    return [...rows].sort((a, b) => {
+        const va = a[field];
+        const vb = b[field];
+        const cmp = compareValues(va, vb);
         return direction === "asc" ? cmp : -cmp;
     });
 };

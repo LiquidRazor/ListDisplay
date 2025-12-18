@@ -1,15 +1,12 @@
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
-// src/components/layout/ListFiltersPanel.tsx
-import React from "react";
 /**
  * Minimal filters panel (placeholder).
  */
-export var ListFiltersPanel = function (_a) {
-    var state = _a.state, fields = _a.fields, onChangeFilters = _a.onChangeFilters;
+export const ListFiltersPanel = ({ state, fields, onChangeFilters, }) => {
     if (!onChangeFilters || fields.length === 0) {
         return null;
     }
-    var handleReset = function () {
+    const handleReset = () => {
         onChangeFilters({});
     };
     return (_jsxs("div", { className: "ld-list__filters", children: [_jsxs("div", { className: "ld-list__filters-header", children: [_jsx("span", { className: "ld-list__filters-title", children: "Filters" }), _jsx("button", { type: "button", className: "ld-list__filters-reset", onClick: handleReset, disabled: state.status === "loading", children: "Reset" })] }), _jsx("div", { className: "ld-list__filters-content", children: _jsx("span", { className: "ld-list__filters-placeholder", children: "Filter UI not configured. Provide a custom FiltersPanel via slots." }) })] }));

@@ -1,6 +1,6 @@
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 // src/components/modals/ListModalOutlet.tsx
-import React, { useMemo } from "react";
+import { useMemo } from "react";
 import { ConfirmModal } from "./ConfirmModal";
 /**
  * Default modal outlet implementation.
@@ -12,36 +12,35 @@ import { ConfirmModal } from "./ConfirmModal";
  * to override this component via the "ModalOutlet" slot and handle rendering
  * themselves.
  */
-export var ListModalOutlet = function (_a) {
-    var _b;
-    var state = _a.state, generalActions = _a.generalActions, rowActions = _a.rowActions, onConfirm = _a.onConfirm, onCancel = _a.onCancel;
-    var ui = state.ui;
-    var modal = ui.modal, activeAction = ui.activeAction;
+export const ListModalOutlet = ({ state, generalActions, rowActions, onConfirm, onCancel, }) => {
+    const { ui } = state;
+    const { modal, activeAction } = ui;
     if (!modal || !modal.isOpen || !modal.actionId) {
         return null;
     }
-    var actionType = (_b = activeAction === null || activeAction === void 0 ? void 0 : activeAction.type) !== null && _b !== void 0 ? _b : (modal.rowId != null ? "row" : "general");
-    var _c = useMemo(function () {
-        var act;
-        var config;
+    const actionType = activeAction?.type
+        ?? (modal.rowId != null ? "row" : "general");
+    const { action, modalConfig } = useMemo(() => {
+        let act;
+        let config;
         if (actionType === "general") {
-            act = (generalActions !== null && generalActions !== void 0 ? generalActions : []).find(function (a) { return a.id === modal.actionId; });
+            act = (generalActions ?? []).find((a) => a.id === modal.actionId);
         }
         else if (actionType === "row") {
-            act = (rowActions !== null && rowActions !== void 0 ? rowActions : []).find(function (a) { return a.id === modal.actionId; });
+            act = (rowActions ?? []).find((a) => a.id === modal.actionId);
         }
         if (act && act.modal) {
             config = act.modal;
         }
         return { action: act, modalConfig: config };
-    }, [actionType, modal.actionId, generalActions, rowActions]), action = _c.action, modalConfig = _c.modalConfig;
+    }, [actionType, modal.actionId, generalActions, rowActions]);
     // Dacă nu găsim acțiunea sau nu are modal config, tot afișăm ceva minim.
     if (!action || !modalConfig) {
-        return (_jsx(ConfirmModal, { title: "Confirm action", description: _jsx("span", { children: "Are you sure you want to execute this action?" }), onConfirm: function () { return onConfirm(); }, onCancel: onCancel }));
+        return (_jsx(ConfirmModal, { title: "Confirm action", description: _jsx("span", { children: "Are you sure you want to execute this action?" }), onConfirm: () => onConfirm(), onCancel: onCancel }));
     }
     // Confirm modal config suportat fully aici.
     if (modalConfig.type === "confirm") {
-        return (_jsx(ConfirmModal, { title: modalConfig.title, description: modalConfig.description, confirmLabel: modalConfig.confirmLabel, cancelLabel: modalConfig.cancelLabel, onConfirm: function () { return onConfirm(); }, onCancel: onCancel }));
+        return (_jsx(ConfirmModal, { title: modalConfig.title, description: modalConfig.description, confirmLabel: modalConfig.confirmLabel, cancelLabel: modalConfig.cancelLabel, onConfirm: () => onConfirm(), onCancel: onCancel }));
     }
     // Custom modal NU este implementat by default în core.
     // Utilizatorul poate overrida ModalOutlet în config.components.ModalOutlet.

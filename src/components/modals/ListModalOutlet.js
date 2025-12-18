@@ -1,7 +1,7 @@
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 // src/components/modals/ListModalOutlet.tsx
 import { useMemo } from "react";
-import { ConfirmModal } from "./ConfirmModal";
+import { ConfirmModal } from "./ConfirmModal.tsx";
 /**
  * Default modal outlet implementation.
  *

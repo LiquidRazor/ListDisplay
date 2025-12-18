@@ -1,6 +1,6 @@
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
-import { ListHeader } from "./ListHeader";
-import { ListBody } from "./ListBody";
+import { ListHeader } from "./ListHeader.tsx";
+import { ListBody } from "./ListBody.tsx";
 /**
  * Default table layout for the list.
  */

@@ -1,5 +1,5 @@
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
-import { ListCell } from "./ListCell";
+import { ListCell } from "./ListCell.tsx";
 const isSelectedRow = (row, selection, idKey) => {
     const id = row[idKey];
     return selection.selectedIds.includes(id);

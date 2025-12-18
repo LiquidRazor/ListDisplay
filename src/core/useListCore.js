@@ -1,12 +1,12 @@
 // src/core/useListCore.ts
 import { useCallback, useEffect, useMemo, useState, } from "react";
-import { applyFilters } from "./filters";
-import { applySorting } from "./sorting";
-import { applyPagination, updatePaginationMeta } from "./pagination";
-import { clearSelection, createSelectionState, selectAllVisible, } from "./selection";
-import { clearActiveAction as clearActiveActionUi, closeModal as closeModalUi, createInitialUiState, openModalForAction, } from "./uiState";
-import { buildSnapshot } from "./snapshots";
-import { applyPatch } from "../dataSource";
+import { applyFilters } from "./filters.ts";
+import { applySorting } from "./sorting.ts";
+import { applyPagination, updatePaginationMeta } from "./pagination.ts";
+import { clearSelection, createSelectionState, selectAllVisible, } from "./selection.ts";
+import { clearActiveAction as clearActiveActionUi, closeModal as closeModalUi, createInitialUiState, openModalForAction, } from "./uiState.ts";
+import { buildSnapshot } from "./snapshots.ts";
+import { applyPatch } from "../dataSource/index.ts";
 /* ─────────────────────────────
  * HELPERS
  * ───────────────────────────── */

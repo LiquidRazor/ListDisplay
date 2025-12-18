@@ -1,17 +1,17 @@
 import { jsx as _jsx, Fragment as _Fragment, jsxs as _jsxs } from "react/jsx-runtime";
 // src/components/ListDisplay.tsx
 import { useMemo } from "react";
-import { useListCore } from "../core";
-import { ListContainer } from "./layout/ListContainer";
-import { ListToolbar } from "./layout/ListToolbar";
-import { ListFiltersPanel } from "./layout/ListFiltersPanel";
-import { ListSortBar } from "./layout/ListSortBar";
-import { ListTable } from "./layout/ListTable";
-import { ListPagination } from "./layout/ListPagination";
-import { ListLoadingState } from "./states/ListLoadingState";
-import { ListEmptyState } from "./states/ListEmptyState";
-import { ListErrorState } from "./states/ListErrorState";
-import { ListModalOutlet } from "./modals/ListModalOutlet";
+import { useListCore } from "../core/index.ts";
+import { ListContainer } from "./layout/ListContainer.tsx";
+import { ListToolbar } from "./layout/ListToolbar.tsx";
+import { ListFiltersPanel } from "./layout/ListFiltersPanel.tsx";
+import { ListSortBar } from "./layout/ListSortBar.tsx";
+import { ListTable } from "./layout/ListTable.tsx";
+import { ListPagination } from "./layout/ListPagination.tsx";
+import { ListLoadingState } from "./states/ListLoadingState.tsx";
+import { ListEmptyState } from "./states/ListEmptyState.tsx";
+import { ListErrorState } from "./states/ListErrorState.tsx";
+import { ListModalOutlet } from "./modals/ListModalOutlet.tsx";
 /* ─────────────────────────────
  * COMPONENT
  * ───────────────────────────── */
