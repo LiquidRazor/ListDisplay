@@ -11,7 +11,7 @@ export const createQuerySource = (options) => {
         };
     };
     const refresh = async () => {
-        // `useListCore` va decide cum să folosească init() + refresh().
+        // `useListCore` will decide how to use init() + refresh().
         await Promise.resolve(load());
     };
     return {

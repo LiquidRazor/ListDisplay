@@ -445,7 +445,7 @@ export const useListCore = <
             }
 
             if (action.opensModal && action.modal) {
-                // identificăm rowId pentru uiState
+                // identify rowId for uiState
                 const row = state.rows[rowIndex];
                 const rowId = row ? ((row as any)[idKey] as TRowId) : undefined;
 

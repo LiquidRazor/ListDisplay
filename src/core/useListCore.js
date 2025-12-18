@@ -1,4 +1,3 @@
-// src/core/useListCore.ts
 import { useCallback, useEffect, useMemo, useState, } from "react";
 import { applyFilters } from "./filters.ts";
 import { applySorting } from "./sorting.ts";
@@ -119,7 +118,7 @@ export const useListCore = (config) => {
     }, [dataSource, fields, idKey]);
     /* REFRESH */
     const refresh = useCallback(async () => {
-        // Simplu și clar: re-run init()
+        // Simple and clear: re-run init()
         await loadInitial();
     }, [loadInitial]);
     /* EXPORT SNAPSHOT */
@@ -157,7 +156,7 @@ export const useListCore = (config) => {
             pagination: {
                 ...prev.pagination,
                 pageSize,
-                pageIndex: 0, // resetăm la prima pagină când se schimbă pageSize
+                pageIndex: 0, // reset to the first page when pageSize changes
             },
         }, fields));
     }, [fields]);
@@ -182,7 +181,7 @@ export const useListCore = (config) => {
         if (!action.handler) {
             return;
         }
-        // construim contextul din state-ul *curent*
+        // build the context from the *current* state
         const snapshot = exportState();
         const updateRows = (updater) => {
             setState((prev) => {
@@ -254,7 +253,7 @@ export const useListCore = (config) => {
             return;
         }
         if (action.opensModal && action.modal) {
-            // identificăm rowId pentru uiState
+            // identify rowId for uiState
             const row = state.rows[rowIndex];
             const rowId = row ? row[idKey] : undefined;
             setState((prev) => ({
@@ -275,14 +274,14 @@ export const useListCore = (config) => {
         if (active.type === "general") {
             const action = (generalActions ?? []).find((a) => a.id === active.actionId);
             if (action) {
-                // deocamdată ignorăm payload aici; se poate integra în handler via CustomModalConfig dacă vrei
+                // For now we ignore payload here; it can be integrated in the handler via CustomModalConfig if needed
                 await runGeneralActionHandler(action);
             }
         }
         else {
             const action = (rowActions ?? []).find((a) => a.id === active.actionId);
             if (action) {
-                // găsim rowIndex pe baza rowId din uiState
+                // find rowIndex based on rowId from uiState
                 const rowId = active.rowId;
                 let rowIndex = -1;
                 if (rowId != null) {
@@ -293,7 +292,7 @@ export const useListCore = (config) => {
                 }
             }
         }
-        // închidem modalul și resetăm acțiunea activă
+        // close the modal and reset the active action
         setState((prev) => ({
             ...prev,
             ui: clearActiveActionUi(closeModalUi(prev.ui)),

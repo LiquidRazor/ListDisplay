@@ -48,7 +48,7 @@ export const ListModalOutlet: React.FC<ModalOutletProps> = (
         return {action: act, modalConfig: config};
     }, [actionType, modal.actionId, generalActions, rowActions]);
 
-    // Dacă nu găsim acțiunea sau nu are modal config, tot afișăm ceva minim.
+    // If the action is missing or lacks modal config, still show a minimal fallback.
     if (!action || !modalConfig) {
         return (
             <ConfirmModal
@@ -64,7 +64,7 @@ export const ListModalOutlet: React.FC<ModalOutletProps> = (
         );
     }
 
-    // Confirm modal config suportat fully aici.
+    // Confirm modal configuration is fully supported here.
     if (modalConfig.type === "confirm") {
         return (
             <ConfirmModal
@@ -78,8 +78,8 @@ export const ListModalOutlet: React.FC<ModalOutletProps> = (
         );
     }
 
-    // Custom modal NU este implementat by default în core.
-    // Utilizatorul poate overrida ModalOutlet în config.components.ModalOutlet.
+    // Custom modal handling is not implemented by default in the core.
+    // The consumer can override ModalOutlet in config.components.ModalOutlet.
     if (modalConfig.type === "custom") {
         return (
             <div className="ld-modal ld-modal--backdrop">
@@ -111,7 +111,7 @@ export const ListModalOutlet: React.FC<ModalOutletProps> = (
         );
     }
 
-    // fallback absolut (în caz de tip necunoscut)
+    // Absolute fallback for unknown modal types.
     return null;
 };
 
