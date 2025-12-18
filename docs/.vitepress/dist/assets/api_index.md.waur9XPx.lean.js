@@ -1,0 +1,1 @@
+import{_ as a,c as t,o as r,ae as i}from"./chunks/framework.CgMU34_t.js";const _=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"api/index.md","filePath":"api/index.md"}'),p={name:"api/index.md"};function o(n,e,s,d,c,l){return r(),t("div",null,[...e[0]||(e[0]=[i("",4)])])}const f=a(p,[["render",o]]);export{_ as __pageData,f as default};
