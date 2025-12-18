@@ -1,4 +1,5 @@
 /**
+ * @packageDocumentation
  * Entry point exporting the ListDisplay React components, core hook, data
  * source helpers, and supporting TypeScript types.
  */

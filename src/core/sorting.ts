@@ -2,11 +2,32 @@ import type {SortDescriptor, FieldSchema} from "../types";
 
 type AnyRow = any;
 
+/**
+ * Context object containing sorting configuration and field metadata for list operations.
+ *
+ * @internal
+ */
 export interface SortingContext<TRow = AnyRow> {
+  /**
+   * Optional sort descriptor specifying the field and direction to sort by.
+   */
   sort?: SortDescriptor<TRow>;
+  /**
+   * Array of field schemas defining the structure of rows in the list.
+   */
   fields: Array<FieldSchema<TRow>>;
 }
 
+/**
+ * Compares two values for sorting purposes with null-safe handling.
+ * Supports numbers, dates, and falls back to case-insensitive string comparison.
+ *
+ * @param a - First value to compare
+ * @param b - Second value to compare
+ * @returns Negative if a < b, positive if a > b, zero if equal
+ *
+ * @internal
+ */
 const compareValues = (a: unknown, b: unknown): number => {
   if (a == null && b == null) return 0;
   if (a == null) return 1;
@@ -28,7 +49,14 @@ const compareValues = (a: unknown, b: unknown): number => {
 };
 
 /**
- * Applies sorting to a list of rows.
+ * Applies sorting to a list of rows based on the provided sorting context.
+ * Returns a new sorted array without mutating the original.
+ *
+ * @param rows - Array of rows to sort
+ * @param ctx - Sorting context containing sort descriptor and field schemas
+ * @returns New array with rows sorted according to the sort descriptor, or original array if no sort is specified
+ *
+ * @internal
  */
 export const applySorting = <TRow = AnyRow>(
   rows: TRow[],

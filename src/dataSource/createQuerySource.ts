@@ -42,7 +42,7 @@ export const createQuerySource = <
 
     const refresh = async (): Promise<void> => {
         // `useListCore` will decide how to use init() + refresh().
-        await Promise.resolve(load());
+        await load();
     };
 
     return {
