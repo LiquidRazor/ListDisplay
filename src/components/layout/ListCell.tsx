@@ -1,5 +1,3 @@
-// src/components/layout/ListCell.tsx
-
 import React from "react";
 import type { FieldSchema } from "../../types";
 

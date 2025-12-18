@@ -1,4 +1,3 @@
-// src/dataSource/createStreamSource.ts
 import type {DataPatchListener, DataSource, DataSourceInitResult, Unsubscribe,RowId} from "../types";
 
 export interface StreamBootstrapResult<TRow = any> {

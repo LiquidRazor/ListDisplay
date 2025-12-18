@@ -1,5 +1,3 @@
-// src/types/uiState.ts
-
 import type { RowId } from "./selection";
 
 export type ListStatus = "idle" | "loading" | "ready" | "streaming" | "error";

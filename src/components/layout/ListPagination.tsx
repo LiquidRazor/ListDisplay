@@ -1,5 +1,3 @@
-// src/components/layout/ListPagination.tsx
-
 import React from "react";
 import type { PaginationProps } from "../../types";
 

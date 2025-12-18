@@ -1,5 +1,3 @@
-// src/types/modal.ts
-
 import type {ReactNode} from "react";
 import type {GeneralActionContext,} from "./actionContext";
 

@@ -1,5 +1,3 @@
-// src/components/layout/ListToolbar.tsx
-
 import React from "react";
 import type { ToolbarProps } from "../../types";
 

@@ -1,4 +1,3 @@
-// src/dataSource/createQuerySource.ts
 import type {DataSource, DataSourceInitResult, RowId} from "../types";
 
 export interface QueryResult<TRow = any> {

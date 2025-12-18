@@ -1,5 +1,3 @@
-// src/components/layout/ListSortBar.tsx
-
 import React from "react";
 import type { SortBarProps } from "../../types";
 

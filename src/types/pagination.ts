@@ -1,5 +1,3 @@
-// src/types/pagination.ts
-
 export interface PaginationState {
   pageIndex: number;
   pageSize: number;

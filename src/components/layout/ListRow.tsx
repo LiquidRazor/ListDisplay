@@ -1,5 +1,3 @@
-// src/components/layout/ListRow.tsx
-
 import React from "react";
 import type {FieldSchema, ListState, RowAction, RowId, SelectionState} from "../../types";
 import {ListCell} from "./ListCell";

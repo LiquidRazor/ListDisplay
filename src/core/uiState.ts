@@ -1,4 +1,3 @@
-// src/core/uiState.ts
 import type { ListUiState, RowId } from "../types";
 
 export const createInitialUiState = (): ListUiState => ({

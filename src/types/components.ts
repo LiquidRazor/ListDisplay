@@ -1,4 +1,3 @@
-// src/types/components.ts
 import type { ComponentType } from "react";
 import type { ListState } from "./listState";
 import type { GeneralAction, RowAction } from "./actions";

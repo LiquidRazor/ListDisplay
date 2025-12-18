@@ -1,5 +1,3 @@
-// src/types/listState.ts
-
 import type { ActiveFilterState } from "./filters";
 import type { PaginationState } from "./pagination";
 import type { SortDescriptor } from "./sorting";

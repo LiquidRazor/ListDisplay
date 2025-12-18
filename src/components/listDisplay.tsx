@@ -1,5 +1,3 @@
-// src/components/listDisplay.tsx
-
 import React, {useMemo} from "react";
 
 import type {ListConfig} from "../types";

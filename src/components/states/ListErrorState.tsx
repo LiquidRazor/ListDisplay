@@ -1,5 +1,3 @@
-// src/components/states/ListErrorState.tsx
-
 import React from "react";
 import type { StatusStateProps } from "../../types";
 

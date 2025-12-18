@@ -1,4 +1,3 @@
-// src/core/sorting.ts
 import type {SortDescriptor, FieldSchema} from "../types";
 
 type AnyRow = any;

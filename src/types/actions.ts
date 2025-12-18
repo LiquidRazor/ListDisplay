@@ -1,5 +1,3 @@
-// src/types/actions.ts
-
 import type { ReactNode } from "react";
 import type { ModalConfig } from "./modal";
 import type {

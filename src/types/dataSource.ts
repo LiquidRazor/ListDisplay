@@ -1,5 +1,3 @@
-// src/types/dataSource.ts
-
 import type { ListStatus } from "./uiState";
 import type { RowId } from "./selection";
 

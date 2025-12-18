@@ -1,5 +1,3 @@
-// src/components/layout/ListContainer.tsx
-
 import React from "react";
 
 export interface ListContainerProps {

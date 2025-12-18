@@ -1,5 +1,3 @@
-// src/types/filters.ts
-
 export type FilterOperator =
   | "equals"
   | "notEquals"

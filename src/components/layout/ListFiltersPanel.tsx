@@ -1,5 +1,3 @@
-// src/components/layout/ListFiltersPanel.tsx
-
 import React from "react";
 import type { FiltersPanelProps } from "../../types";
 

@@ -1,4 +1,3 @@
-// src/dataSource/createStaticSource.ts
 import type {
   DataSource,
   DataSourceInitResult,

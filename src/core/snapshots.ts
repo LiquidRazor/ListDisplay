@@ -1,4 +1,3 @@
-// src/core/snapshots.ts
 import type { ListState, ListSnapshot, RowId } from "../types";
 /**
  * Builds an immutable snapshot of the current list state.

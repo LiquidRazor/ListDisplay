@@ -1,5 +1,3 @@
-// src/components/states/ListLoadingState.tsx
-
 import React from "react";
 import type { StatusStateProps } from "../../types";
 

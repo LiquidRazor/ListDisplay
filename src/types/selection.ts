@@ -1,5 +1,3 @@
-// src/types/selection.ts
-
 export type RowId = string | number;
 
 export type SelectionMode = "none" | "single" | "multiple";

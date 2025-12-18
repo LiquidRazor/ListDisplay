@@ -1,5 +1,3 @@
-// src/components/layout/ListTable.tsx
-
 import React from "react";
 import type { TableProps } from "../../types";
 import { ListHeader } from "./ListHeader";

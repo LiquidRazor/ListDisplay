@@ -1,5 +1,3 @@
-// src/components/modals/ListModalOutlet.tsx
-
 import React, {useMemo} from "react";
 import type {GeneralAction, ModalConfig, ModalOutletProps, RowAction} from "../../types";
 import {ConfirmModal} from "./ConfirmModal";

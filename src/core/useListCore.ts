@@ -1,5 +1,3 @@
-// src/core/useListCore.ts
-
 import {useCallback, useEffect, useMemo, useState,} from "react";
 
 import type {

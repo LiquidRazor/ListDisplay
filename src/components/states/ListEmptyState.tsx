@@ -1,5 +1,3 @@
-// src/components/states/ListEmptyState.tsx
-
 import React from "react";
 import type { StatusStateProps } from "../../types";
 

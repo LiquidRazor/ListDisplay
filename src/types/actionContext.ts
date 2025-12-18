@@ -1,5 +1,3 @@
-// src/types/actionContext.ts
-
 import type { ActiveFilterState } from "./filters";
 import type { PaginationState } from "./pagination";
 import type { ListSnapshot } from "./snapshot";

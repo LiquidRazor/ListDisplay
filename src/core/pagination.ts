@@ -1,4 +1,3 @@
-// src/core/pagination.ts
 import type { PaginationState } from "../types";
 
 type AnyRow = any;

@@ -1,4 +1,3 @@
-// src/core/filters.ts
 import type {
   ActiveFilterState,
   FieldFilterConfig,

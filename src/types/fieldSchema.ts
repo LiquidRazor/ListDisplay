@@ -1,5 +1,3 @@
-// src/types/fieldSchema.ts
-
 import type { CSSProperties, ReactNode } from "react";
 import type { FieldFilterConfig } from "./filters";
 

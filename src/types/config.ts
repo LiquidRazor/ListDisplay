@@ -1,5 +1,3 @@
-// src/types/config.ts
-
 import type { GeneralAction, RowAction } from "./actions";
 import type { ListComponents, ListComponentsProps } from "./components";
 import type { DataSource } from "./dataSource";

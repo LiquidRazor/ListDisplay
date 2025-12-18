@@ -1,5 +1,3 @@
-// src/components/modals/ConfirmModal.tsx
-
 import React from "react";
 
 export interface ConfirmModalProps {

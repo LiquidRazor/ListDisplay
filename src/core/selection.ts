@@ -1,4 +1,3 @@
-// src/core/selection.ts
 import type {RowId, SelectionMode, SelectionState,} from "../types";
 
 type AnyRow = any;
