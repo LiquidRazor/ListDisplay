@@ -1,6 +1,6 @@
 {
   "name": "@liquidrazor/list-display",
-  "version": "0.1.3.1",
+  "version": "0.1.4",
   "description": "Headless-friendly React list display component with filtering, sorting, pagination, and actions.",
   "type": "module",
   "main": "dist/index.js",
