@@ -1,6 +1,7 @@
 {
   "name": "@liquidrazor/list-display",
   "version": "0.1.0",
+  "description": "Headless-friendly React list display component with filtering, sorting, pagination, and actions.",
   "type": "module",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -14,17 +15,38 @@
   "files": [
     "dist"
   ],
+  "sideEffects": false,
   "license": "MIT",
+  "author": "LiquidRazor",
+  "keywords": [
+    "react",
+    "list",
+    "table",
+    "datagrid",
+    "filtering",
+    "sorting",
+    "pagination",
+    "actions"
+  ],
+  "homepage": "https://github.com/LiquidRazor/list-display#readme",
+  "bugs": {
+    "url": "https://github.com/LiquidRazor/list-display/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LiquidRazor/list-display.git"
+  },
   "scripts": {
-    "build": "tsc -p tsconfig.build.json"
+    "clean": "rm -rf dist",
+    "build": "tsc -p tsconfig.build.json",
+    "prepublishOnly": "npm run clean && npm run build"
   },
   "peerDependencies": {
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/LiquidRazor/list-display.git"
+  "publishConfig": {
+    "access": "public"
   },
   "devDependencies": {
     "@types/react": "^19.2.7",
