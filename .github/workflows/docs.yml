@@ -26,9 +26,6 @@ jobs:
           cache: npm
 
       - run: npm ci
-      
-      - run: npm run api:extract
-      - run: npm run api:docs
 
       - run: npm run docs:build
 
