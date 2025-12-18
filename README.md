@@ -8,7 +8,9 @@ ListDisplay is a React component and hook combo that delivers filtering, sorting
 
 ## Documentation
 
-Full usage, configuration guidance, and examples live in [`docs/index.md`](docs/index.md).
+Quick guide available [here](docs/index.md)
+
+Full API docs are available [here](docs/api/list-display.md)
 
 ## Getting started
 
