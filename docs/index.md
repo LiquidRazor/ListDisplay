@@ -18,7 +18,7 @@ pnpm add @liquidrazor/list-display react react-dom
 2. Describe your columns with `FieldSchema` entries.
 3. Declare any toolbar or row-level actions.
 4. Render the `ListDisplay` component.
-{% raw %}
+
 ```tsx
 import { ListDisplay } from "@liquidrazor/list-display";
 import type { DataSource, FieldSchema, GeneralAction } from "@liquidrazor/list-display";
@@ -64,7 +64,6 @@ export const UsersPage = () => (
   />
 );
 ```
-{% endraw %}
 
 ## Component overview
 
@@ -83,7 +82,6 @@ ListDisplay does not fetch data directly; instead it consumes a `DataSource` abs
 - **Refresh:** optional `refresh()` for parent-controlled re-fetch logic, invoked by actions.
 - **Destroy:** optional `destroy()` for cleanup when the list unmounts or subscriptions change.
 
-{% raw %}
 
 ```ts
 import type { DataSource } from "@liquidrazor/list-display";
@@ -101,7 +99,6 @@ const streamSource: DataSource<Row> = {
   destroy: () => console.log("closed"),
 };
 ```
-{% endraw %}
 
 ## Configuration
 
@@ -118,7 +115,6 @@ The `ListConfig` contract is the single source of truth for a list instance:
 
 Example configuration with custom renderers and filters:
 
-{% raw %}
 ```tsx
 const fields: FieldSchema<User>[] = [
   {
@@ -141,13 +137,11 @@ const fields: FieldSchema<User>[] = [
   },
 ];
 ```
-{% endraw %}
 
 ## Actions and modals
 
 Actions let users trigger mutations or workflows from the toolbar or per-row menus. Define `GeneralAction` and `RowAction` entries with ids, labels, optional icons/kinds, and handlers. Mark `opensModal` and include a `modal` config when an action should require confirmation or custom input.
 
-{% raw %}
 ```tsx
 const actions: GeneralAction<User>[] = [
   {
@@ -164,7 +158,6 @@ const actions: GeneralAction<User>[] = [
   },
 ];
 ```
-{% endraw %}
 
 Row actions work the same way but receive the target row and index in the handler context.
 
@@ -186,8 +179,6 @@ Enable row selection with `selectionMode`. Use `multiple` for bulk workflows; se
 
 Pass a `components` map to swap any UI piece while keeping core behaviors:
 
-{% raw %}
-
 ```tsx
 import { ListDisplay, ListToolbar } from "@liquidrazor/list-display";
 import { CustomTable } from "./CustomTable";
@@ -205,7 +196,6 @@ import { CustomTable } from "./CustomTable";
   }}
 />
 ```
-{% endraw %}
 
 Slots receive the same state and callbacks used by the defaults, so replacements remain interoperable with filtering, sorting, pagination, selection, and actions.
 
