@@ -209,6 +209,10 @@ The exported types help ensure configuration correctness:
 - `ActiveFilterState`, `SortDescriptor`, `PaginationState`, `SelectionState`: reusable state models.
 - `ListSnapshot`: shape returned by `exportState()` for downstream consumers.
 
+## Full API documentation
+
+you can always dig into the full api documentation [here](./api/index.md)
+
 ## Troubleshooting
 
 - Make sure `idKey` matches a stable unique value on each row; patches and selection rely on it.
