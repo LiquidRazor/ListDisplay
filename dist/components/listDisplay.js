@@ -1,17 +1,17 @@
 import { jsx as _jsx, Fragment as _Fragment, jsxs as _jsxs } from "react/jsx-runtime";
-// src/components/ListDisplay.tsx
+// src/components/listDisplay.tsx
 import { useMemo } from "react";
-import { useListCore } from "../core/index.ts";
-import { ListContainer } from "./layout/ListContainer.tsx";
-import { ListToolbar } from "./layout/ListToolbar.tsx";
-import { ListFiltersPanel } from "./layout/ListFiltersPanel.tsx";
-import { ListSortBar } from "./layout/ListSortBar.tsx";
-import { ListTable } from "./layout/ListTable.tsx";
-import { ListPagination } from "./layout/ListPagination.tsx";
-import { ListLoadingState } from "./states/ListLoadingState.tsx";
-import { ListEmptyState } from "./states/ListEmptyState.tsx";
-import { ListErrorState } from "./states/ListErrorState.tsx";
-import { ListModalOutlet } from "./modals/ListModalOutlet.tsx";
+import { useListCore } from "../core";
+import { ListContainer } from "./layout/ListContainer";
+import { ListToolbar } from "./layout/ListToolbar";
+import { ListFiltersPanel } from "./layout/ListFiltersPanel";
+import { ListSortBar } from "./layout/ListSortBar";
+import { ListTable } from "./layout/ListTable";
+import { ListPagination } from "./layout/ListPagination";
+import { ListLoadingState } from "./states/ListLoadingState";
+import { ListEmptyState } from "./states/ListEmptyState";
+import { ListErrorState } from "./states/ListErrorState";
+import { ListModalOutlet } from "./modals/ListModalOutlet";
 /* ─────────────────────────────
  * COMPONENT
  * ───────────────────────────── */
@@ -92,3 +92,4 @@ export const ListDisplay = (props) => {
     return (_jsxs(ListContainer, { className: "ld-list", children: [_jsx(ToolbarComponent, { ...compProps.Toolbar, state: state, generalActions: generalActions, onActionClick: handleToolbarActionClick }), _jsx(FiltersPanelComponent, { ...compProps.FiltersPanel, state: state, fields: fields, onChangeFilters: handleChangeFilters }), _jsx(SortBarComponent, { ...compProps.SortBar, state: state, fields: fields, onChangeSort: handleChangeSort }), isLoading && (_jsx(LoadingStateComponent, { ...compProps.LoadingState, message: loadingMessage })), hasError && !isLoading && (_jsx(ErrorStateComponent, { ...compProps.ErrorState, message: errorMessage })), isEmpty && !isLoading && !hasError && (_jsx(EmptyStateComponent, { ...compProps.EmptyState, message: emptyMessage })), !isLoading && !hasError && state.rows && state.rows.length > 0 && (_jsxs(_Fragment, { children: [_jsx(TableComponent, { ...compProps.Table, state: state, fields: fields, idKey: idKey, rowActions: rowActions, onRowActionClick: handleRowActionClick }), _jsx(PaginationComponent, { ...compProps.Pagination, state: state, onChangePage: handlePageChange, onChangePageSize: handlePageSizeChange })] })), _jsx(ModalOutletComponent, { ...compProps.ModalOutlet, state: state, generalActions: generalActions, rowActions: rowActions, onConfirm: handleModalConfirm, onCancel: handleModalCancel })] }));
 };
 export default ListDisplay;
+//# sourceMappingURL=listDisplay.js.map

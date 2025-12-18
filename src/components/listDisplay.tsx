@@ -1,4 +1,4 @@
-// src/components/ListDisplay.tsx
+// src/components/listDisplay.tsx
 
 import React, {useMemo} from "react";
 

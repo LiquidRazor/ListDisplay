@@ -1,5 +1,5 @@
 import { jsx as _jsx, Fragment as _Fragment, jsxs as _jsxs } from "react/jsx-runtime";
-// src/components/ListDisplay.tsx
+// src/components/listDisplay.tsx
 import { useMemo } from "react";
 import { useListCore } from "../core";
 import { ListContainer } from "./layout/ListContainer";
