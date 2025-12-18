@@ -10,8 +10,6 @@ ListDisplay is a React component and hook combo that delivers filtering, sorting
 
 Quick guide available [here](./docs/index.md)
 
-Full API docs are available [here](./docs/api/list-display.md)
-
 ## Getting started
 
 Install the package alongside React 18:
@@ -32,6 +30,6 @@ import { ListDisplay } from "@liquidrazor/list-display";
 />
 ```
 
-For advanced patterns (filters, actions, custom slots, streaming updates), see the [documentation](docs/index.md).
+For advanced patterns (filters, actions, custom slots, streaming updates), see the [documentation](https://liquidrazor.github.io/ListDisplay/).
 
 The published package includes only the compiled `dist` artifacts along with type declarations and source maps for consumers.
