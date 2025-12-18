@@ -79,7 +79,7 @@ export const useListCore = (config) => {
                 error: undefined,
                 pagination: {
                     ...prev.pagination,
-                    // totalItems & totalPages vor fi recalculare
+                    // totalItems & totalPages will be recalculated
                 },
             }, fields));
         }
@@ -156,7 +156,7 @@ export const useListCore = (config) => {
             pagination: {
                 ...prev.pagination,
                 pageSize,
-                pageIndex: 0, // reset to the first page when pageSize changes
+                pageIndex: 0, // reset to first page when pageSize changes
             },
         }, fields));
     }, [fields]);
@@ -274,7 +274,7 @@ export const useListCore = (config) => {
         if (active.type === "general") {
             const action = (generalActions ?? []).find((a) => a.id === active.actionId);
             if (action) {
-                // For now we ignore payload here; it can be integrated in the handler via CustomModalConfig if needed
+                // for now we ignore payload here; it can be integrated in handler via CustomModalConfig if you want
                 await runGeneralActionHandler(action);
             }
         }

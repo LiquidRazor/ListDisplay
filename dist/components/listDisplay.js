@@ -20,7 +20,7 @@ export const ListDisplay = (props) => {
         ...coreConfig,
         idKey,
     });
-    /* Actual components (default or override) */
+    /* EFFECTIVE COMPONENTS (default or override) */
     const { Toolbar: ToolbarSlot, FiltersPanel: FiltersPanelSlot, SortBar: SortBarSlot, Table: TableSlot, Pagination: PaginationSlot, ModalOutlet: ModalOutletSlot, LoadingState: LoadingStateSlot, EmptyState: EmptyStateSlot, ErrorState: ErrorStateSlot, } = components ?? {};
     const compProps = componentsProps ?? {};
     const ToolbarComponent = ToolbarSlot ?? ListToolbar;
@@ -32,7 +32,7 @@ export const ListDisplay = (props) => {
     const LoadingStateComponent = LoadingStateSlot ?? ListLoadingState;
     const EmptyStateComponent = EmptyStateSlot ?? ListEmptyState;
     const ErrorStateComponent = ErrorStateSlot ?? ListErrorState;
-    /* UI handlers */
+    /* HANDLERS FOR UI */
     const handleChangeFilters = (next) => {
         const filters = (next ?? {});
         setFilters(() => filters);
@@ -75,7 +75,7 @@ export const ListDisplay = (props) => {
     const handleModalCancel = () => {
         cancelActiveAction();
     };
-    /* Derived state for UI */
+    /* DERIVED STATE FOR UI */
     const isLoading = state.status === "loading" &&
         (!state.rows || state.rows.length === 0);
     const hasError = state.status === "error";
@@ -86,7 +86,7 @@ export const ListDisplay = (props) => {
     const emptyMessage = "No data available.";
     const errorMessage = "An error occurred while loading data.";
     const snapshotForExport = useMemo(() => exportState(), [exportState]);
-    void snapshotForExport; // prevent linter complaints until it is actually used
+    void snapshotForExport; // to prevent linter warnings until it's actually used
     /* RENDER */
     return (_jsxs(ListContainer, { className: "ld-list", children: [_jsx(ToolbarComponent, { ...compProps.Toolbar, state: state, generalActions: generalActions, onActionClick: handleToolbarActionClick }), _jsx(FiltersPanelComponent, { ...compProps.FiltersPanel, state: state, fields: fields, onChangeFilters: handleChangeFilters }), _jsx(SortBarComponent, { ...compProps.SortBar, state: state, fields: fields, onChangeSort: handleChangeSort }), isLoading && (_jsx(LoadingStateComponent, { ...compProps.LoadingState, message: loadingMessage })), hasError && !isLoading && (_jsx(ErrorStateComponent, { ...compProps.ErrorState, message: errorMessage })), isEmpty && !isLoading && !hasError && (_jsx(EmptyStateComponent, { ...compProps.EmptyState, message: emptyMessage })), !isLoading && !hasError && state.rows && state.rows.length > 0 && (_jsxs(_Fragment, { children: [_jsx(TableComponent, { ...compProps.Table, state: state, fields: fields, idKey: idKey, rowActions: rowActions, onRowActionClick: handleRowActionClick }), _jsx(PaginationComponent, { ...compProps.Pagination, state: state, onChangePage: handlePageChange, onChangePageSize: handlePageSizeChange })] })), _jsx(ModalOutletComponent, { ...compProps.ModalOutlet, state: state, generalActions: generalActions, rowActions: rowActions, onConfirm: handleModalConfirm, onCancel: handleModalCancel })] }));
 };
