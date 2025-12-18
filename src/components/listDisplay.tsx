@@ -58,7 +58,7 @@ export const ListDisplay: React.FC<ListDisplayProps> = (props) => {
         idKey,
     });
 
-    /* COMPONENTE EFECTIVE (default sau override) */
+    /* EFFECTIVE COMPONENTS (default or override) */
 
     const {
         Toolbar: ToolbarSlot,
@@ -84,7 +84,7 @@ export const ListDisplay: React.FC<ListDisplayProps> = (props) => {
     const EmptyStateComponent = EmptyStateSlot ?? ListEmptyState;
     const ErrorStateComponent = ErrorStateSlot ?? ListErrorState;
 
-    /* HANDLERE PENTRU UI */
+    /* HANDLERS FOR UI */
 
     const handleChangeFilters = (next: unknown) => {
         const filters = (next ?? {}) as ActiveFilterState;
@@ -136,7 +136,7 @@ export const ListDisplay: React.FC<ListDisplayProps> = (props) => {
         cancelActiveAction();
     };
 
-    /* STATE DERIVAT PENTRU UI */
+    /* DERIVED STATE FOR UI */
 
     const isLoading =
         state.status === "loading" &&
@@ -153,7 +153,7 @@ export const ListDisplay: React.FC<ListDisplayProps> = (props) => {
     const errorMessage = "An error occurred while loading data.";
 
     const snapshotForExport = useMemo(() => exportState(), [exportState]);
-    void snapshotForExport; // ca să nu comenteze linterul, până îl folosești efectiv
+    void snapshotForExport; // to prevent linter warnings until it's actually used
 
     /* RENDER */
 

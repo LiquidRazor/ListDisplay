@@ -179,7 +179,7 @@ export const useListCore = <
                         error: undefined,
                         pagination: {
                             ...prev.pagination,
-                            // totalItems & totalPages vor fi recalculare
+                            // totalItems & totalPages will be recalculated
                         },
                     },
                     fields
@@ -233,7 +233,7 @@ export const useListCore = <
     /* REFRESH */
 
     const refresh = useCallback(async () => {
-        // Simplu și clar: re-run init()
+        // Simple and clear: re-run init()
         await loadInitial();
     }, [loadInitial]);
 
@@ -304,7 +304,7 @@ export const useListCore = <
                     pagination: {
                         ...prev.pagination,
                         pageSize,
-                        pageIndex: 0, // resetăm la prima pagină când se schimbă pageSize
+                        pageIndex: 0, // reset to first page when pageSize changes
                     },
                 },
                 fields
@@ -343,7 +343,7 @@ export const useListCore = <
                 return;
             }
 
-            // construim contextul din state-ul *curent*
+            // build the context from the *current* state
             const snapshot = exportState();
 
             const updateRows = (updater: (current: TRow[]) => TRow[]) => {
@@ -481,7 +481,7 @@ export const useListCore = <
                     (a) => a.id === active.actionId
                 );
                 if (action) {
-                    // deocamdată ignorăm payload aici; se poate integra în handler via CustomModalConfig dacă vrei
+                    // for now we ignore payload here; it can be integrated in handler via CustomModalConfig if you want
                     await runGeneralActionHandler(action);
                 }
             } else {
@@ -489,7 +489,7 @@ export const useListCore = <
                     (a) => a.id === active.actionId
                 );
                 if (action) {
-                    // găsim rowIndex pe baza rowId din uiState
+                    // find rowIndex based on rowId from uiState
                     const rowId = active.rowId as TRowId | undefined;
                     let rowIndex = -1;
                     if (rowId != null) {
@@ -504,7 +504,7 @@ export const useListCore = <
                 }
             }
 
-            // închidem modalul și resetăm acțiunea activă
+            // close the modal and reset the active action
             setState((prev) => ({
                 ...prev,
                 ui: clearActiveActionUi(closeModalUi(prev.ui)),
