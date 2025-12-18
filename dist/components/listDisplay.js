@@ -14,6 +14,12 @@ import { ListModalOutlet } from "./modals/ListModalOutlet";
 /* ─────────────────────────────
  * COMPONENT
  * ───────────────────────────── */
+/**
+ * High-level component that renders the entire ListDisplay experience using
+ * the core hook for state management and a set of slot-based components for
+ * the UI. Consumers can override any slot via the {@link ListConfig.components}
+ * map while still benefiting from the built-in behaviours.
+ */
 export const ListDisplay = (props) => {
     const { components, componentsProps, idKey, ...coreConfig } = props;
     const { state, fields, generalActions, rowActions, setFilters, setSort, setPageIndex, setPageSize, clearSelection, selectAllVisible, triggerGeneralAction, triggerRowAction, confirmActiveAction, cancelActiveAction, exportState, refresh, } = useListCore({

@@ -548,7 +548,7 @@
         {
           "kind": "Interface",
           "canonicalReference": "@liquidrazor/list-display!ActiveActionState:interface",
-          "docComment": "",
+          "docComment": "/**\n * Tracks which action is currently active in the UI, optionally tied to a row.\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -563,7 +563,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!ActiveActionState#actionId:member",
-              "docComment": "",
+              "docComment": "/**\n * Identifier of the action as defined in the configuration.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -590,7 +590,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!ActiveActionState#rowId:member",
-              "docComment": "",
+              "docComment": "/**\n * Identifier of the row associated with the action, when applicable.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -618,7 +618,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!ActiveActionState#type:member",
-              "docComment": "",
+              "docComment": "/**\n * Whether the active action targets the entire list or a single row.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -1659,7 +1659,7 @@
         {
           "kind": "Interface",
           "canonicalReference": "@liquidrazor/list-display!ConfirmModalConfig:interface",
-          "docComment": "",
+          "docComment": "/**\n * Configuration for the built-in confirmation modal used by actions that need a simple yes/no flow.\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -1674,7 +1674,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!ConfirmModalConfig#cancelLabel:member",
-              "docComment": "",
+              "docComment": "/**\n * Label for the cancel button. Defaults are provided by the UI layer.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -1701,7 +1701,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!ConfirmModalConfig#confirmLabel:member",
-              "docComment": "",
+              "docComment": "/**\n * Label for the confirm button. Defaults are provided by the UI layer.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -1728,7 +1728,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!ConfirmModalConfig#description:member",
-              "docComment": "",
+              "docComment": "/**\n * Optional descriptive text rendered under the title.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -1756,7 +1756,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!ConfirmModalConfig#title:member",
-              "docComment": "",
+              "docComment": "/**\n * Title displayed at the top of the modal.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -1783,7 +1783,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!ConfirmModalConfig#type:member",
-              "docComment": "",
+              "docComment": "/**\n * Discriminator indicating a confirm modal.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -2374,7 +2374,7 @@
         {
           "kind": "Interface",
           "canonicalReference": "@liquidrazor/list-display!CustomModalConfig:interface",
-          "docComment": "",
+          "docComment": "/**\n * Configuration for a user-supplied modal renderer, allowing bespoke flows while still participating in the ListDisplay action lifecycle.\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -2429,7 +2429,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!CustomModalConfig#render:member",
-              "docComment": "",
+              "docComment": "/**\n * Render function that returns any React node to display. The provided context contains helpers to close or submit the modal.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -2470,7 +2470,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!CustomModalConfig#type:member",
-              "docComment": "",
+              "docComment": "/**\n * Discriminator indicating a custom modal.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -3949,7 +3949,7 @@
         {
           "kind": "TypeAlias",
           "canonicalReference": "@liquidrazor/list-display!FilterOperator:type",
-          "docComment": "",
+          "docComment": "/**\n * Operators supported by the filtering engine.\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -3975,7 +3975,7 @@
         {
           "kind": "Interface",
           "canonicalReference": "@liquidrazor/list-display!FilterOption:interface",
-          "docComment": "",
+          "docComment": "/**\n * Option used by select-based filters.\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -3990,7 +3990,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!FilterOption#label:member",
-              "docComment": "",
+              "docComment": "/**\n * Human-readable label presented to the user.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -4017,7 +4017,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!FilterOption#value:member",
-              "docComment": "",
+              "docComment": "/**\n * Option value stored in the filter state.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -4047,7 +4047,7 @@
         {
           "kind": "Interface",
           "canonicalReference": "@liquidrazor/list-display!FiltersPanelProps:interface",
-          "docComment": "",
+          "docComment": "/**\n * Props for the filters panel slot. This component is expected to surface controls for adjusting the active filter set.\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -4062,7 +4062,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!FiltersPanelProps#fields:member",
-              "docComment": "",
+              "docComment": "/**\n * Definitions for the fields that support filtering.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -4103,7 +4103,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!FiltersPanelProps#onChangeFilters:member",
-              "docComment": "",
+              "docComment": "/**\n * Handler to update the filter bag. The consumer should pass the next value that will be merged into the list state.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -4130,7 +4130,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!FiltersPanelProps#state:member",
-              "docComment": "",
+              "docComment": "/**\n * Current list state including the active filters.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -4165,7 +4165,7 @@
         {
           "kind": "TypeAlias",
           "canonicalReference": "@liquidrazor/list-display!FilterType:type",
-          "docComment": "",
+          "docComment": "/**\n * Logical filter types used to match operators and value shapes.\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -5288,7 +5288,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!ListComponents#EmptyState:member",
-              "docComment": "",
+              "docComment": "/**\n * Component displayed when there are no rows.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -5329,7 +5329,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!ListComponents#ErrorState:member",
-              "docComment": "",
+              "docComment": "/**\n * Component displayed when the list is in an error state.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -5370,7 +5370,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!ListComponents#FiltersPanel:member",
-              "docComment": "",
+              "docComment": "/**\n * Filters panel slot component.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -5402,7 +5402,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!ListComponents#LoadingState:member",
-              "docComment": "",
+              "docComment": "/**\n * Component displayed while data is loading.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -5443,7 +5443,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!ListComponents#ModalOutlet:member",
-              "docComment": "",
+              "docComment": "/**\n * Modal outlet slot component.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -5475,7 +5475,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!ListComponents#Pagination:member",
-              "docComment": "",
+              "docComment": "/**\n * Pagination slot component.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -5507,7 +5507,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!ListComponents#SortBar:member",
-              "docComment": "",
+              "docComment": "/**\n * Sort bar slot component.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -5539,7 +5539,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!ListComponents#Table:member",
-              "docComment": "",
+              "docComment": "/**\n * Table slot component responsible for rendering rows.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -5571,7 +5571,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!ListComponents#Toolbar:member",
-              "docComment": "",
+              "docComment": "/**\n * Toolbar slot component.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -5606,7 +5606,7 @@
         {
           "kind": "TypeAlias",
           "canonicalReference": "@liquidrazor/list-display!ListComponentsProps:type",
-          "docComment": "/**\n * Optional props bag for slot components. Keyed by slot name.\n */\n",
+          "docComment": "/**\n * Optional props bag for slot components keyed by the slot name. This allows consumers to feed ad-hoc properties into overridden components while keeping the core library agnostic of their shape.\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -6160,7 +6160,7 @@
         {
           "kind": "Variable",
           "canonicalReference": "@liquidrazor/list-display!ListDisplay:var",
-          "docComment": "",
+          "docComment": "/**\n * High-level component that renders the entire ListDisplay experience using the core hook for state management and a set of slot-based components for the UI. Consumers can override any slot via the {@link ListConfig.components} map while still benefiting from the built-in behaviours.\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -6197,7 +6197,7 @@
         {
           "kind": "TypeAlias",
           "canonicalReference": "@liquidrazor/list-display!ListDisplayProps:type",
-          "docComment": "",
+          "docComment": "/**\n * Props forwarded to {@link ListDisplay}. They mirror {@link ListConfig} and therefore describe the full data, schema, and action configuration for the list.\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -7468,7 +7468,7 @@
         {
           "kind": "TypeAlias",
           "canonicalReference": "@liquidrazor/list-display!ListStatus:type",
-          "docComment": "",
+          "docComment": "/**\n * Status values representing the lifecycle of the list data layer.\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -7642,7 +7642,7 @@
         {
           "kind": "TypeAlias",
           "canonicalReference": "@liquidrazor/list-display!ModalConfig:type",
-          "docComment": "",
+          "docComment": "/**\n * Union describing the supported modal configurations for actions.\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -7722,7 +7722,7 @@
         {
           "kind": "Interface",
           "canonicalReference": "@liquidrazor/list-display!ModalOutletProps:interface",
-          "docComment": "",
+          "docComment": "/**\n * Props forwarded to the modal outlet slot which orchestrates confirmation or custom modals associated with actions.\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -7737,7 +7737,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!ModalOutletProps#generalActions:member",
-              "docComment": "",
+              "docComment": "/**\n * General list actions that may open a modal.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -7778,7 +7778,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!ModalOutletProps#onCancel:member",
-              "docComment": "",
+              "docComment": "/**\n * Callback when the active modal flow is cancelled.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -7805,7 +7805,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!ModalOutletProps#onConfirm:member",
-              "docComment": "",
+              "docComment": "/**\n * Callback when the active modal flow is confirmed.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -7841,7 +7841,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!ModalOutletProps#rowActions:member",
-              "docComment": "",
+              "docComment": "/**\n * Row-specific actions that may open a modal.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -7882,7 +7882,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!ModalOutletProps#state:member",
-              "docComment": "",
+              "docComment": "/**\n * Current list state, including modal metadata.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -7917,7 +7917,7 @@
         {
           "kind": "Interface",
           "canonicalReference": "@liquidrazor/list-display!ModalState:interface",
-          "docComment": "",
+          "docComment": "/**\n * State for the modal experience tied to actions.\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -7932,7 +7932,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!ModalState#actionId:member",
-              "docComment": "",
+              "docComment": "/**\n * Identifier of the action owning the modal.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -7959,7 +7959,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!ModalState#isOpen:member",
-              "docComment": "",
+              "docComment": "/**\n * Whether a modal is currently shown.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -7986,7 +7986,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!ModalState#rowId:member",
-              "docComment": "",
+              "docComment": "/**\n * Identifier of the row associated with the modal, if any.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -8109,7 +8109,7 @@
         {
           "kind": "Interface",
           "canonicalReference": "@liquidrazor/list-display!PaginationProps:interface",
-          "docComment": "",
+          "docComment": "/**\n * Props for the pagination controls slot.\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -8124,7 +8124,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!PaginationProps#onChangePage:member",
-              "docComment": "",
+              "docComment": "/**\n * Handler to move to a different page index.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -8151,7 +8151,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!PaginationProps#onChangePageSize:member",
-              "docComment": "",
+              "docComment": "/**\n * Handler to update the number of items displayed per page.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -8178,7 +8178,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!PaginationProps#state:member",
-              "docComment": "",
+              "docComment": "/**\n * Current pagination state.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -8213,7 +8213,7 @@
         {
           "kind": "Interface",
           "canonicalReference": "@liquidrazor/list-display!PaginationState:interface",
-          "docComment": "",
+          "docComment": "/**\n * Pagination metadata describing both the current paging parameters and the total counts when known.\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -8228,7 +8228,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!PaginationState#pageIndex:member",
-              "docComment": "",
+              "docComment": "/**\n * Zero-based index of the current page.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -8255,7 +8255,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!PaginationState#pageSize:member",
-              "docComment": "",
+              "docComment": "/**\n * Number of items requested per page.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -8282,7 +8282,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!PaginationState#totalItems:member",
-              "docComment": "",
+              "docComment": "/**\n * Optional total number of items available.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -8309,7 +8309,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!PaginationState#totalPages:member",
-              "docComment": "",
+              "docComment": "/**\n * Optional total number of pages inferred from {@link totalItems}.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -8855,7 +8855,7 @@
         {
           "kind": "TypeAlias",
           "canonicalReference": "@liquidrazor/list-display!RowId:type",
-          "docComment": "",
+          "docComment": "/**\n * Identifier type accepted by selection helpers.\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -9144,7 +9144,7 @@
         {
           "kind": "TypeAlias",
           "canonicalReference": "@liquidrazor/list-display!SelectionMode_2:type",
-          "docComment": "",
+          "docComment": "/**\n * Available selection modes for the list component.\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -9170,7 +9170,7 @@
         {
           "kind": "Interface",
           "canonicalReference": "@liquidrazor/list-display!SelectionState:interface",
-          "docComment": "",
+          "docComment": "/**\n * Tracks the current selection configuration and the ids that are selected.\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -9207,7 +9207,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!SelectionState#mode:member",
-              "docComment": "",
+              "docComment": "/**\n * Current selection mode.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -9235,7 +9235,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!SelectionState#selectedIds:member",
-              "docComment": "",
+              "docComment": "/**\n * Identifiers for the selected rows.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -9265,7 +9265,7 @@
         {
           "kind": "Interface",
           "canonicalReference": "@liquidrazor/list-display!SortBarProps:interface",
-          "docComment": "",
+          "docComment": "/**\n * Props for the sort bar slot. This surface exposes the fields that can be sorted alongside a handler to update the current sort descriptor.\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -9280,7 +9280,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!SortBarProps#fields:member",
-              "docComment": "",
+              "docComment": "/**\n * Fields that can be sorted.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -9321,7 +9321,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!SortBarProps#onChangeSort:member",
-              "docComment": "",
+              "docComment": "/**\n * Handler invoked when the user selects a new field to sort by.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -9348,7 +9348,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!SortBarProps#state:member",
-              "docComment": "",
+              "docComment": "/**\n * Current list state including the active sort descriptor.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -9383,7 +9383,7 @@
         {
           "kind": "Interface",
           "canonicalReference": "@liquidrazor/list-display!SortDescriptor:interface",
-          "docComment": "",
+          "docComment": "/**\n * Describes the active sort configuration for the list.\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -9419,7 +9419,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!SortDescriptor#direction:member",
-              "docComment": "",
+              "docComment": "/**\n * Direction in which rows should be ordered.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -9447,7 +9447,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!SortDescriptor#field:member",
-              "docComment": "",
+              "docComment": "/**\n * Field id used to extract the sortable value from a row.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -9477,7 +9477,7 @@
         {
           "kind": "TypeAlias",
           "canonicalReference": "@liquidrazor/list-display!SortDirection:type",
-          "docComment": "",
+          "docComment": "/**\n * Direction used when sorting rows.\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -9616,7 +9616,7 @@
         {
           "kind": "Interface",
           "canonicalReference": "@liquidrazor/list-display!StatusStateProps:interface",
-          "docComment": "",
+          "docComment": "/**\n * Minimal props shared by the various status state components such as loading, empty, or error states.\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -9631,7 +9631,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!StatusStateProps#message:member",
-              "docComment": "",
+              "docComment": "/**\n * Optional message to display alongside the visual state.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -10092,7 +10092,7 @@
         {
           "kind": "Interface",
           "canonicalReference": "@liquidrazor/list-display!TableProps:interface",
-          "docComment": "",
+          "docComment": "/**\n * Props for the table slot responsible for rendering the visible rows.\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -10107,7 +10107,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!TableProps#fields:member",
-              "docComment": "",
+              "docComment": "/**\n * Field schema definitions used to map row values to columns.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -10148,7 +10148,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!TableProps#idKey:member",
-              "docComment": "",
+              "docComment": "/**\n * Identifier key to extract a stable row id from each record.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -10175,7 +10175,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!TableProps#onRowActionClick:member",
-              "docComment": "",
+              "docComment": "/**\n * Callback fired when a row action is selected.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -10202,7 +10202,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!TableProps#rowActions:member",
-              "docComment": "",
+              "docComment": "/**\n * Optional row-level actions.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -10243,7 +10243,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!TableProps#state:member",
-              "docComment": "",
+              "docComment": "/**\n * Current list state containing the rows to render.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -10417,7 +10417,7 @@
         {
           "kind": "Interface",
           "canonicalReference": "@liquidrazor/list-display!ToolbarProps:interface",
-          "docComment": "",
+          "docComment": "/**\n * Props passed to the toolbar slot component. This surface focuses on triggering list-level actions and therefore exposes the current list state and the available general actions.\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -10432,7 +10432,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!ToolbarProps#generalActions:member",
-              "docComment": "",
+              "docComment": "/**\n * Collection of actions that apply to the whole list rather than a specific row.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -10473,7 +10473,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!ToolbarProps#onActionClick:member",
-              "docComment": "",
+              "docComment": "/**\n * Callback invoked when a toolbar action is selected.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -10500,7 +10500,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!ToolbarProps#state:member",
-              "docComment": "",
+              "docComment": "/**\n * Latest list state snapshot. Consumers can use this to render counters or to derive disabled states for toolbar controls.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -10620,7 +10620,7 @@
         {
           "kind": "Function",
           "canonicalReference": "@liquidrazor/list-display!useListCore:function(1)",
-          "docComment": "",
+          "docComment": "/**\n * Core hook that encapsulates the data-management logic for ListDisplay. It wires a {@link DataSource}, schema metadata, and optional actions into a cohesive state machine that can be consumed by UI components.\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -10721,7 +10721,7 @@
         {
           "kind": "Interface",
           "canonicalReference": "@liquidrazor/list-display!UseListCoreResult:interface",
-          "docComment": "",
+          "docComment": "/**\n * Contract returned by {@link useListCore}. It aggregates the current list state as well as callbacks to mutate filters, sorting, pagination, and selection. Action-oriented handlers are also exposed to keep the UI layer thin and declarative.\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -10786,7 +10786,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!UseListCoreResult#cancelActiveAction:member",
-              "docComment": "",
+              "docComment": "/**\n * Cancels the currently active action modal.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -10813,7 +10813,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!UseListCoreResult#clearSelection:member",
-              "docComment": "",
+              "docComment": "/**\n * Clears all selections regardless of mode.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -10840,7 +10840,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!UseListCoreResult#confirmActiveAction:member",
-              "docComment": "",
+              "docComment": "/**\n * Confirms the currently active action modal.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -10876,7 +10876,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!UseListCoreResult#exportState:member",
-              "docComment": "",
+              "docComment": "/**\n * Exports the current state into a serializable snapshot.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -10912,7 +10912,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!UseListCoreResult#fields:member",
-              "docComment": "",
+              "docComment": "/**\n * Field schema definitions used to interpret rows.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -10953,7 +10953,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!UseListCoreResult#generalActions:member",
-              "docComment": "",
+              "docComment": "/**\n * General actions configured for the list.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -10994,7 +10994,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!UseListCoreResult#refresh:member",
-              "docComment": "",
+              "docComment": "/**\n * Refreshes the data source and recomputes derived state.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -11030,7 +11030,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!UseListCoreResult#rowActions:member",
-              "docComment": "",
+              "docComment": "/**\n * Row-level actions configured for the list.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -11071,7 +11071,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!UseListCoreResult#selectAllVisible:member",
-              "docComment": "",
+              "docComment": "/**\n * Selects all rows currently visible in the paginated slice.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -11098,7 +11098,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!UseListCoreResult#setFilters:member",
-              "docComment": "",
+              "docComment": "/**\n * Updates the active filters map.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -11143,7 +11143,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!UseListCoreResult#setPageIndex:member",
-              "docComment": "",
+              "docComment": "/**\n * Moves to the specified page index.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -11170,7 +11170,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!UseListCoreResult#setPageSize:member",
-              "docComment": "",
+              "docComment": "/**\n * Updates the number of rows per page.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -11197,7 +11197,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!UseListCoreResult#setSort:member",
-              "docComment": "",
+              "docComment": "/**\n * Sets the active sort descriptor.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -11233,7 +11233,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!UseListCoreResult#state:member",
-              "docComment": "",
+              "docComment": "/**\n * Latest list state produced by the hook.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -11265,7 +11265,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!UseListCoreResult#triggerGeneralAction:member",
-              "docComment": "",
+              "docComment": "/**\n * Triggers the handler for a general action by id.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -11301,7 +11301,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "@liquidrazor/list-display!UseListCoreResult#triggerRowAction:member",
-              "docComment": "",
+              "docComment": "/**\n * Triggers the handler for a row action by id and row index.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",

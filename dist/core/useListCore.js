@@ -44,6 +44,11 @@ const recomputeDerived = (prevState, fields, rawRowsOverride) => {
 /* ─────────────────────────────
  * HOOK
  * ───────────────────────────── */
+/**
+ * Core hook that encapsulates the data-management logic for ListDisplay. It
+ * wires a {@link DataSource}, schema metadata, and optional actions into a
+ * cohesive state machine that can be consumed by UI components.
+ */
 export const useListCore = (config) => {
     const { dataSource, fields, idKey, generalActions, rowActions, initialFilters, initialPagination, initialSort, selectionMode, } = config;
     /* INITIAL STATE */

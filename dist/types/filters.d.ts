@@ -1,7 +1,18 @@
+/**
+ * Operators supported by the filtering engine.
+ */
 export type FilterOperator = "equals" | "notEquals" | "contains" | "startsWith" | "endsWith" | "in" | "gt" | "gte" | "lt" | "lte" | "between";
+/**
+ * Logical filter types used to match operators and value shapes.
+ */
 export type FilterType = "text" | "select" | "multiSelect" | "number" | "date" | "boolean" | "custom";
+/**
+ * Option used by select-based filters.
+ */
 export interface FilterOption {
+    /** Option value stored in the filter state. */
     value: string | number | boolean;
+    /** Human-readable label presented to the user. */
     label: string;
 }
 /**

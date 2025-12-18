@@ -30,13 +30,10 @@ export interface ActionContextBase<TRow = any, TRowId = string | number> {
 // @public (undocumented)
 export type ActionKind = "default" | "primary" | "secondary" | "danger" | "ghost";
 
-// @public (undocumented)
+// @public
 export interface ActiveActionState {
-    // (undocumented)
     actionId: string;
-    // (undocumented)
     rowId?: RowId;
-    // (undocumented)
     type: "general" | "row";
 }
 
@@ -90,17 +87,12 @@ export const closeModal: (prev: ListUiState) => ListUiState;
 // @public
 export const ConfirmModal: React_2.FC<ConfirmModalProps>;
 
-// @public (undocumented)
+// @public
 export interface ConfirmModalConfig {
-    // (undocumented)
     cancelLabel?: string;
-    // (undocumented)
     confirmLabel?: string;
-    // (undocumented)
     description?: ReactNode;
-    // (undocumented)
     title: string;
-    // (undocumented)
     type: "confirm";
 }
 
@@ -137,11 +129,9 @@ export const createStaticSource: <TRow = any, TRowId extends RowId = RowId>(opti
 // @public
 export const createStreamSource: <TRow = any, TRowId extends RowId = RowId>(options: StreamSourceOptions<TRow, TRowId>) => DataSource<TRow, TRowId>;
 
-// @public (undocumented)
+// @public
 export interface CustomModalConfig<TRow = any, TRowId = string | number> {
-    // (undocumented)
     render: (ctx: CustomModalRenderContext<TRow, TRowId>) => ReactNode;
-    // (undocumented)
     type: "custom";
 }
 
@@ -239,28 +229,23 @@ export interface FilterContext<TRow = AnyRow> {
     filters: ActiveFilterState;
 }
 
-// @public (undocumented)
+// @public
 export type FilterOperator = "equals" | "notEquals" | "contains" | "startsWith" | "endsWith" | "in" | "gt" | "gte" | "lt" | "lte" | "between";
 
-// @public (undocumented)
+// @public
 export interface FilterOption {
-    // (undocumented)
     label: string;
-    // (undocumented)
     value: string | number | boolean;
 }
 
-// @public (undocumented)
+// @public
 export interface FiltersPanelProps {
-    // (undocumented)
     fields: Array<FieldSchema<any>>;
-    // (undocumented)
     onChangeFilters?: (next: unknown) => void;
-    // (undocumented)
     state: ListState<any>;
 }
 
-// @public (undocumented)
+// @public
 export type FilterType = "text" | "select" | "multiSelect" | "number" | "date" | "boolean" | "custom";
 
 // @public (undocumented)
@@ -329,23 +314,14 @@ export interface ListCellProps {
 
 // @public
 export interface ListComponents {
-    // (undocumented)
     EmptyState?: ComponentType<StatusStateProps>;
-    // (undocumented)
     ErrorState?: ComponentType<StatusStateProps>;
-    // (undocumented)
     FiltersPanel?: ComponentType<any>;
-    // (undocumented)
     LoadingState?: ComponentType<StatusStateProps>;
-    // (undocumented)
     ModalOutlet?: ComponentType<any>;
-    // (undocumented)
     Pagination?: ComponentType<any>;
-    // (undocumented)
     SortBar?: ComponentType<any>;
-    // (undocumented)
     Table?: ComponentType<any>;
-    // (undocumented)
     Toolbar?: ComponentType<any>;
 }
 
@@ -378,10 +354,10 @@ export interface ListContainerProps {
     className?: string;
 }
 
-// @public (undocumented)
+// @public
 export const ListDisplay: React_2.FC<ListDisplayProps>;
 
-// @public (undocumented)
+// @public
 export type ListDisplayProps = ListConfig<any, any>;
 
 // @public (undocumented)
@@ -471,7 +447,7 @@ export interface ListState<TRow = any> {
     ui: ListUiState;
 }
 
-// @public (undocumented)
+// @public
 export type ListStatus = "idle" | "loading" | "ready" | "streaming" | "error";
 
 // @public
@@ -488,55 +464,40 @@ export interface ListUiState {
     modal?: ModalState;
 }
 
-// @public (undocumented)
+// @public
 export type ModalConfig<TRow = any, TRowId = string | number> = ConfirmModalConfig | CustomModalConfig<TRow, TRowId>;
 
-// @public (undocumented)
+// @public
 export interface ModalOutletProps {
-    // (undocumented)
     generalActions?: Array<GeneralAction<any, any>>;
-    // (undocumented)
     onCancel: () => void;
-    // (undocumented)
     onConfirm: (payload?: unknown) => void | Promise<void>;
-    // (undocumented)
     rowActions?: Array<RowAction<any, any>>;
-    // (undocumented)
     state: ListState<any>;
 }
 
-// @public (undocumented)
+// @public
 export interface ModalState {
-    // (undocumented)
     actionId?: string;
-    // (undocumented)
     isOpen: boolean;
-    // (undocumented)
     rowId?: RowId;
 }
 
 // @public (undocumented)
 export const openModalForAction: (prev: ListUiState, actionId: string, type: "general" | "row", rowId?: RowId) => ListUiState;
 
-// @public (undocumented)
+// @public
 export interface PaginationProps {
-    // (undocumented)
     onChangePage?: (pageIndex: number) => void;
-    // (undocumented)
     onChangePageSize?: (pageSize: number) => void;
-    // (undocumented)
     state: ListState<any>;
 }
 
-// @public (undocumented)
+// @public
 export interface PaginationState {
-    // (undocumented)
     pageIndex: number;
-    // (undocumented)
     pageSize: number;
-    // (undocumented)
     totalItems?: number;
-    // (undocumented)
     totalPages?: number;
 }
 
@@ -570,7 +531,7 @@ export interface RowActionContext<TRow = any, TRowId = string | number> extends 
     rowIndex: number;
 }
 
-// @public (undocumented)
+// @public
 export type RowId = string | number;
 
 // @public (undocumented)
@@ -584,37 +545,30 @@ export interface SelectionContext<TRow = AnyRow_3, TRowId extends RowId = RowId>
     mode: SelectionMode_2;
 }
 
-// @public (undocumented)
+// @public
 type SelectionMode_2 = "none" | "single" | "multiple";
 export { SelectionMode_2 as SelectionMode }
 
-// @public (undocumented)
+// @public
 export interface SelectionState<TRowId = RowId> {
-    // (undocumented)
     mode: SelectionMode_2;
-    // (undocumented)
     selectedIds: TRowId[];
 }
 
-// @public (undocumented)
+// @public
 export interface SortBarProps {
-    // (undocumented)
     fields: Array<FieldSchema<any>>;
-    // (undocumented)
     onChangeSort?: (fieldId: string) => void;
-    // (undocumented)
     state: ListState<any>;
 }
 
-// @public (undocumented)
+// @public
 export interface SortDescriptor<TRow = any> {
-    // (undocumented)
     direction: SortDirection;
-    // (undocumented)
     field: keyof TRow & string;
 }
 
-// @public (undocumented)
+// @public
 export type SortDirection = "asc" | "desc";
 
 // @public (undocumented)
@@ -625,9 +579,8 @@ export interface SortingContext<TRow = AnyRow_4> {
     sort?: SortDescriptor<TRow>;
 }
 
-// @public (undocumented)
+// @public
 export interface StatusStateProps {
-    // (undocumented)
     message?: string;
 }
 
@@ -650,30 +603,22 @@ export interface StreamSourceOptions<TRow = any, TRowId extends RowId = RowId> {
 // @public (undocumented)
 export type StreamSubscribeFn<TRow = any, TRowId extends RowId = RowId> = (listener: DataPatchListener<TRow, TRowId>) => Unsubscribe | void;
 
-// @public (undocumented)
+// @public
 export interface TableProps {
-    // (undocumented)
     fields: Array<FieldSchema<any>>;
-    // (undocumented)
     idKey: string;
-    // (undocumented)
     onRowActionClick?: (actionId: string, rowIndex: number) => void;
-    // (undocumented)
     rowActions?: Array<RowAction<any, any>>;
-    // (undocumented)
     state: ListState<any>;
 }
 
 // @public (undocumented)
 export const toggleRowSelection: <TRow = AnyRow_3, TRowId extends RowId = RowId>(row: TRow, selection: SelectionState<TRowId>, ctx: SelectionContext<TRow, TRowId>) => SelectionState<TRowId>;
 
-// @public (undocumented)
+// @public
 export interface ToolbarProps {
-    // (undocumented)
     generalActions?: Array<GeneralAction<any, any>>;
-    // (undocumented)
     onActionClick?: (actionId: string) => void;
-    // (undocumented)
     state: ListState<any>;
 }
 
@@ -683,42 +628,26 @@ export type Unsubscribe = () => void;
 // @public
 export const updatePaginationMeta: (pagination: PaginationState, totalItems: number) => PaginationState;
 
-// @public (undocumented)
+// @public
 export const useListCore: <TRow = any, TRowId extends RowId = RowId>(config: ListConfig<TRow, TRowId>) => UseListCoreResult<TRow, TRowId>;
 
-// @public (undocumented)
+// @public
 export interface UseListCoreResult<TRow = any, TRowId extends RowId = RowId> {
-    // (undocumented)
     cancelActiveAction: () => void;
-    // (undocumented)
     clearSelection: () => void;
-    // (undocumented)
     confirmActiveAction: (payload?: unknown) => Promise<void>;
-    // (undocumented)
     exportState: () => ListSnapshot<TRow, TRowId>;
-    // (undocumented)
     fields: Array<FieldSchema<TRow>>;
-    // (undocumented)
     generalActions?: Array<GeneralAction<TRow, TRowId>>;
-    // (undocumented)
     refresh: () => Promise<void>;
-    // (undocumented)
     rowActions?: Array<RowAction<TRow, TRowId>>;
-    // (undocumented)
     selectAllVisible: () => void;
-    // (undocumented)
     setFilters: (updater: (prev: ListState<TRow>["filters"]) => ListState<TRow>["filters"]) => void;
-    // (undocumented)
     setPageIndex: (pageIndex: number) => void;
-    // (undocumented)
     setPageSize: (pageSize: number) => void;
-    // (undocumented)
     setSort: (sort: ListState<TRow>["sort"] | undefined) => void;
-    // (undocumented)
     state: ListState<TRow>;
-    // (undocumented)
     triggerGeneralAction: (actionId: string) => Promise<void>;
-    // (undocumented)
     triggerRowAction: (actionId: string, rowIndex: number) => Promise<void>;
 }
 
