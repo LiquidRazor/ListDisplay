@@ -6,7 +6,7 @@ export default defineConfig({
 
     // IMPORTANT for GitHub Pages project sites:
     // https://<user>.github.io/<repo>/
-    base: '/LiquidRazor/ListDisplay/',
+    base: '/ListDisplay/',
 
     themeConfig: {
         nav: [
