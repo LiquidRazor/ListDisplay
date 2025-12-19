@@ -1292,7 +1292,6 @@ type ListDisplayProps<TRow = any, TRowId = any, TPatch = unknown> = {
      * filtering, sorting, pagination, etc. The registry must be created and configured
      * before being passed to ListDisplay.
      *
-     * @see {@link ./features/registeringExample.ts} for an example of how to register features
      */
     registry: FeatureRegistry<TRow, TRowId>;
     /**
@@ -1387,7 +1386,6 @@ type ListDisplayProps<TRow = any, TRowId = any, TPatch = unknown> = {
  * }
  * ```
  *
- * @see {@link ./features/registeringExample.ts} for a complete example of feature registration
  *
  * @public
  */
@@ -1522,7 +1520,6 @@ type GeneralActionsApi = {
  * @public
  * @typeParam TRow - The row data type
  * @param options - Configuration options for the feature
- * @param options.actions - Array of general action definitions
  * @returns A list feature with UI slots and action trigger capabilities
  * @throws Error if actions array is not provided or if idKey is missing from context metadata
  *
@@ -1800,7 +1797,7 @@ type FilteringFeatureOptions<TRow = any> = {
      * The initial filter values to use when the feature is first created.
      *
      * @remarks
-     * If not provided, defaults to an empty object ({}).
+     * If not provided, defaults to an empty object.
      */
     initial?: FiltersValue;
 };

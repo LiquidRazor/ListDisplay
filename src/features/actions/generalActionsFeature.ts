@@ -198,7 +198,6 @@ function getModalsApi(ctx: ListFeatureContext<any, any, any, any>) {
  * @public
  * @typeParam TRow - The row data type
  * @param options - Configuration options for the feature
- * @param options.actions - Array of general action definitions
  * @returns A list feature with UI slots and action trigger capabilities
  * @throws Error if actions array is not provided or if idKey is missing from context metadata
  *

@@ -64,7 +64,7 @@ export type FilteringFeatureOptions<TRow = any> = {
      * The initial filter values to use when the feature is first created.
      *
      * @remarks
-     * If not provided, defaults to an empty object ({}).
+     * If not provided, defaults to an empty object.
      */
     initial?: FiltersValue;
 };

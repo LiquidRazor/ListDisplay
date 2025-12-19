@@ -80,7 +80,6 @@ export type ListDisplayProps<TRow = any, TRowId = any, TPatch = unknown> = {
      * filtering, sorting, pagination, etc. The registry must be created and configured
      * before being passed to ListDisplay.
      *
-     * @see {@link ./features/registeringExample.ts} for an example of how to register features
      */
     registry: FeatureRegistry<TRow, TRowId>;
 
@@ -188,7 +187,6 @@ const DEFAULT_STATE: CoreListState<any> = {
  * }
  * ```
  *
- * @see {@link ./features/registeringExample.ts} for a complete example of feature registration
  *
  * @public
  */
