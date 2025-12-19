@@ -6,12 +6,12 @@ export default defineConfig({
 
     // IMPORTANT for GitHub Pages project sites:
     // https://<user>.github.io/<repo>/
-    base: '/ListDisplay/',
+    base: '/LiquidRazor/ListDisplay/',
 
     themeConfig: {
         nav: [
             { text: 'Home', link: '/' },
-            { text: 'API', link: '/api/' }
+            { text: 'API', link: '/api/list-display' }
         ],
 
         sidebar: [
@@ -24,8 +24,7 @@ export default defineConfig({
             {
                 text: 'API Reference',
                 items: [
-                    { text: 'API Index', link: '/api/' },
-                    { text: 'Package: @liquidrazor/list-display', link: '/api/list-display' }
+                    { text: 'Api', link: '/api/list-display' }
                 ]
             }
         ]
