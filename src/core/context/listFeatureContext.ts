@@ -10,7 +10,7 @@
  *
  * @param updater - Function that receives the previous state and returns the new state
  *
- * @internal
+ * @public
  */
 export type SetStateFn<TState> = (updater: (prev: TState) => TState) => void;
 
@@ -34,7 +34,7 @@ export type SetStateFn<TState> = (updater: (prev: TState) => TState) => void;
  * @typeParam TState - The shape of the internal list state object
  * @typeParam TSnapshot - The type of the exported/serialized state snapshot
  *
- * @internal
+ * @public
  */
 export interface ListFeatureContext<
     TRow = any,

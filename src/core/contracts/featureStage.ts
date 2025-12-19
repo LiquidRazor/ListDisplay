@@ -43,7 +43,7 @@
  *
  * @see {@link ListFeatureContext} for the context object passed to features during execution
  *
- * @internal
+ * @public
  */
 export type FeatureStage =
   | "derive"

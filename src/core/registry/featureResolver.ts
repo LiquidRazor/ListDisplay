@@ -86,7 +86,7 @@ import {FeatureNode} from "./featureNode";
  * // Result: [base, sorting, filtering]
  * ```
  *
- * @internal
+ * @public
  */
 export function resolveFeatureOrder(
     features: ListFeatureWithUI<any, any, any, any>[]

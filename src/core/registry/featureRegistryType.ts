@@ -54,7 +54,7 @@ import {CompiledFeaturePlan} from "./compiledFeaturePlan";
  * @see {@link CompiledFeaturePlan} for the output of the compilation process
  * @see {@link FeatureStage} for the execution stages used during compilation
  *
- * @internal
+ * @public
  */
 export interface FeatureRegistry<
     TRow = any,

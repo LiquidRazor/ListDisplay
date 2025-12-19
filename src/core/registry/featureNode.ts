@@ -25,7 +25,7 @@ import {ListFeatureWithUI} from "../contracts/listFeatureWithUI";
  * - The initialization sequence is deterministic and repeatable
  * - No feature accesses uninitialized dependencies during its lifecycle
  *
- * @internal
+ * @public
  *
  * @see {@link resolveFeatureOrder} for the topological sort implementation using these nodes
  * @see {@link ListFeatureWithUI} for the complete feature interface definition

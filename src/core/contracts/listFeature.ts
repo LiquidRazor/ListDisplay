@@ -27,7 +27,7 @@ import {ListFeatureContext} from "../context/listFeatureContext";
  * @typeParam TSnapshot - The type of the feature's serialized state snapshot
  * @typeParam TApi - The type of the public API exposed by this feature to other features
  *
- * @internal
+ * @public
  */
 export interface ListFeature<
     TRow = any,

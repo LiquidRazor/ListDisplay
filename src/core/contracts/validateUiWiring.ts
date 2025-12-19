@@ -14,7 +14,7 @@ import {ListRuntimePlan} from "../registry/compiledFeaturePlan";
  * all required handler methods are properly implemented in the feature API. This prevents
  * runtime errors caused by missing handler implementations.
  *
- * @internal
+ * @public
  */
 export type UiWiringValidationOptions = {
     /**
@@ -69,7 +69,7 @@ export type UiWiringValidationOptions = {
  * @returns `true` if at least one slot from the provided array exists in the components registry,
  *          `false` if the slots array is undefined, empty, or none of the slots exist
  *
- * @internal
+ * @public
  */
 function hasAnySlot(components: ListSlots, slots?: string[]): boolean {
     if (!slots || slots.length === 0) return false;
@@ -96,7 +96,7 @@ function hasAnySlot(components: ListSlots, slots?: string[]): boolean {
  * @returns `true` if the value is a function, `false` otherwise. When `true`, TypeScript
  *          narrows the type to `(...args: any[]) => any`
  *
- * @internal
+ * @public
  */
 function isFunction(value: unknown): value is (...args: any[]) => any {
     return typeof value === "function";
@@ -171,7 +171,7 @@ function isFunction(value: unknown): value is (...args: any[]) => any {
  * @see {@link ListRuntimePlan} for the runtime plan structure
  * @see {@link ListSlots} for the slot component registry structure
  *
- * @internal
+ * @public
  */
 export function validateUiWiring(
     runtime: ListRuntimePlan<any>,

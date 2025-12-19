@@ -29,7 +29,7 @@ import type { ComponentType } from "react";
  * @see {@link BuiltInSlotNames} for standard slot name definitions
  * @see {@link FeatureStage} for the UI stage where slots are typically populated
  *
- * @internal
+ * @public
  */
 export type ListSlots = Record<string, ComponentType<any> | undefined>;
 
@@ -63,7 +63,7 @@ export type ListSlots = Record<string, ComponentType<any> | undefined>;
  *
  * @see {@link ListSlots} for the complete slots registry type definition
  *
- * @internal
+ * @public
  */
 export type BuiltInSlotNames =
   | "Toolbar"

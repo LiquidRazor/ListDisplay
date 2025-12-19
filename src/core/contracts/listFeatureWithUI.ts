@@ -37,7 +37,7 @@ import {ListFeature} from "./listFeature";
  * @see {@link ListFeatureContext} for the context object passed to features during execution
  * @see {@link FeatureStage} for information about the feature execution pipeline stages
  *
- * @internal
+ * @public
  */
 export type ListFeatureWithUI<
     TRow = any,

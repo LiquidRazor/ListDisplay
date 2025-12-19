@@ -14,7 +14,7 @@ import {ListFeatureContext, SetStateFn} from "./listFeatureContext";
  * @typeParam TState - The type of the internal state object managed by the runtime
  * @typeParam TSnapshot - The type of the exported state snapshot representation
  *
- * @internal
+ * @public
  */
 export type CreateListRuntimeArgs<
     TRow = any,
@@ -75,7 +75,7 @@ export type CreateListRuntimeArgs<
  * @param args - Configuration object containing all required dependencies and callbacks
  * @returns A ListRuntimePlan instance that manages feature execution and provides access to compiled feature APIs
  *
- * @internal
+ * @public
  */
 export function createListRuntime<
     TRow = any,

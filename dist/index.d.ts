@@ -13,7 +13,7 @@ import { ComponentType } from 'react';
  *
  * @param updater - Function that receives the previous state and returns the new state
  *
- * @internal
+ * @public
  */
 type SetStateFn<TState> = (updater: (prev: TState) => TState) => void;
 /**
@@ -36,7 +36,7 @@ type SetStateFn<TState> = (updater: (prev: TState) => TState) => void;
  * @typeParam TState - The shape of the internal list state object
  * @typeParam TSnapshot - The type of the exported/serialized state snapshot
  *
- * @internal
+ * @public
  */
 interface ListFeatureContext<TRow = any, TRowId = any, TState = unknown, TSnapshot = unknown> {
     /**
@@ -149,7 +149,7 @@ interface ListFeatureContext<TRow = any, TRowId = any, TState = unknown, TSnapsh
  * @typeParam TSnapshot - The type of the feature's serialized state snapshot
  * @typeParam TApi - The type of the public API exposed by this feature to other features
  *
- * @internal
+ * @public
  */
 interface ListFeature<TRow = any, TRowId = any, TState = unknown, TSnapshot = unknown, TApi = unknown> {
     /**
@@ -441,7 +441,7 @@ interface ListFeature<TRow = any, TRowId = any, TState = unknown, TSnapshot = un
  * @see {@link ListFeatureContext} for the context object passed to features during execution
  * @see {@link FeatureStage} for information about the feature execution pipeline stages
  *
- * @internal
+ * @public
  */
 type ListFeatureWithUI<TRow = any, TRowId = any, TState = unknown, TSnapshot = unknown, TApi = unknown> = ListFeature<TRow, TRowId, TState, TSnapshot, TApi>;
 
@@ -490,7 +490,7 @@ type ListFeatureWithUI<TRow = any, TRowId = any, TState = unknown, TSnapshot = u
  * @see {@link FeatureStage} for information about the "ui" stage in the feature pipeline
  * @see {@link ListFeatureContext} for the context object available during UI rendering
  *
- * @internal
+ * @public
  */
 interface FeatureUIContract {
     /**
@@ -682,7 +682,7 @@ interface FeatureUIContract {
  * @see {@link ListRuntimePlan} for the executable runtime instance created from this plan
  * @see {@link createRuntimePlan} for the function that converts a compiled plan into a runtime
  *
- * @internal
+ * @public
  */
 interface CompiledFeaturePlan<TRow = any> {
     /**
@@ -853,7 +853,7 @@ interface CompiledFeaturePlan<TRow = any> {
  * @see {@link CompiledFeaturePlan} for the output of the compilation process
  * @see {@link FeatureStage} for the execution stages used during compilation
  *
- * @internal
+ * @public
  */
 interface FeatureRegistry<TRow = any, TRowId = any, TState = unknown, TSnapshot = unknown> {
     /**
@@ -954,7 +954,7 @@ interface FeatureRegistry<TRow = any, TRowId = any, TState = unknown, TSnapshot 
  *
  * @see {@link CoreListState.status} for usage within the core state structure
  *
- * @internal
+ * @public
  */
 type ListStatus = "idle" | "loading" | "ready" | "error";
 /**
@@ -980,7 +980,7 @@ type ListStatus = "idle" | "loading" | "ready" | "error";
  *
  * @see {@link CoreListState.featureState} for usage within the core state structure
  *
- * @internal
+ * @public
  */
 type FeatureStateBag = Record<string, unknown>;
 /**
@@ -1016,7 +1016,7 @@ type FeatureStateBag = Record<string, unknown>;
  * @see {@link ListFeatureContext} for the context object that provides access to this state
  * @see {@link FeatureStage} for information about the feature execution pipeline
  *
- * @internal
+ * @public
  */
 interface CoreListState<TRow = any> {
     /**
@@ -1107,7 +1107,7 @@ interface CoreListState<TRow = any> {
  *
  * @typeParam TRow - The type of individual row data objects
  *
- * @internal
+ * @public
  */
 type DataSourceInitResult<TRow> = {
     rows?: TRow[];
@@ -1130,7 +1130,7 @@ type DataSourceInitResult<TRow> = {
  * @typeParam TRow - The type of individual row data objects provided by the data source
  * @typeParam TPatch - The type of patch objects used for incremental updates (defaults to unknown)
  *
- * @internal
+ * @public
  */
 type DataSource<TRow, TPatch = unknown> = {
     /**
@@ -1191,7 +1191,7 @@ type DataSource<TRow, TPatch = unknown> = {
  * @param patch - The patch object describing the changes to apply
  * @returns A new array of rows with the patch applied
  *
- * @internal
+ * @public
  */
 type ApplyPatchFn<TRow, TPatch> = (rows: TRow[], patch: TPatch) => TRow[];
 
@@ -1224,7 +1224,7 @@ type ApplyPatchFn<TRow, TPatch> = (rows: TRow[], patch: TPatch) => TRow[];
  * @see {@link BuiltInSlotNames} for standard slot name definitions
  * @see {@link FeatureStage} for the UI stage where slots are typically populated
  *
- * @internal
+ * @public
  */
 type ListSlots = Record<string, ComponentType<any> | undefined>;
 

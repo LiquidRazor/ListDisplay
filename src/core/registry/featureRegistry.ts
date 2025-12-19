@@ -12,7 +12,7 @@
  * communication.
  *
  * @packageDocumentation
- * @internal
+ * @public
  */
 
 import {FeatureRegistry} from "./featureRegistryType";
@@ -62,7 +62,7 @@ import {resolveFeatureOrder} from "./featureResolver";
  * @see {@link CompiledFeaturePlan} for the compilation output structure
  * @see {@link resolveFeatureOrder} for dependency resolution algorithm
  *
- * @internal
+ * @public
  */
 export function createFeatureRegistry<
     TRow = any,
@@ -107,7 +107,7 @@ export function createFeatureRegistry<
          *   .register(featureC);
          * ```
          *
-         * @internal
+         * @public
          */
         register(feature) {
             if (compiled) {
@@ -157,7 +157,7 @@ export function createFeatureRegistry<
          * @see {@link resolveFeatureOrder} for the dependency resolution algorithm
          * @see {@link ListFeatureContext} for the context object interface
          *
-         * @internal
+         * @public
          */
         compile(ctx) {
             if (compiled) {

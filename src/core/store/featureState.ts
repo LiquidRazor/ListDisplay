@@ -24,7 +24,7 @@ import type { CoreListState } from "./coreState";
  *
  * @returns The existing feature state slice if present, otherwise the result of calling the init function
  *
- * @internal
+ * @public
  */
 export function getFeatureSlice<TSlice>(
   state: CoreListState<any>,
@@ -66,7 +66,7 @@ export function getFeatureSlice<TSlice>(
  *
  * @returns A new state object with the updated feature slice, preserving all other state properties
  *
- * @internal
+ * @public
  */
 export function setFeatureSlice<TState extends CoreListState<any>, TSlice>(
   state: TState,

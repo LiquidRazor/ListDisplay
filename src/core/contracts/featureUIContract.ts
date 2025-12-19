@@ -43,7 +43,7 @@
  * @see {@link FeatureStage} for information about the "ui" stage in the feature pipeline
  * @see {@link ListFeatureContext} for the context object available during UI rendering
  *
- * @internal
+ * @public
  */
 export interface FeatureUIContract {
   /**

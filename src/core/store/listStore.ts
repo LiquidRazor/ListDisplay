@@ -11,7 +11,7 @@
  * synchronously after each state change. They are typically used to trigger re-renders
  * in UI frameworks or to propagate state changes to dependent systems.
  *
- * @internal
+ * @public
  */
 export type Listener = () => void;
 
@@ -36,7 +36,7 @@ export type Listener = () => void;
  *
  * @typeParam TState - The type of the state object managed by the store
  *
- * @internal
+ * @public
  */
 export interface ListStore<TState> {
     /**
@@ -132,7 +132,7 @@ export interface ListStore<TState> {
  * @param initialState - The initial state value for the store
  * @returns A new ListStore instance initialized with the provided state
  *
- * @internal
+ * @public
  */
 export function createListStore<TState>(initialState: TState): ListStore<TState> {
     let state = initialState;

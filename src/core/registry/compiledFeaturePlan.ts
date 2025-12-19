@@ -26,7 +26,7 @@ import {FeatureUIContract} from "../contracts/featureUIContract";
  * @see {@link ListRuntimePlan} for the executable runtime instance created from this plan
  * @see {@link createRuntimePlan} for the function that converts a compiled plan into a runtime
  *
- * @internal
+ * @public
  */
 export interface CompiledFeaturePlan<TRow = any> {
     /**
@@ -176,7 +176,7 @@ export interface CompiledFeaturePlan<TRow = any> {
  * @see {@link CompiledFeaturePlan} for the compiled plan that generates this runtime
  * @see {@link createRuntimePlan} for the factory function that creates runtime instances
  *
- * @internal
+ * @public
  */
 export interface ListRuntimePlan<TRow = any> {
     /**
@@ -362,7 +362,7 @@ export interface ListRuntimePlan<TRow = any> {
  * @see {@link ListRuntimePlan} for the structure of the returned runtime instance
  * @see {@link ListFeatureContext} for the context object interface
  *
- * @internal
+ * @public
  */
 export function createRuntimePlan<TRow = any>(
     ctx: ListFeatureContext<TRow>,

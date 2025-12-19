@@ -14,7 +14,7 @@
  *
  * @see {@link CoreListState.status} for usage within the core state structure
  *
- * @internal
+ * @public
  */
 export type ListStatus = "idle" | "loading" | "ready" | "error";
 
@@ -41,7 +41,7 @@ export type ListStatus = "idle" | "loading" | "ready" | "error";
  *
  * @see {@link CoreListState.featureState} for usage within the core state structure
  *
- * @internal
+ * @public
  */
 export type FeatureStateBag = Record<string, unknown>;
 
@@ -78,7 +78,7 @@ export type FeatureStateBag = Record<string, unknown>;
  * @see {@link ListFeatureContext} for the context object that provides access to this state
  * @see {@link FeatureStage} for information about the feature execution pipeline
  *
- * @internal
+ * @public
  */
 export interface CoreListState<TRow = any> {
     /**

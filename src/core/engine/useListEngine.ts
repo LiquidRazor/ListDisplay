@@ -14,7 +14,7 @@ import {ListStore} from "../store/listStore";
  *
  * @typeParam TRow - The type of individual row data objects
  *
- * @internal
+ * @public
  */
 export type DataSourceInitResult<TRow> = {
     rows?: TRow[];
@@ -38,7 +38,7 @@ export type DataSourceInitResult<TRow> = {
  * @typeParam TRow - The type of individual row data objects provided by the data source
  * @typeParam TPatch - The type of patch objects used for incremental updates (defaults to unknown)
  *
- * @internal
+ * @public
  */
 export type DataSource<TRow, TPatch = unknown> = {
     /**
@@ -102,7 +102,7 @@ export type DataSource<TRow, TPatch = unknown> = {
  * @param patch - The patch object describing the changes to apply
  * @returns A new array of rows with the patch applied
  *
- * @internal
+ * @public
  */
 export type ApplyPatchFn<TRow, TPatch> = (rows: TRow[], patch: TPatch) => TRow[];
 
@@ -137,7 +137,7 @@ export type ApplyPatchFn<TRow, TPatch> = (rows: TRow[], patch: TPatch) => TRow[]
  *
  * @returns Object containing the refresh function for manual data reloading
  *
- * @internal
+ * @public
  */
 export function useListEngine<TRow, TPatch>(args: {
     store: ListStore<CoreListState<TRow>>;

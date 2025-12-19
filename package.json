@@ -41,8 +41,10 @@
     "build": "tsup",
     "prepublishOnly": "npm run clean && npm run build",
     "api:extract": "api-extractor run --local",
-    "api:docs": "api-documenter markdown -i temp/api -o docs/api",
-    "docs:gen": "npm run build && npm run api:extract && npm run api:docs",
+    "api:docs": "api-documenter markdown -i temp/api -o docs/_raw",
+    "api:organize": "node scripts/organize-api-docs.js",
+    "api:merge-intros": "node scripts/merge-intros-and-toc.js",
+    "docs:gen": "npm run build && npm run api:extract && npm run api:docs && npm run api:organize && npm run api:merge-intros",
     "docs:build": "npm run docs:gen && vitepress build docs",
     "docs:dev": "npm run docs:gen && vitepress dev docs"
   },

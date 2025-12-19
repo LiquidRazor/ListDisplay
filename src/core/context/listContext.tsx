@@ -15,7 +15,7 @@ import type {ListFeatureContext} from "./listFeatureContext";
  * @typeParam TState - The shape of the internal list state object
  * @typeParam TSnapshot - The type of the exported/serialized state snapshot
  *
- * @internal
+ * @public
  */
 export type ListCtx<
     TRow = any, TRowId = any, TState = any, TSnapshot = any
@@ -46,7 +46,7 @@ const ListContext = createContext<ListCtx<any, any, any, any> | null>(null);
  * </ListContextProvider>
  * ```
  *
- * @internal
+ * @public
  */
 export function ListContextProvider(props: {
     value: ListCtx<any, any, any, any>;
@@ -87,7 +87,7 @@ export function ListContextProvider(props: {
  * }
  * ```
  *
- * @internal
+ * @public
  */
 export function useListCtx<
     TRow = any,
